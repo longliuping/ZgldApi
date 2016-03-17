@@ -12,18 +12,11 @@ import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
 import java.util.UUID;
-
-import org.apache.struts2.ServletActionContext;
-
-import sun.security.util.Password;
-
 import com.google.gson.Gson;
 import com.google.gson.reflect.TypeToken;
 import com.zgld.api.beans.AspnetMembers;
-import com.zgld.api.beans.AspnetRoles;
 import com.zgld.api.beans.AspnetUsers;
 import com.zgld.api.beans.AspnetUsersInRoles;
-import com.zgld.api.beans.AspnetUsersInRolesId;
 import com.zgld.api.beans.GsonBean;
 import com.zgld.api.beans.HishopAttributeValues;
 import com.zgld.api.beans.HishopAttributes;
@@ -39,7 +32,6 @@ import com.zgld.api.beans.HomeBanner;
 import com.zgld.api.beans.JyPwd;
 import com.zgld.api.beans.Supplier;
 import com.zgld.api.beans.UserToken;
-import com.zgld.api.biz.BaseBiz;
 import com.zgld.api.utils.AddressXmlUtils;
 import com.zgld.api.utils.DateUtils;
 import com.zgld.api.utils.HttpUtil;
@@ -909,11 +901,7 @@ public class JsonAction extends BaseAction {
 			userToken.setTokenRemark("");
 			baseBiz.save(userToken);
 			return userToken;
-		} catch (NoSuchAlgorithmException e) {
-			// TODO Auto-generated catch block
-			e.printStackTrace();
-			return null;
-		} catch (UnsupportedEncodingException e) {
+		} catch (Exception e) {
 			// TODO Auto-generated catch block
 			e.printStackTrace();
 			return null;
