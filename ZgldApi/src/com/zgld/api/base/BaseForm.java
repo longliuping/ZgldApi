@@ -67,6 +67,7 @@ public class BaseForm {
 	private Integer productId;
 	private Integer number;
 	private String skuId;
+	private String skuNumber;
 	private Double money;
 	private String content;
 	private Integer display;
@@ -90,6 +91,14 @@ public class BaseForm {
 	private AspnetUsers userinfo;
 	private HishopUserShippingAddresses address;
 	
+	public String getSkuNumber() {
+		return skuNumber;
+	}
+
+	public void setSkuNumber(String skuNumber) {
+		this.skuNumber = skuNumber;
+	}
+
 	public String getToken() {
 		return token;
 	}
