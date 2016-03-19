@@ -3,11 +3,14 @@ package com.zgld.api.action;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+import java.util.regex.Matcher;
+import java.util.regex.Pattern;
 
 import com.zgld.api.beans.AspnetUsers;
 import com.zgld.api.beans.HishopUserShippingAddresses;
+import com.zgld.api.utils.EmailUtil;
 
-public class UserAction extends BaseAction{
+public class UserAction extends BaseAction {
 	/**
 	 * 用户登录
 	 */
@@ -99,13 +102,15 @@ public class UserAction extends BaseAction{
 			} else if (form.getPassword() == null) {
 				form.setJsonMsg("密码password不能为空", false, json, 1001);
 			} else {
-				int userId = aspnetUsers.getUserId();
-				List<HishopUserShippingAddresses> hishopUserShippingAddresses = (List<HishopUserShippingAddresses>) baseBiz.findAll(" from HishopUserShippingAddresses as hu where hu.userId = " + userId);
-				for (HishopUserShippingAddresses hishopUserShippingAddresses2 : hishopUserShippingAddresses) {
-					System.out.println(hishopUserShippingAddresses2.getAddress());
+				String pwd = pwd(form.getPassword(), aspnetUsers.getPasswordSalt());
+				if (!pwd.equals(aspnetUsers.getPassword())) {
+					form.setJsonMsg("旧密码错误", false, json, 1001);
+				} else {
+					aspnetUsers.setPassword(pwd);
+					baseBiz.update(aspnetUsers);
+					json.put(INFO, aspnetUsers);
+					form.setJsonMsg("修改成功", true, json, 200);
 				}
-				json.put("listInfo", hishopUserShippingAddresses);
-				form.setJsonMsg("success", true, json, 200);
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -114,4 +119,59 @@ public class UserAction extends BaseAction{
 		}
 		return JSON_PAGE;
 	}
+
+	/**
+	 * 修改性别
+	 * 
+	 * @return
+	 */
+	public String update_user_gender() {
+		Map<String, Object> json = new HashMap<String, Object>();
+		try {
+			AspnetUsers aspnetUsers = getUserInfo();
+			if (aspnetUsers == null) {
+				form.setJsonMsg(NO_USER, false, json, 201);
+			} else if (form.getUserinfo().getGender() == null) {
+				form.setJsonMsg("userinfo.gender不能为空", false, json, 1001);
+			} else {
+				aspnetUsers.setGender(form.getUserinfo().getGender());
+				baseBiz.update(aspnetUsers);
+				json.put(INFO, aspnetUsers);
+				form.setJsonMsg("修改成功", true, json, 200);
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			form.setJsonMsg("系统出错", false, json, 1001);
+		}
+		return JSON_PAGE;
+	}
+	/**
+	 * 修改用户邮箱
+	 * @return
+	 */
+	public String update_user_email() {
+		Map<String, Object> json = new HashMap<String, Object>();
+		try {
+			AspnetUsers aspnetUsers = getUserInfo();
+			if (aspnetUsers == null) {
+				form.setJsonMsg(NO_USER, false, json, 201);
+			} else if (form.getUserinfo().getEmail() == null) {
+				form.setJsonMsg("userinfo.email不能为空", false, json, 1001);
+			} else if (EmailUtil.emailMatches(form.getUserinfo().getEmail())) {
+				form.setJsonMsg("email格式输入错误不能为空", false, json, 1001);
+			} else {
+				aspnetUsers.setEmail(form.getUserinfo().getEmail());
+				baseBiz.update(aspnetUsers);
+				json.put(INFO, aspnetUsers);
+				form.setJsonMsg("修改成功", true, json, 200);
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			form.setJsonMsg("系统出错", false, json, 1001);
+		}
+		return JSON_PAGE;
+	}
+	
 }
