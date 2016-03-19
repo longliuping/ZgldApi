@@ -44,89 +44,11 @@ public abstract class AbstractAspnetUsers implements java.io.Serializable {
 	private String openId;
 	private String openIdType;
 	private String sessionId;
-	private Set aspnetUsersInRoleses = new HashSet(0);
-
+	private String head;
 	// Constructors
 
 	/** default constructor */
 	public AbstractAspnetUsers() {
-	}
-
-	/** minimal constructor */
-	public AbstractAspnetUsers(String userName, String loweredUserName,
-			Boolean isAnonymous, Date lastActivityDate, String password,
-			Integer passwordFormat, String passwordSalt, Boolean isApproved,
-			Boolean isLockedOut, Date createDate, Date lastLoginDate,
-			Date lastPasswordChangedDate, Date lastLockoutDate,
-			Integer failedPasswordAttemptCount,
-			Date failedPasswordAttemptWindowStart,
-			Integer failedPasswordAnswerAttemptCount,
-			Date failedPasswordAnswerAttemptWindowStart, String sessionId) {
-		this.userName = userName;
-		this.loweredUserName = loweredUserName;
-		this.isAnonymous = isAnonymous;
-		this.lastActivityDate = lastActivityDate;
-		this.password = password;
-		this.passwordFormat = passwordFormat;
-		this.passwordSalt = passwordSalt;
-		this.isApproved = isApproved;
-		this.isLockedOut = isLockedOut;
-		this.createDate = createDate;
-		this.lastLoginDate = lastLoginDate;
-		this.lastPasswordChangedDate = lastPasswordChangedDate;
-		this.lastLockoutDate = lastLockoutDate;
-		this.failedPasswordAttemptCount = failedPasswordAttemptCount;
-		this.failedPasswordAttemptWindowStart = failedPasswordAttemptWindowStart;
-		this.failedPasswordAnswerAttemptCount = failedPasswordAnswerAttemptCount;
-		this.failedPasswordAnswerAttemptWindowStart = failedPasswordAnswerAttemptWindowStart;
-		this.sessionId = sessionId;
-	}
-
-	/** full constructor */
-	public AbstractAspnetUsers(String userName, String loweredUserName,
-			String mobilePin, Boolean isAnonymous, Date lastActivityDate,
-			String password, Integer passwordFormat, String passwordSalt,
-			String email, String loweredEmail, String passwordQuestion,
-			String passwordAnswer, Boolean isApproved, Boolean isLockedOut,
-			Date createDate, Date lastLoginDate,
-			Date lastPasswordChangedDate, Date lastLockoutDate,
-			Integer failedPasswordAttemptCount,
-			Date failedPasswordAttemptWindowStart,
-			Integer failedPasswordAnswerAttemptCount,
-			Date failedPasswordAnswerAttemptWindowStart, String comment,
-			Integer gender, Date birthDate, Integer userRole,
-			String openId, String openIdType, String sessionId,
-			Set aspnetUsersInRoleses) {
-		this.userName = userName;
-		this.loweredUserName = loweredUserName;
-		this.mobilePin = mobilePin;
-		this.isAnonymous = isAnonymous;
-		this.lastActivityDate = lastActivityDate;
-		this.password = password;
-		this.passwordFormat = passwordFormat;
-		this.passwordSalt = passwordSalt;
-		this.email = email;
-		this.loweredEmail = loweredEmail;
-		this.passwordQuestion = passwordQuestion;
-		this.passwordAnswer = passwordAnswer;
-		this.isApproved = isApproved;
-		this.isLockedOut = isLockedOut;
-		this.createDate = createDate;
-		this.lastLoginDate = lastLoginDate;
-		this.lastPasswordChangedDate = lastPasswordChangedDate;
-		this.lastLockoutDate = lastLockoutDate;
-		this.failedPasswordAttemptCount = failedPasswordAttemptCount;
-		this.failedPasswordAttemptWindowStart = failedPasswordAttemptWindowStart;
-		this.failedPasswordAnswerAttemptCount = failedPasswordAnswerAttemptCount;
-		this.failedPasswordAnswerAttemptWindowStart = failedPasswordAnswerAttemptWindowStart;
-		this.comment = comment;
-		this.gender = gender;
-		this.birthDate = birthDate;
-		this.userRole = userRole;
-		this.openId = openId;
-		this.openIdType = openIdType;
-		this.sessionId = sessionId;
-		this.aspnetUsersInRoleses = aspnetUsersInRoleses;
 	}
 
 	// Property accessors
@@ -374,12 +296,14 @@ public abstract class AbstractAspnetUsers implements java.io.Serializable {
 		this.sessionId = sessionId;
 	}
 
-	public Set getAspnetUsersInRoleses() {
-		return this.aspnetUsersInRoleses;
+	public String getHead() {
+		return head;
 	}
 
-	public void setAspnetUsersInRoleses(Set aspnetUsersInRoleses) {
-		this.aspnetUsersInRoleses = aspnetUsersInRoleses;
+	public void setHead(String head) {
+		this.head = head;
 	}
+
+
 
 }

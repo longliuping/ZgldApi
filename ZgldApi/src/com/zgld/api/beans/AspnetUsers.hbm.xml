@@ -97,11 +97,8 @@
         <property name="sessionId" type="java.lang.String">
             <column name="SessionId" length="36" not-null="true" />
         </property>
-<!--        <set name="aspnetUsersInRoleses" inverse="true"  lazy="false">-->
-<!--            <key>-->
-<!--                <column name="UserId" not-null="true" />-->
-<!--            </key>-->
-<!--            <one-to-many class="com.zgld.api.beans.AspnetUsersInRoles" />-->
-<!--        </set>-->
+        <property name="head" type="java.lang.String">
+            <column name="Head" />
+        </property>
     </class>
 </hibernate-mapping>

@@ -9,6 +9,7 @@ import java.util.regex.Pattern;
 import com.zgld.api.beans.AspnetUsers;
 import com.zgld.api.beans.HishopUserShippingAddresses;
 import com.zgld.api.utils.EmailUtil;
+import com.zgld.api.utils.ImageBase64;
 
 public class UserAction extends BaseAction {
 	/**
@@ -146,8 +147,10 @@ public class UserAction extends BaseAction {
 		}
 		return JSON_PAGE;
 	}
+
 	/**
 	 * 修改用户邮箱
+	 * 
 	 * @return
 	 */
 	public String update_user_email() {
@@ -173,5 +176,32 @@ public class UserAction extends BaseAction {
 		}
 		return JSON_PAGE;
 	}
-	
+
+	public String update_user_head() {
+		Map<String, Object> json = new HashMap<String, Object>();
+		try {
+			AspnetUsers aspnetUsers = getUserInfo();
+			if (aspnetUsers == null) {
+				form.setJsonMsg(NO_USER, false, json, 201);
+			} else if (form.getUserinfo().getHead() == null) {
+				form.setJsonMsg("userinfo.head不能为空", false, json, 1001);
+			} else {
+				String url = ImageBase64.GenerateImage(aspnetUsers.getUserId(), "0.png", form.getUserinfo().getHead());
+				if (url != null && url.length() > 10) {
+					aspnetUsers.setHead(url);
+					baseBiz.update(aspnetUsers);
+					json.put(INFO, aspnetUsers);
+					form.setJsonMsg("修改成功", true, json, 200);
+				} else {
+					form.setJsonMsg("base64图片处理失败,请重试", false, json, 1001);
+				}
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			form.setJsonMsg("系统出错", false, json, 1001);
+		}
+		return JSON_PAGE;
+	}
+
 }
