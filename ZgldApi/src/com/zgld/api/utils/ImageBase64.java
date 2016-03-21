@@ -76,4 +76,7 @@ public class ImageBase64 {
         }  
         return saveFilePath;
     }  
+    public static void main(String[] args) {
+		System.out.println(GenerateImage(1117, "0.png", GetImageStr()));
+	}
 }

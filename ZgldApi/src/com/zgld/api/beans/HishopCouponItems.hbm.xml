@@ -10,9 +10,6 @@
             <column name="ClaimCode" />
             <generator class="identity" />
         </id>
-        <many-to-one name="hishopCoupons" class="com.zgld.api.beans.HishopCoupons" fetch="select">
-            <column name="CouponId" not-null="true" />
-        </many-to-one>
         <property name="lotNumber" type="java.lang.String">
             <column name="LotNumber" length="36" not-null="true" />
         </property>

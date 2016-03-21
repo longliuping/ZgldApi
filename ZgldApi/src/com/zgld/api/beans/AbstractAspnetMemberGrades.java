@@ -19,35 +19,12 @@ public abstract class AbstractAspnetMemberGrades implements
 	private Integer points;
 	private Boolean isDefault;
 	private Integer discount;
-	private Set hishopPromotionMemberGradeses = new HashSet(0);
-	private Set hishopSkumemberPrices = new HashSet(0);
+	
 
 	// Constructors
 
 	/** default constructor */
 	public AbstractAspnetMemberGrades() {
-	}
-
-	/** minimal constructor */
-	public AbstractAspnetMemberGrades(String name, Integer points,
-			Boolean isDefault, Integer discount) {
-		this.name = name;
-		this.points = points;
-		this.isDefault = isDefault;
-		this.discount = discount;
-	}
-
-	/** full constructor */
-	public AbstractAspnetMemberGrades(String name, String description,
-			Integer points, Boolean isDefault, Integer discount,
-			Set hishopPromotionMemberGradeses, Set hishopSkumemberPrices) {
-		this.name = name;
-		this.description = description;
-		this.points = points;
-		this.isDefault = isDefault;
-		this.discount = discount;
-		this.hishopPromotionMemberGradeses = hishopPromotionMemberGradeses;
-		this.hishopSkumemberPrices = hishopSkumemberPrices;
 	}
 
 	// Property accessors
@@ -99,22 +76,4 @@ public abstract class AbstractAspnetMemberGrades implements
 	public void setDiscount(Integer discount) {
 		this.discount = discount;
 	}
-
-	public Set getHishopPromotionMemberGradeses() {
-		return this.hishopPromotionMemberGradeses;
-	}
-
-	public void setHishopPromotionMemberGradeses(
-			Set hishopPromotionMemberGradeses) {
-		this.hishopPromotionMemberGradeses = hishopPromotionMemberGradeses;
-	}
-
-	public Set getHishopSkumemberPrices() {
-		return this.hishopSkumemberPrices;
-	}
-
-	public void setHishopSkumemberPrices(Set hishopSkumemberPrices) {
-		this.hishopSkumemberPrices = hishopSkumemberPrices;
-	}
-
 }

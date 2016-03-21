@@ -25,17 +25,5 @@
         <property name="discount" type="java.lang.Integer">
             <column name="Discount" not-null="true" />
         </property>
-        <set name="hishopPromotionMemberGradeses" inverse="true" lazy="false">
-            <key>
-                <column name="GradeId" not-null="true" />
-            </key>
-            <one-to-many class="com.zgld.api.beans.HishopPromotionMemberGrades" />
-        </set>
-        <set name="hishopSkumemberPrices" inverse="true" lazy="false">
-            <key>
-                <column name="GradeId" not-null="true" />
-            </key>
-            <one-to-many class="com.zgld.api.beans.HishopSkumemberPrice" />
-        </set>
     </class>
 </hibernate-mapping>

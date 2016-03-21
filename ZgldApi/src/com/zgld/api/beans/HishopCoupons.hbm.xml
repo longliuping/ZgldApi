@@ -34,11 +34,5 @@
         <property name="needPoint" type="java.lang.Integer">
             <column name="NeedPoint" not-null="true" />
         </property>
-        <set name="hishopCouponItemses" inverse="true">
-            <key>
-                <column name="CouponId" not-null="true" />
-            </key>
-            <one-to-many class="com.zgld.api.beans.HishopCouponItems" />
-        </set>
     </class>
 </hibernate-mapping>

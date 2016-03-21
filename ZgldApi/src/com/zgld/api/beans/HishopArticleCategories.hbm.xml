@@ -22,11 +22,5 @@
         <property name="description" type="java.lang.String">
             <column name="Description" />
         </property>
-        <set name="hishopArticleses" inverse="true"  lazy="false">
-            <key>
-                <column name="CategoryId" not-null="true" />
-            </key>
-            <one-to-many class="com.zgld.api.beans.HishopArticles" />
-        </set>
     </class>
 </hibernate-mapping>

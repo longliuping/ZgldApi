@@ -10,9 +10,6 @@
             <column name="JournalNumber" />
             <generator class="identity" />
         </id>
-        <many-to-one name="aspnetMembers" class="com.zgld.api.beans.AspnetMembers" fetch="select"  lazy="false">
-            <column name="UserId" not-null="true" />
-        </many-to-one>
         <property name="userName" type="java.lang.String">
             <column name="UserName" not-null="true" />
         </property>

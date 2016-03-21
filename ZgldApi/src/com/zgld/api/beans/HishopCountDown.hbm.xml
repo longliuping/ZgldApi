@@ -10,9 +10,6 @@
             <column name="CountDownId" />
             <generator class="identity" />
         </id>
-        <many-to-one name="hishopProducts" class="com.zgld.api.beans.HishopProducts" fetch="select">
-            <column name="ProductId" not-null="true" />
-        </many-to-one>
         <property name="startDate" type="java.sql.Timestamp">
             <column name="StartDate" length="23" not-null="true" />
         </property>

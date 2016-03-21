@@ -10,9 +10,6 @@
             <column name="ActivityId" />
             <generator class="identity" />
         </id>
-        <many-to-one name="hishopPromotions" class="com.zgld.api.beans.HishopPromotions" update="false" insert="false" fetch="select">
-            <column name="ActivityId" not-null="true" unique="true" />
-        </many-to-one>
         <property name="amount" type="java.lang.Double">
             <column name="Amount" scale="4" not-null="true" />
         </property>

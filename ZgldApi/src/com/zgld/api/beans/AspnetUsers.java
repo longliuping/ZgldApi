@@ -15,10 +15,18 @@ public class AspnetUsers extends AbstractAspnetUsers implements
 	public AspnetUsers() {
 	}
 	UserToken userToken;
+	AspnetMembers aspnetMembers;
 	public UserToken getUserToken() {
 		return userToken;
 	}
 	public void setUserToken(UserToken userToken) {
 		this.userToken = userToken;
 	}
+	public AspnetMembers getAspnetMembers() {
+		return aspnetMembers;
+	}
+	public void setAspnetMembers(AspnetMembers aspnetMembers) {
+		this.aspnetMembers = aspnetMembers;
+	}
+	
 }

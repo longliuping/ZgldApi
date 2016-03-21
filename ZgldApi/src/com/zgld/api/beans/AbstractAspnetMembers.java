@@ -34,80 +34,12 @@ public abstract class AbstractAspnetMembers implements java.io.Serializable {
 	private String qq;
 	private String wangwang;
 	private String msn;
-	private Set hishopUserShippingAddresseses = new HashSet(0);
-	private Set hishopFavorites = new HashSet(0);
-	private Set hishopInpourRequests = new HashSet(0);
-	private Set hishopBalanceDrawRequests = new HashSet(0);
-	private Set hishopBalanceDetailses = new HashSet(0);
-	private Set hishopPointDetailses = new HashSet(0);
-	private Set hishopShoppingCartses = new HashSet(0);
-	private Set hishopGiftShoppingCartses = new HashSet(0);
+
 
 	// Constructors
 
 	/** default constructor */
 	public AbstractAspnetMembers() {
-	}
-
-	/** minimal constructor */
-	public AbstractAspnetMembers(Integer gradeId, Boolean isOpenBalance,
-			String tradePassword, String tradePasswordSalt,
-			Integer tradePasswordFormat, Integer orderNumber,
-			Double expenditure, Integer points, Double balance,
-			Double requestBalance) {
-		this.gradeId = gradeId;
-		this.isOpenBalance = isOpenBalance;
-		this.tradePassword = tradePassword;
-		this.tradePasswordSalt = tradePasswordSalt;
-		this.tradePasswordFormat = tradePasswordFormat;
-		this.orderNumber = orderNumber;
-		this.expenditure = expenditure;
-		this.points = points;
-		this.balance = balance;
-		this.requestBalance = requestBalance;
-	}
-
-	/** full constructor */
-	public AbstractAspnetMembers(Integer gradeId, Integer referralUserId,
-			Boolean isOpenBalance, String tradePassword,
-			String tradePasswordSalt, Integer tradePasswordFormat,
-			Integer orderNumber, Double expenditure, Integer points,
-			Double balance, Double requestBalance, Integer topRegionId,
-			Integer regionId, String realName, String address, String zipcode,
-			String telPhone, String cellPhone, String qq, String wangwang,
-			String msn, Set hishopUserShippingAddresseses, Set hishopFavorites,
-			Set hishopInpourRequests, Set hishopBalanceDrawRequests,
-			Set hishopBalanceDetailses, Set hishopPointDetailses,
-			Set hishopShoppingCartses, Set hishopGiftShoppingCartses) {
-		this.gradeId = gradeId;
-		this.referralUserId = referralUserId;
-		this.isOpenBalance = isOpenBalance;
-		this.tradePassword = tradePassword;
-		this.tradePasswordSalt = tradePasswordSalt;
-		this.tradePasswordFormat = tradePasswordFormat;
-		this.orderNumber = orderNumber;
-		this.expenditure = expenditure;
-		this.points = points;
-		this.balance = balance;
-		this.requestBalance = requestBalance;
-		this.topRegionId = topRegionId;
-		this.regionId = regionId;
-		this.realName = realName;
-		this.address = address;
-		this.zipcode = zipcode;
-		this.telPhone = telPhone;
-		this.cellPhone = cellPhone;
-		this.qq = qq;
-		this.wangwang = wangwang;
-		this.msn = msn;
-		this.hishopUserShippingAddresseses = hishopUserShippingAddresseses;
-		this.hishopFavorites = hishopFavorites;
-		this.hishopInpourRequests = hishopInpourRequests;
-		this.hishopBalanceDrawRequests = hishopBalanceDrawRequests;
-		this.hishopBalanceDetailses = hishopBalanceDetailses;
-		this.hishopPointDetailses = hishopPointDetailses;
-		this.hishopShoppingCartses = hishopShoppingCartses;
-		this.hishopGiftShoppingCartses = hishopGiftShoppingCartses;
 	}
 
 	// Property accessors
@@ -287,70 +219,4 @@ public abstract class AbstractAspnetMembers implements java.io.Serializable {
 	public void setMsn(String msn) {
 		this.msn = msn;
 	}
-
-	public Set getHishopUserShippingAddresseses() {
-		return this.hishopUserShippingAddresseses;
-	}
-
-	public void setHishopUserShippingAddresseses(
-			Set hishopUserShippingAddresseses) {
-		this.hishopUserShippingAddresseses = hishopUserShippingAddresseses;
-	}
-
-	public Set getHishopFavorites() {
-		return this.hishopFavorites;
-	}
-
-	public void setHishopFavorites(Set hishopFavorites) {
-		this.hishopFavorites = hishopFavorites;
-	}
-
-	public Set getHishopInpourRequests() {
-		return this.hishopInpourRequests;
-	}
-
-	public void setHishopInpourRequests(Set hishopInpourRequests) {
-		this.hishopInpourRequests = hishopInpourRequests;
-	}
-
-	public Set getHishopBalanceDrawRequests() {
-		return this.hishopBalanceDrawRequests;
-	}
-
-	public void setHishopBalanceDrawRequests(Set hishopBalanceDrawRequests) {
-		this.hishopBalanceDrawRequests = hishopBalanceDrawRequests;
-	}
-
-	public Set getHishopBalanceDetailses() {
-		return this.hishopBalanceDetailses;
-	}
-
-	public void setHishopBalanceDetailses(Set hishopBalanceDetailses) {
-		this.hishopBalanceDetailses = hishopBalanceDetailses;
-	}
-
-	public Set getHishopPointDetailses() {
-		return this.hishopPointDetailses;
-	}
-
-	public void setHishopPointDetailses(Set hishopPointDetailses) {
-		this.hishopPointDetailses = hishopPointDetailses;
-	}
-
-	public Set getHishopShoppingCartses() {
-		return this.hishopShoppingCartses;
-	}
-
-	public void setHishopShoppingCartses(Set hishopShoppingCartses) {
-		this.hishopShoppingCartses = hishopShoppingCartses;
-	}
-
-	public Set getHishopGiftShoppingCartses() {
-		return this.hishopGiftShoppingCartses;
-	}
-
-	public void setHishopGiftShoppingCartses(Set hishopGiftShoppingCartses) {
-		this.hishopGiftShoppingCartses = hishopGiftShoppingCartses;
-	}
-
 }

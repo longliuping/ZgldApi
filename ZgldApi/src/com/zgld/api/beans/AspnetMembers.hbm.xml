@@ -73,53 +73,5 @@
         <property name="msn" type="java.lang.String">
             <column name="MSN" />
         </property>
-<!--        <set name="hishopUserShippingAddresseses" inverse="true" lazy="false">-->
-<!--            <key>-->
-<!--                <column name="UserId" not-null="true" />-->
-<!--            </key>-->
-<!--            <one-to-many class="com.zgld.api.beans.HishopUserShippingAddresses" />-->
-<!--        </set>-->
-<!--        <set name="hishopFavorites" inverse="true" lazy="false">-->
-<!--            <key>-->
-<!--                <column name="UserId" not-null="true" />-->
-<!--            </key>-->
-<!--            <one-to-many class="com.zgld.api.beans.HishopFavorite" />-->
-<!--        </set>-->
-<!--        <set name="hishopInpourRequests" inverse="true" lazy="false">-->
-<!--            <key>-->
-<!--                <column name="UserId" not-null="true" />-->
-<!--            </key>-->
-<!--            <one-to-many class="com.zgld.api.beans.HishopInpourRequest" />-->
-<!--        </set>-->
-<!--        <set name="hishopBalanceDrawRequests" inverse="true" lazy="false">-->
-<!--            <key>-->
-<!--                <column name="UserId" not-null="true" unique="true" />-->
-<!--            </key>-->
-<!--            <one-to-many class="com.zgld.api.beans.HishopBalanceDrawRequest" />-->
-<!--        </set>-->
-<!--        <set name="hishopBalanceDetailses" inverse="true" lazy="false">-->
-<!--            <key>-->
-<!--                <column name="UserId" not-null="true" />-->
-<!--            </key>-->
-<!--            <one-to-many class="com.zgld.api.beans.HishopBalanceDetails" />-->
-<!--        </set>-->
-<!--        <set name="hishopPointDetailses" inverse="true" lazy="false">-->
-<!--            <key>-->
-<!--                <column name="UserId" not-null="true" />-->
-<!--            </key>-->
-<!--            <one-to-many class="com.zgld.api.beans.HishopPointDetails" />-->
-<!--        </set>-->
-<!--        <set name="hishopShoppingCartses" inverse="true" lazy="false">-->
-<!--            <key>-->
-<!--                <column name="UserId" not-null="true" />-->
-<!--            </key>-->
-<!--            <one-to-many class="com.zgld.api.beans.HishopShoppingCarts" />-->
-<!--        </set>-->
-<!--        <set name="hishopGiftShoppingCartses" inverse="true" lazy="false">-->
-<!--            <key>-->
-<!--                <column name="UserId" not-null="true" />-->
-<!--            </key>-->
-<!--            <one-to-many class="com.zgld.api.beans.HishopGiftShoppingCarts" />-->
-<!--        </set>-->
     </class>
 </hibernate-mapping>

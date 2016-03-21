@@ -37,11 +37,5 @@
         <property name="theme" type="java.lang.String">
             <column name="Theme" />
         </property>
-        <set name="hishopProductTypeBrandses" inverse="true"  lazy="false">
-            <key>
-                <column name="BrandId" not-null="true" />
-            </key>
-            <one-to-many class="com.zgld.api.beans.HishopProductTypeBrands" />
-        </set>
     </class>
 </hibernate-mapping>

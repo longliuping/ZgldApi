@@ -10,9 +10,6 @@
             <column name="ValueId" />
             <generator class="identity" />
         </id>
-<!--        <many-to-one name="hishopAttributes" class="com.zgld.api.beans.HishopAttributes" fetch="select" lazy="false">-->
-<!--            <column name="AttributeId" not-null="true" />-->
-<!--        </many-to-one>-->
          <property name="attributeId" type="java.lang.Integer">
             <column name="AttributeId" not-null="true" />
         </property>

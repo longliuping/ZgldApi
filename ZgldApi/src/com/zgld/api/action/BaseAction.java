@@ -296,6 +296,7 @@ public class BaseAction extends ActionSupport implements ModelDriven<Object> {
 		members.setTradePasswordSalt(passwordformat);
 		members.setTradePassword(jypwd(form.getPassword(), passwordformat));
 		baseBiz.save(members);
+		user.setAspnetMembers(members);
 		user.setUserToken(setUserToken(userId));
 		return user;
 	}
@@ -351,10 +352,13 @@ public class BaseAction extends ActionSupport implements ModelDriven<Object> {
 		}
 		UserToken userToken = (UserToken) baseBiz.bean(" from UserToken as ut where ut.userId = " + userId + " order by ut.tokenId desc");
 		AspnetUsers users = (AspnetUsers) baseBiz.bean(" from AspnetUsers as u where u.userId = " + userId);
+		AspnetMembers members = (AspnetMembers)baseBiz.bean(" from AspnetMembers as u where u.userId = "+userId);
 		if (userToken != null && users != null) {
 			if (userToken.getAccountToken().equals(token)) {
 				users.setUserToken(userToken);
+				users.setAspnetMembers(members);
 				return users;
+				
 			} else {
 				return null;
 			}

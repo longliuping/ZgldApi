@@ -34,11 +34,5 @@
         <property name="displaySequence" type="java.lang.Integer">
             <column name="DisplaySequence" not-null="true" />
         </property>
-        <set name="hishopGroupBuyConditions" inverse="true">
-            <key>
-                <column name="GroupBuyId" not-null="true" />
-            </key>
-            <one-to-many class="com.zgld.api.beans.HishopGroupBuyCondition" />
-        </set>
     </class>
 </hibernate-mapping>

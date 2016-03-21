@@ -31,11 +31,5 @@
         <property name="isReply" type="java.lang.Boolean">
             <column name="IsReply" not-null="true" />
         </property>
-        <set name="hishopLeaveCommentReplyses" inverse="true">
-            <key>
-                <column name="LeaveId" not-null="true" />
-            </key>
-            <one-to-many class="com.zgld.api.beans.HishopLeaveCommentReplys" />
-        </set>
     </class>
 </hibernate-mapping>

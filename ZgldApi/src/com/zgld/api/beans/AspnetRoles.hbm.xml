@@ -19,11 +19,5 @@
         <property name="description" type="java.lang.String">
             <column name="Description" />
         </property>
-        <set name="aspnetUsersInRoleses" inverse="true"  lazy="false">
-            <key>
-                <column name="RoleId" length="36" not-null="true" />
-            </key>
-            <one-to-many class="com.zgld.api.beans.AspnetUsersInRoles" />
-        </set>
     </class>
 </hibernate-mapping>

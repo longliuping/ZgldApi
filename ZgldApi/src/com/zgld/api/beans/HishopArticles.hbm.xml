@@ -10,9 +10,6 @@
             <column name="ArticleId" />
             <generator class="identity" />
         </id>
-        <many-to-one name="hishopArticleCategories" class="com.zgld.api.beans.HishopArticleCategories" fetch="select"  lazy="false">
-            <column name="CategoryId" not-null="true" />
-        </many-to-one>
         <property name="title" type="java.lang.String">
             <column name="Title" not-null="true" />
         </property>

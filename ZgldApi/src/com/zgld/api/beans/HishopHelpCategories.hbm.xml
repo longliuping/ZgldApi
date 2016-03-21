@@ -28,11 +28,5 @@
         <property name="isShowFooter" type="java.lang.Boolean">
             <column name="IsShowFooter" not-null="true" />
         </property>
-        <set name="hishopHelpses" inverse="true">
-            <key>
-                <column name="CategoryId" not-null="true" />
-            </key>
-            <one-to-many class="com.zgld.api.beans.HishopHelps" />
-        </set>
     </class>
 </hibernate-mapping>

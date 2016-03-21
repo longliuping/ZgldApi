@@ -67,11 +67,5 @@
         <property name="hasChildren" type="java.lang.Boolean">
             <column name="HasChildren" not-null="true" />
         </property>
-        <set name="hishopHotkeywordses" inverse="true" lazy="false">
-            <key>
-                <column name="CategoryId" not-null="true" />
-            </key>
-            <one-to-many class="com.zgld.api.beans.HishopHotkeywords" />
-        </set>
     </class>
 </hibernate-mapping>

@@ -6,6 +6,7 @@ import java.util.Map;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
+import com.zgld.api.beans.AspnetMembers;
 import com.zgld.api.beans.AspnetUsers;
 import com.zgld.api.beans.HishopUserShippingAddresses;
 import com.zgld.api.utils.EmailUtil;
@@ -30,6 +31,8 @@ public class UserAction extends BaseAction {
 					if (user == null || !user.getPassword().equals(pwd(form.getPassword(), user.getPasswordSalt()))) {
 						form.setJsonMsg("用户名或者密码错误", false, json, 1001);
 					} else {
+						AspnetMembers members = (AspnetMembers)baseBiz.bean(" from AspnetMembers as u where u.userId = "+user.getUserId());						
+						user.setAspnetMembers(members);
 						user.setUserToken(setUserToken(user.getUserId()));
 						json.put(INFO, user);
 						form.setJsonMsg("登录成功", true, json, 200);
@@ -52,7 +55,7 @@ public class UserAction extends BaseAction {
 	 * 
 	 * @return
 	 */
-	public String usere_register() {
+	public String user_register() {
 
 		Map<String, Object> json = new HashMap<String, Object>();
 		try {
