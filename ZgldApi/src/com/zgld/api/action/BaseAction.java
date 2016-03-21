@@ -165,40 +165,7 @@ public class BaseAction extends ActionSupport implements ModelDriven<Object> {
 		return initToPage();
 	}
 
-	/**
-	 * 保存修改的密码
-	 * 
-	 * @return
-	 */
-	public String save_modify_password() {
-		try {
-			if (getCurrentUserInfo() == null) {
-				form.setJsonMsg("请登录", true, null, 201);
-			} else if (form.getOldPassword() == null) {
-				form.setJsonMsg("原密码不能为空", true, null, 201);
-			} else if (form.getPassword() == null) {
-				form.setJsonMsg("新密码不能为空", true, null, 201);
-			} else if (form.getOkPassword() == null) {
-				form.setJsonMsg("确认密码不能为空", true, null, 201);
-			} else if (!form.getPassword().equals(form.getOkPassword())) {
-				form.setJsonMsg("新密码和确认密码不一致", true, null, 201);
-			} else {
-				AspnetUsers users = baseBiz.findUserinfoByUserid(getCurrentUserInfo().getUserId());
-				if (!form.getOldPassword().equals(users.getPassword())) {
-					form.setJsonMsg("原密码错误", true, null, 201);
-				} else {
-					users.setPassword(form.getPassword());
-					baseBiz.update(users);
-					setCurrentUserInfo(null);
-					form.setJsonMsg("修改成功,请重新登录", true, null, 200);
-				}
-			}
-		} catch (Exception e) {
-			// TODO: handle exception
-			e.printStackTrace();
-		}
-		return JSON_PAGE;
-	}
+	
 
 	/**
 	 * 修改资料

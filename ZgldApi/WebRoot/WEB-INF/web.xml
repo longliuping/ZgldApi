@@ -3,26 +3,6 @@
   <listener>
     <listener-class>org.springframework.web.context.ContextLoaderListener</listener-class>
   </listener>
-  <servlet>
-    <description>This is the description of my J2EE component</description>
-    <display-name>This is the display name of my J2EE component</display-name>
-    <servlet-name>UserServlet</servlet-name>
-    <servlet-class>com.zgld.api.servlet.UserServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>UserServlet</servlet-name>
-    <url-pattern>/json/user/*</url-pattern>
-  </servlet-mapping>
-  <servlet>
-    <description>This is the description of my J2EE component</description>
-    <display-name>This is the display name of my J2EE component</display-name>
-    <servlet-name>JsonServlet</servlet-name>
-    <servlet-class>com.zgld.api.servlet.JsonServlet</servlet-class>
-  </servlet>
-  <servlet-mapping>
-    <servlet-name>JsonServlet</servlet-name>
-    <url-pattern>/json/*</url-pattern>
-  </servlet-mapping>
   <context-param>
     <param-name>contextConfigLocation</param-name>
     <param-value>classpath:applicationContext.xml</param-value>

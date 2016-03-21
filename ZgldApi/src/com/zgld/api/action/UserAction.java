@@ -1,14 +1,9 @@
 package com.zgld.api.action;
 
 import java.util.HashMap;
-import java.util.List;
 import java.util.Map;
-import java.util.regex.Matcher;
-import java.util.regex.Pattern;
-
 import com.zgld.api.beans.AspnetMembers;
 import com.zgld.api.beans.AspnetUsers;
-import com.zgld.api.beans.HishopUserShippingAddresses;
 import com.zgld.api.utils.EmailUtil;
 import com.zgld.api.utils.ImageBase64;
 
@@ -179,7 +174,10 @@ public class UserAction extends BaseAction {
 		}
 		return JSON_PAGE;
 	}
-
+	/**
+	 * 修改用户头像
+	 * @return
+	 */
 	public String update_user_head() {
 		Map<String, Object> json = new HashMap<String, Object>();
 		try {

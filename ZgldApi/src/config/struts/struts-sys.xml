@@ -8,5 +8,15 @@
 		</action>
 		<action name="user_*" class="com.zgld.api.action.UserAction" method="{1}">
 		</action>
+		<action name="car_*" class="com.zgld.api.action.CarAction" method="{1}">
+		</action>
+		<action name="order_*" class="com.zgld.api.action.OrderAction" method="{1}">
+		</action>
+		<action name="product_*" class="com.zgld.api.action.ProductAction" method="{1}">
+		</action>
+		<action name="supplier_*" class="com.zgld.api.action.SupplierAction" method="{1}">
+		</action>
+		<action name="addresses_*" class="com.zgld.api.action.AddressesAction" method="{1}">
+		</action>
 	</package>
 </struts>

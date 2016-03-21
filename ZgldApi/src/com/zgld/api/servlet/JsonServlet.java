@@ -4,10 +4,11 @@ import java.io.IOException;
 import java.io.PrintWriter;
 
 import javax.servlet.ServletException;
+import javax.servlet.annotation.WebServlet;
 import javax.servlet.http.HttpServlet;
 import javax.servlet.http.HttpServletRequest;
 import javax.servlet.http.HttpServletResponse;
-
+@WebServlet("/json/*")
 public class JsonServlet extends HttpServlet {
 
 	/**
@@ -54,6 +55,8 @@ public class JsonServlet extends HttpServlet {
 			throws ServletException, IOException {
 		String currentPath = request.getRequestURL().toString();
 		response.setContentType("text/html;charset=utf-8");
+		String u = request.getRequestDispatcher(currentPath).toString();
+		System.out.println(u);
 		request.setCharacterEncoding("UTF-8");
 		if (currentPath.length() >= 6) {
 			int index = currentPath.indexOf("/json") + 6;
