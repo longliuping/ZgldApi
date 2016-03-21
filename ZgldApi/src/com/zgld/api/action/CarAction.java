@@ -17,6 +17,10 @@ import com.zgld.api.beans.Supplier;
 
 public class CarAction extends BaseAction {
 	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
 	 * 加入产品到购物车
 	 * 
 	 * @return

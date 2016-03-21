@@ -9,6 +9,10 @@ import com.zgld.api.utils.ImageBase64;
 
 public class UserAction extends BaseAction {
 	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
 	 * 用户登录
 	 */
 	public String user_login() {

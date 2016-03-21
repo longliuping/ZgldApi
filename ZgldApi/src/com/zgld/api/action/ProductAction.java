@@ -15,6 +15,10 @@ import com.zgld.api.beans.Supplier;
 
 public class ProductAction extends BaseAction {
 	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
 	 * 根据分类id 查询产品列表
 	 * 
 	 * @return

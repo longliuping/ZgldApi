@@ -9,6 +9,11 @@ import com.zgld.api.beans.HishopUserShippingAddresses;
 
 public class AddressesAction extends BaseAction {
 	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	/**
 	 * 删除用户收货地址信息
 	 * 
 	 * @return

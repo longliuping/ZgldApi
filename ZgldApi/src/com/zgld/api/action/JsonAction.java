@@ -7,7 +7,10 @@ import java.util.Map;
 import com.zgld.api.beans.HomeBanner;
 
 public class JsonAction extends BaseAction {
-
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	/**
 	 * 首页的banner
 	 * 

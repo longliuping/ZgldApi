@@ -7,6 +7,10 @@ import com.zgld.api.beans.AspnetUsers;
 
 public class SupplierAction extends BaseAction {
 	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+	/**
 	 * 商家的产品
 	 * @return
 	 */
