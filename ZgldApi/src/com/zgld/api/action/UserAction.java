@@ -12,6 +12,7 @@ public class UserAction extends BaseAction {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+
 	/**
 	 * 用户登录
 	 */
@@ -30,7 +31,7 @@ public class UserAction extends BaseAction {
 					if (user == null || !user.getPassword().equals(pwd(form.getPassword(), user.getPasswordSalt()))) {
 						form.setJsonMsg("用户名或者密码错误", false, json, 1001);
 					} else {
-						AspnetMembers members = (AspnetMembers)baseBiz.bean(" from AspnetMembers as u where u.userId = "+user.getUserId());						
+						AspnetMembers members = (AspnetMembers) baseBiz.bean(" from AspnetMembers as u where u.userId = " + user.getUserId());
 						user.setAspnetMembers(members);
 						user.setUserToken(setUserToken(user.getUserId()));
 						json.put(INFO, user);
@@ -178,8 +179,10 @@ public class UserAction extends BaseAction {
 		}
 		return JSON_PAGE;
 	}
+
 	/**
 	 * 修改用户头像
+	 * 
 	 * @return
 	 */
 	public String update_user_head() {

@@ -81,6 +81,7 @@ public class AddressesAction extends BaseAction {
 		}
 		return JSON_PAGE;
 	}
+
 	/**
 	 * 用户 所有的收货地址
 	 * 

@@ -20,6 +20,7 @@ public class CarAction extends BaseAction {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+
 	/**
 	 * 加入产品到购物车
 	 * 
@@ -177,6 +178,7 @@ public class CarAction extends BaseAction {
 		}
 		return JSON_PAGE;
 	}
+
 	/**
 	 * 查询用户购物车的所有产品
 	 * 

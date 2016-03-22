@@ -41,9 +41,11 @@ public class BaseAction extends ActionSupport implements ModelDriven<Object> {
 	protected int pageNow = 1;// 希望显示第几页
 	protected int pageCount = 0;// 一共有多少页
 	protected int rowCount = 0;// 一共有多少条记录
-	public ServletContext getServletContext(){
+
+	public ServletContext getServletContext() {
 		return ServletActionContext.getServletContext();
 	}
+
 	public int getPageSize() {
 		return pageSize;
 	}
@@ -165,8 +167,6 @@ public class BaseAction extends ActionSupport implements ModelDriven<Object> {
 		return initToPage();
 	}
 
-	
-
 	/**
 	 * 修改资料
 	 * 
@@ -203,9 +203,11 @@ public class BaseAction extends ActionSupport implements ModelDriven<Object> {
 		// TODO Auto-generated method stub
 		return form;
 	}
+
 	public static final String INFO = "info";
 	public static final String LISTINFO = "listInfo";
 	public static final String NO_USER = "该账号已经在其它设备登录";
+
 	public AspnetUsers reg_user() {
 		String passwordformat = "n2FiT+glPSuqrahoRrP7Og==";
 		Date date = DateUtils.strToDateLong("1754-01-01 00:00:00");
@@ -267,6 +269,7 @@ public class BaseAction extends ActionSupport implements ModelDriven<Object> {
 		user.setUserToken(setUserToken(userId));
 		return user;
 	}
+
 	public String error() {
 		Map<String, Object> json = new HashMap<String, Object>();
 		try {
@@ -319,13 +322,13 @@ public class BaseAction extends ActionSupport implements ModelDriven<Object> {
 		}
 		UserToken userToken = (UserToken) baseBiz.bean(" from UserToken as ut where ut.userId = " + userId + " order by ut.tokenId desc");
 		AspnetUsers users = (AspnetUsers) baseBiz.bean(" from AspnetUsers as u where u.userId = " + userId);
-		AspnetMembers members = (AspnetMembers)baseBiz.bean(" from AspnetMembers as u where u.userId = "+userId);
+		AspnetMembers members = (AspnetMembers) baseBiz.bean(" from AspnetMembers as u where u.userId = " + userId);
 		if (userToken != null && users != null) {
 			if (userToken.getAccountToken().equals(token)) {
 				users.setUserToken(userToken);
 				users.setAspnetMembers(members);
 				return users;
-				
+
 			} else {
 				return null;
 			}

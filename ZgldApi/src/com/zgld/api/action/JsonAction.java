@@ -1,4 +1,5 @@
 package com.zgld.api.action;
+
 import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
@@ -11,6 +12,7 @@ public class JsonAction extends BaseAction {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+
 	/**
 	 * 首页的banner
 	 * 

@@ -22,6 +22,7 @@ public class OrderAction extends BaseAction {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+
 	/**
 	 * 提交订单
 	 * 

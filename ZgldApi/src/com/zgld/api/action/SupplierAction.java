@@ -13,14 +13,16 @@ public class SupplierAction extends BaseAction {
 	 * 
 	 */
 	private static final long serialVersionUID = 1L;
+
 	/**
 	 * 商家的产品
+	 * 
 	 * @return
 	 */
-	public String supplier_product(){
+	public String supplier_product() {
 		Map<String, Object> json = new HashMap<String, Object>();
 		try {
-			List<HishopProducts> listInfo = (List<HishopProducts>)baseBiz.findPage(form.getPageNum(), form.getPageSize(), " from HishopProducts as hp where hp.userid = "+form.getId());
+			List<HishopProducts> listInfo = (List<HishopProducts>) baseBiz.findPage(form.getPageNum(), form.getPageSize(), " from HishopProducts as hp where hp.userid = " + form.getId());
 			for (int j = 0; j < listInfo.size(); j++) {
 				HishopProducts hishopProducts2 = listInfo.get(j);
 				HishopSkus hishopSkus = (HishopSkus) baseBiz.bean(" from HishopSkus as hs where hs.productId =" + hishopProducts2.getProductId() + " order by hs.salePrice asc");
