@@ -67,8 +67,7 @@ public class ProductAction extends BaseAction {
 			if (form.getId() == null) {
 				form.setJsonMsg("产品id不能为空", false, json, 1001);
 			} else {
-				// int productId = form.getId();
-				int productId = 9;
+				 int productId = form.getId();
 				// 查询产品详细
 				HishopProducts hishopProducts = (HishopProducts) baseBiz
 						.bean(" from HishopProducts as p where p.productId = "
