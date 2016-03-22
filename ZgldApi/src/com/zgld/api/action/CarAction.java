@@ -222,8 +222,8 @@ public class CarAction extends BaseAction {
 						lsitHishopShoppingCarts.set(i, carts);
 					}
 				}
-				json.put("listInfo", lsitHishopShoppingCarts);
-				form.setJsonMsg("success", true, json, 200);
+				json.put(LISTINFO, lsitHishopShoppingCarts);
+				form.setJsonMsg(SUCCESS, true, json, 200);
 			}
 
 		} catch (Exception e) {

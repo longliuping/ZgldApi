@@ -32,7 +32,7 @@ public class JsonAction extends BaseAction {
 			banner.setImgUrl("http://www.jym1798.com:99/templates/master/fangjingdong/fckfiles/Files/Image/5.jpg");
 			listBanner.add(banner);
 			json.put("items", listBanner);
-			form.setJsonMsg("success", true, json, 200);
+			form.setJsonMsg(SUCCESS, true, json, 200);
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();

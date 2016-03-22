@@ -143,7 +143,7 @@ public class OrderAction extends BaseAction {
 				hishopOrders.get(i).setListHishopOrderItems(items);
 			}
 			json.put("listInfo", hishopOrders);
-			form.setJsonMsg("success", true, json, 200);
+			form.setJsonMsg(SUCCESS, true, json, 200);
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();
@@ -171,7 +171,7 @@ public class OrderAction extends BaseAction {
 					List<HishopOrderItems> items = (List<HishopOrderItems>) baseBiz.findPage(form.getPageNum(), form.getPageSize(), " from HishopOrderItems as oi where oi.orderId = " + orders.getOrderId());
 					orders.setListHishopOrderItems(items);
 					json.put("info", orders);
-					form.setJsonMsg("success", true, json, 200);
+					form.setJsonMsg(SUCCESS, true, json, 200);
 				}
 			}
 		} catch (Exception e) {

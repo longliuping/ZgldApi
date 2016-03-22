@@ -38,8 +38,8 @@ public class ProductAction extends BaseAction {
 					System.out.println(hishopProducts2.getProductName());
 					System.out.println(hishopProducts2.getHishopSkus().getSalePrice());
 				}
-				json.put("listInfo", hishopProducts);
-				form.setJsonMsg("success", true, json, 200);
+				json.put(LISTINFO, hishopProducts);
+				form.setJsonMsg(SUCCESS, true, json, 200);
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -101,8 +101,8 @@ public class ProductAction extends BaseAction {
 					System.out.println(hishopProducts.getListHishopAttributeValues().get(i).getValueStr());
 				}
 				info.setHishopProducts(hishopProducts);
-				json.put("info", info);
-				form.setJsonMsg("success", true, json, 200);
+				json.put(INFO, info);
+				form.setJsonMsg(SUCCESS, true, json, 200);
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -135,8 +135,8 @@ public class ProductAction extends BaseAction {
 				info.setHishopProducts(hishopProducts);
 				listTypes.set(i, info);
 			}
-			json.put("listInfo", listTypes);
-			form.setJsonMsg("success", true, json, 200);
+			json.put(LISTINFO, listTypes);
+			form.setJsonMsg(SUCCESS, true, json, 200);
 		} catch (Exception e) {
 			// TODO: handle exception
 			e.printStackTrace();

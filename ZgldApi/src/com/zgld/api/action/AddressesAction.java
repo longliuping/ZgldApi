@@ -98,8 +98,8 @@ public class AddressesAction extends BaseAction {
 				for (HishopUserShippingAddresses hishopUserShippingAddresses2 : hishopUserShippingAddresses) {
 					System.out.println(hishopUserShippingAddresses2.getAddress());
 				}
-				json.put("listInfo", hishopUserShippingAddresses);
-				form.setJsonMsg("success", true, json, 200);
+				json.put(LISTINFO, hishopUserShippingAddresses);
+				form.setJsonMsg(SUCCESS, true, json, 200);
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
