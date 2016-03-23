@@ -89,7 +89,27 @@ public class UserAction extends BaseAction {
 		}
 		return JSON_PAGE;
 	}
-
+	/**
+	 * 获取用户信息
+	 * @return
+	 */
+	public String userinfo(){
+		Map<String, Object> json = new HashMap<String, Object>();
+		try {
+			AspnetUsers aspnetUsers = getUserInfo();
+			if (aspnetUsers == null) {
+				form.setJsonMsg(NO_USER, false, json, 201);
+			}else{
+				json.put(INFO, aspnetUsers);
+				form.setJsonMsg(SUCCESS, true, json, 200);
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			form.setJsonMsg("系统出错", false, json, 1001);
+		}
+		return JSON_PAGE;
+	}
 	/**
 	 * 修改用户密码
 	 * 

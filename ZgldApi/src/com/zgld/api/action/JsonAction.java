@@ -50,7 +50,6 @@ public class JsonAction extends BaseAction {
 	public String home_hot_category(){
 		Map<String, Object> json = new HashMap<String, Object>();
 		try {
-			
 			List<HotCategory> listInfo = (List<HotCategory>)baseBiz.findAll(" from HotCategory as h order by h.hotid asc ");
 			json.put(LISTINFO, listInfo);
 			form.setJsonMsg(SUCCESS, true, json, 200);
