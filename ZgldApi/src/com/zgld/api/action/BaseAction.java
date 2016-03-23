@@ -347,7 +347,7 @@ public class BaseAction extends ActionSupport implements ModelDriven<Object> {
 		try {
 			UserToken userToken = new UserToken();
 			userToken.setTokenDateTime(new Date());
-			userToken.setAccountToken(PasswordUtils.EncoderByMd5(new Date().getTime() + ""));
+			userToken.setAccountToken(PasswordUtils.EncoderByMd5());
 			userToken.setTokenType(1);
 			userToken.setUserId(userId);
 			userToken.setTokenRemark("");
