@@ -2,6 +2,7 @@ package com.zgld.api.utils;
 
 import java.io.InputStream;
 import java.util.List;
+
 import javax.xml.parsers.SAXParser;
 import javax.xml.parsers.SAXParserFactory;
 
@@ -14,20 +15,21 @@ import com.zgld.api.beans.Region;
  * 
  */
 public class AddressXmlUtils {
-	public static List<Region> readXML(InputStream inStream) {
+	public static List<Region> readXML() {
 		try {
+			InputStream inputStream = AddressXmlUtils.class.getClassLoader().getResourceAsStream("address.xml");
 			SAXParserFactory spf = SAXParserFactory.newInstance();// 创建解析器
 			SAXParser saxParser = spf.newSAXParser();
 			// 设置解析器的相关特性，true表示开启命名空间特性
 			// saxParser.setProperty("http://xml.org/sax/features/namespaces",
 			// true);
 			XMLContentHandler handler = new XMLContentHandler();
-			saxParser.parse(inStream, handler);
+			saxParser.parse(inputStream, handler);
 			handler.getCountys();
 			handler.getCitys();
 			handler.getProvinces();
 			handler.getRegions();
-			inStream.close();
+			inputStream.close();
 			// List<Region> listRegions = handler.getRegions();
 			// for (Region region : listRegions) {
 			// System.out.println("地区:ID=" + region.getId() + ",name=" +
@@ -50,6 +52,6 @@ public class AddressXmlUtils {
 		return null;
 	}
 	public static void main(String[] args) {
-//		readXML();
+		readXML();
 	}
 }

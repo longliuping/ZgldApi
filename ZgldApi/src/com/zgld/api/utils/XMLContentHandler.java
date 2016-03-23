@@ -58,27 +58,27 @@ public class XMLContentHandler extends DefaultHandler{
 	public void startElement(String namespaceURI, String localName,
 			String qName, Attributes atts) throws SAXException {
 
-		if (localName.equals("region")) {
+		if (qName.equals("region")) {
 			currentRegion = new Region();
 			currentRegion.setId(Integer.parseInt(atts.getValue(0)));
 			currentRegion.setName(atts.getValue(1));
 		}
-		if (localName.equals("province")) {
+		if (qName.equals("province")) {
 			currentProvince = new Province();
 			currentProvince.setId(Integer.parseInt(atts.getValue(0)));
 			currentProvince.setName(atts.getValue(1));
 		}
-		if (localName.equals("city")) {
+		if (qName.equals("city")) {
 			currentCity = new City();
 			currentCity.setId(Integer.parseInt(atts.getValue(0)));
 			currentCity.setName(atts.getValue(1));
 		}
-		if (localName.equals("county")) {
+		if (qName.equals("county")) {
 			currentCounty = new County();
 			currentCounty.setId(Integer.parseInt(atts.getValue(0)));
 			currentCounty.setName(atts.getValue(1));
 		}
-		this.tagName = localName;
+		this.tagName = qName;
 	}
 
 	// 接收字符数据的通知。该方法用来处理在XML文件中读到的内容，第一个参数用于存放文件的内容，
@@ -103,25 +103,25 @@ public class XMLContentHandler extends DefaultHandler{
 	public void endElement(String uri, String localName, String name)
 			throws SAXException {
 
-		if (localName.equals("region")) {
+		if (name.equals("region")) {
 			currentRegion.setProvinces(getProvinces());
 			regions.add(currentRegion);
 			provinces = new ArrayList<Province>();// 这里
 			currentRegion = null;
 		}
-		if (localName.equals("province")) {
+		if (name.equals("province")) {
 			currentProvince.setCitys(getCitys());
 			citys = new ArrayList<City>();
 			provinces.add(currentProvince);
 			currentProvince = null;
 		}
-		if (localName.equals("city")) {
+		if (name.equals("city")) {
 			currentCity.setCountys(getCountys());
 			countys = new ArrayList<County>();
 			citys.add(currentCity);
 			currentCity = null;
 		}
-		if (localName.equals("county")) {
+		if (name.equals("county")) {
 			countys.add(currentCounty);
 			currentCounty = null;
 		}

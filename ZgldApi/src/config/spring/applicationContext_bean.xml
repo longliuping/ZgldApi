@@ -165,6 +165,7 @@
 					com/zgld/api/beans/HishopCellphoneQueue.hbm.xml</value>
 				<value>com/zgld/api/beans/HishopOrderLookupLists.hbm.xml</value>
 				<value>com/zgld/api/beans/UserToken.hbm.xml</value>
+				<value>com/zgld/api/beans/HotCategory.hbm.xml</value>
 			</list>
 		</property>
 	</bean>

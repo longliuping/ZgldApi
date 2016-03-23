@@ -160,6 +160,7 @@
 			resource="com/zgld/api/beans/HishopOrderLookupLists.hbm.xml" />
 		<mapping resource="com/zgld/api/beans/UserToken.hbm.xml" />
 		<mapping resource="com/zgld/api/beans/SupperArea.hbm.xml" />
+		<mapping resource="com/zgld/api/beans/HotCategory.hbm.xml" />
 	</session-factory>
 
 </hibernate-configuration>
