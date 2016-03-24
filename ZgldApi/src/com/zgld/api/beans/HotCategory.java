@@ -10,15 +10,4 @@ public class HotCategory extends AbstractHotCategory implements java.io.Serializ
 	/** default constructor */
 	public HotCategory() {
 	}
-
-	/** minimal constructor */
-	public HotCategory(Integer hotid) {
-		super(hotid);
-	}
-
-	/** full constructor */
-	public HotCategory(Integer hotid, String hotname) {
-		super(hotid, hotname);
-	}
-
 }

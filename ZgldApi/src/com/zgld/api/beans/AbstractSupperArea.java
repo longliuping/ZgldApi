@@ -8,28 +8,20 @@ package com.zgld.api.beans;
 public abstract class AbstractSupperArea implements java.io.Serializable {
 
 	// Fields
-
-	private SupperAreaId id;
-
-	// Constructors
-
-	/** default constructor */
-	public AbstractSupperArea() {
+	private Integer userid;
+	private Integer areaid;
+	public Integer getUserid() {
+		return userid;
 	}
-
-	/** full constructor */
-	public AbstractSupperArea(SupperAreaId id) {
-		this.id = id;
+	public void setUserid(Integer userid) {
+		this.userid = userid;
 	}
-
-	// Property accessors
-
-	public SupperAreaId getId() {
-		return this.id;
+	public Integer getAreaid() {
+		return areaid;
 	}
-
-	public void setId(SupperAreaId id) {
-		this.id = id;
+	public void setAreaid(Integer areaid) {
+		this.areaid = areaid;
 	}
+	
 
 }

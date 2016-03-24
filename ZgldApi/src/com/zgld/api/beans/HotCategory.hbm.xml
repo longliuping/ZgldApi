@@ -13,5 +13,8 @@
         <property name="hotname" type="java.lang.String">
             <column name="hotname" />
         </property>
+        <property name="hotimg" type="java.lang.String">
+            <column name="hotimg" />
+        </property>
     </class>
 </hibernate-mapping>

@@ -1,14 +1,14 @@
 package com.zgld.api.beans;
 
 /**
- * SupperArea entity. @author MyEclipse Persistence Tools
+ * SupperHot entity. @author MyEclipse Persistence Tools
  */
-public class SupperArea extends AbstractSupperArea implements java.io.Serializable {
+public class SupperHot extends AbstractSupperHot implements java.io.Serializable {
 
 	// Constructors
 
 	/** default constructor */
-	public SupperArea() {
+	public SupperHot() {
 	}
 	Supplier supplier;
 	public Supplier getSupplier() {

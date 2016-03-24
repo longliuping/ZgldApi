@@ -65,6 +65,8 @@ public class BaseForm {
 	private Integer code;
 	private Integer orderid;
 	private Integer productId;
+	private Integer hotid;
+	private Integer areaid;
 	private Integer number;
 	private String skuId;
 	private String skuNumber;
@@ -91,6 +93,22 @@ public class BaseForm {
 	private AspnetUsers userinfo;
 	private HishopUserShippingAddresses address;
 	
+	public Integer getHotid() {
+		return hotid;
+	}
+
+	public void setHotid(Integer hotid) {
+		this.hotid = hotid;
+	}
+
+	public Integer getAreaid() {
+		return areaid;
+	}
+
+	public void setAreaid(Integer areaid) {
+		this.areaid = areaid;
+	}
+
 	public String getSkuNumber() {
 		return skuNumber;
 	}
