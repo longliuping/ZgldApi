@@ -6,12 +6,12 @@
 -->
 <hibernate-mapping>
     <class name="com.zgld.api.beans.SupperArea" table="Supper_Area" schema="dbo" catalog="Concept_Leader">
-        <id name="areaid" type="java.lang.Integer">
-            <column name="areaid" />
+        <id name="userid" type="java.lang.Integer">
+            <column name="userid" />
             <generator class="identity" />
         </id>
-        <property name="userid" type="java.lang.Integer">
-            <column name="userid" />
+        <property name="areaid" type="java.lang.Integer">
+            <column name="areaid" />
         </property>
     </class>
 </hibernate-mapping>

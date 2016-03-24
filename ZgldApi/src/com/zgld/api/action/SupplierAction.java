@@ -2,6 +2,7 @@ package com.zgld.api.action;
 
 import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.Iterator;
 import java.util.List;
 import java.util.Map;
 
@@ -66,20 +67,19 @@ public class SupplierAction extends BaseAction {
 		}
 		return JSON_PAGE;
 	}
-
-	public String area_supplier() {
+	/**
+	 * 根据地址和热门标签查询商家
+	 * @return
+	 */
+	public String hot_area_supplier() {
 		Map<String, Object> json = new HashMap<String, Object>();
 		try {
-			List<SupperArea> listAreas = (List<SupperArea>) baseBiz.findPage(form.getPageNum(), form.getPageSize(), " from SupperArea as sa where sa.areaid = " + form.getAreaid());
-			if (listAreas != null) {
-				for (int i = 0; i < listAreas.size(); i++) {
-					SupperArea supperArea = listAreas.get(i);
-					Supplier supplier = (Supplier) baseBiz.bean(" from Supplier as s where s.userId = " + supperArea.getUserid());
-					supperArea.setSupplier(supplier);
-					listAreas.set(i, supperArea);
-				}
+			List<Supplier> listInfo = new ArrayList<Supplier>();
+			List<?> obj = baseBiz.findPage(form.getPageNum(), form.getPageSize(), " from Supplier as s,SupperArea as sa,SupperHot as sh where s.userId = sa.userid and  sa.userid = sh.userid and sa.areaid = " + form.getAreaid()+" and sh.hotid = "+form.getHotid());
+			for (Object object : obj) {
+				listInfo.add((Supplier)((Object[])object)[0]);
 			}
-			json.put(LISTINFO, listAreas);
+			json.put(LISTINFO, listInfo);
 			form.setJsonMsg(SUCCESS, true, json, 200);
 		} catch (Exception e) {
 			// TODO: handle exception
