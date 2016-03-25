@@ -196,10 +196,14 @@ public class OrderAction extends BaseAction {
 			if (aspnetUsers == null) {
 				form.setJsonMsg(NO_USER, false, json, 201);
 			} else {
-				
-				List<HishopOrders> hishopOrders = (List<HishopOrders>) baseBiz.findPage(form.getPageNum(), form.getPageSize(), " from HishopOrders as order where order.userId = " + aspnetUsers.getUserId());
+				StringBuffer sb = new StringBuffer(" from HishopOrders as ho where ho.userId = "+aspnetUsers.getUserId());
+				if(form.getId()!=null && form.getId()>0){
+					sb.append(" and ho.orderStatus = "+form.getId());
+				}
+				sb.append(" order by ho.orderDate desc ");
+				List<HishopOrders> hishopOrders = (List<HishopOrders>) baseBiz.findPage(form.getPageNum(), form.getPageSize(), sb.toString());
 				for (int i = 0; i < hishopOrders.size(); i++) {
-					List<HishopOrderItems> items = (List<HishopOrderItems>) baseBiz.findAll(" from HishopOrderItems as oi where oi.orderId = " + hishopOrders.get(i).getOrderId());
+					List<HishopOrderItems> items = (List<HishopOrderItems>) baseBiz.findAll(" from HishopOrderItems as oi where oi.orderId = '" + hishopOrders.get(i).getOrderId()+"'");
 					hishopOrders.get(i).setListHishopOrderItems(items);
 				}
 				json.put("listInfo", hishopOrders);
