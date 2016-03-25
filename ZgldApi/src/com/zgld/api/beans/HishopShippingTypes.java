@@ -11,17 +11,4 @@ public class HishopShippingTypes extends AbstractHishopShippingTypes implements
 	/** default constructor */
 	public HishopShippingTypes() {
 	}
-
-	/** minimal constructor */
-	public HishopShippingTypes(HishopShippingTemplates hishopShippingTemplates,
-			String name, Integer displaySequence) {
-		super(hishopShippingTemplates, name, displaySequence);
-	}
-
-	/** full constructor */
-	public HishopShippingTypes(HishopShippingTemplates hishopShippingTemplates,
-			String name, String description, Integer displaySequence) {
-		super(hishopShippingTemplates, name, description, displaySequence);
-	}
-
 }

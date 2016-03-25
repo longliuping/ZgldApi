@@ -61,16 +61,18 @@ public class BaseForm {
 	private Integer pageSize = 50;
 	private Integer newPageSize = 0;
 	private Integer id;
-	private Integer userId;
+	private Integer userId;//用戶id
 	private Integer code;
-	private Integer orderid;
-	private Integer productId;
-	private Integer hotid;
-	private Integer areaid;
+	private Integer orderid;//订单ID
+	private Integer productId;//产品ID
+	private Integer hotid;//热门标签ID
+	private Integer areaid;//地址ID
 	private Integer number;
-	private String skuId;
-	private String skuNumber;
-	private Integer shippingId;
+	private String skuId;//产品skuId
+	private String skuNumber;//产品数量
+	private Integer shippingId;//用户地址ID
+	private Integer modeId;//快递公司模板
+	private Integer templateId;//快递模板
 	private Double money;
 	private String content;
 	private Integer display;
@@ -400,6 +402,22 @@ public class BaseForm {
 
 	public void setShippingId(Integer shippingId) {
 		this.shippingId = shippingId;
+	}
+
+	public Integer getModeId() {
+		return modeId;
+	}
+
+	public void setModeId(Integer modeId) {
+		this.modeId = modeId;
+	}
+
+	public Integer getTemplateId() {
+		return templateId;
+	}
+
+	public void setTemplateId(Integer templateId) {
+		this.templateId = templateId;
 	}
 	
 }

@@ -10,11 +10,11 @@
             <column name="ModeId" />
             <generator class="identity" />
         </id>
-        <many-to-one name="hishopShippingTemplates" class="com.zgld.api.beans.HishopShippingTemplates" fetch="select"  lazy="false">
-            <column name="TemplateId" not-null="true" />
-        </many-to-one>
         <property name="name" type="java.lang.String">
             <column name="Name" not-null="true" />
+        </property>
+        <property name="templateId" type="java.lang.Integer">
+            <column name="TemplateId" not-null="true" />
         </property>
         <property name="description" type="java.lang.String">
             <column name="Description" />
