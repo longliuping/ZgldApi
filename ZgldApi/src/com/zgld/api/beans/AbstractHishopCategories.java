@@ -32,52 +32,11 @@ public abstract class AbstractHishopCategories implements java.io.Serializable {
 	private String notes5;
 	private String theme;
 	private Boolean hasChildren;
-	private Set hishopHotkeywordses = new HashSet(0);
 
 	// Constructors
 
 	/** default constructor */
 	public AbstractHishopCategories() {
-	}
-
-	/** minimal constructor */
-	public AbstractHishopCategories(String name, Integer displaySequence,
-			Integer depth, String path, Boolean hasChildren) {
-		this.name = name;
-		this.displaySequence = displaySequence;
-		this.depth = depth;
-		this.path = path;
-		this.hasChildren = hasChildren;
-	}
-
-	/** full constructor */
-	public AbstractHishopCategories(String name, Integer displaySequence,
-			String metaTitle, String metaDescription, String metaKeywords,
-			String description, Integer parentCategoryId, Integer depth,
-			String path, String rewriteName, String skuprefix,
-			Integer associatedProductType, String notes1, String notes2,
-			String notes3, String notes4, String notes5, String theme,
-			Boolean hasChildren, Set hishopHotkeywordses) {
-		this.name = name;
-		this.displaySequence = displaySequence;
-		this.metaTitle = metaTitle;
-		this.metaDescription = metaDescription;
-		this.metaKeywords = metaKeywords;
-		this.description = description;
-		this.parentCategoryId = parentCategoryId;
-		this.depth = depth;
-		this.path = path;
-		this.rewriteName = rewriteName;
-		this.skuprefix = skuprefix;
-		this.associatedProductType = associatedProductType;
-		this.notes1 = notes1;
-		this.notes2 = notes2;
-		this.notes3 = notes3;
-		this.notes4 = notes4;
-		this.notes5 = notes5;
-		this.theme = theme;
-		this.hasChildren = hasChildren;
-		this.hishopHotkeywordses = hishopHotkeywordses;
 	}
 
 	// Property accessors
@@ -240,14 +199,6 @@ public abstract class AbstractHishopCategories implements java.io.Serializable {
 
 	public void setHasChildren(Boolean hasChildren) {
 		this.hasChildren = hasChildren;
-	}
-
-	public Set getHishopHotkeywordses() {
-		return this.hishopHotkeywordses;
-	}
-
-	public void setHishopHotkeywordses(Set hishopHotkeywordses) {
-		this.hishopHotkeywordses = hishopHotkeywordses;
 	}
 
 }

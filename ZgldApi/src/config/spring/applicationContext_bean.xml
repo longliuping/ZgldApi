@@ -168,6 +168,7 @@
 				<value>com/zgld/api/beans/HotCategory.hbm.xml</value>
 				<value>com/zgld/api/beans/SupperArea.hbm.xml</value>
 				<value>com/zgld/api/beans/SupperHot.hbm.xml</value>
+				<value>com/zgld/api/beans/VwHishopBrowseProductList.hbm.xml</value>
 			</list>
 		</property>
 	</bean>

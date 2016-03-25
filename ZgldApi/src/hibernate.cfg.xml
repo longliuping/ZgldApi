@@ -162,6 +162,8 @@
 		<mapping resource="com/zgld/api/beans/SupperArea.hbm.xml" />
 		<mapping resource="com/zgld/api/beans/HotCategory.hbm.xml" />
 		<mapping resource="com/zgld/api/beans/SupperHot.hbm.xml" />
+		<mapping
+			resource="com/zgld/api/beans/VwHishopBrowseProductList.hbm.xml" />
 	</session-factory>
 
 </hibernate-configuration>

@@ -6,9 +6,12 @@
 -->
 <hibernate-mapping>
     <class name="com.zgld.api.beans.HishopOrderItems" table="Hishop_OrderItems" schema="dbo" catalog="Concept_Leader">
-     	<id name="skuId" type="java.lang.String">
-            <column name="SkuId" />
+     	<id name="addTime" type="java.util.Date">
+            <column name="AddTime"/>
         </id>
+     	<property name="skuId" type="java.lang.String">
+            <column name="SkuId" />
+        </property>
 		<property name="orderId" type="java.lang.String">
                <column name="OrderId" />
          </property>

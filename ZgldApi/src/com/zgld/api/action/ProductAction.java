@@ -7,6 +7,7 @@ import java.util.Map;
 
 import com.zgld.api.beans.HishopAttributeValues;
 import com.zgld.api.beans.HishopAttributes;
+import com.zgld.api.beans.HishopCategories;
 import com.zgld.api.beans.HishopProductTypes;
 import com.zgld.api.beans.HishopProducts;
 import com.zgld.api.beans.HishopSkuitems;
@@ -128,16 +129,28 @@ public class ProductAction extends BaseAction {
 	public String home_all_product() {
 		Map<String, Object> json = new HashMap<String, Object>();
 		try {
-			List<HishopProductTypes> listTypes = (List<HishopProductTypes>) baseBiz.findAll(" from HishopProductTypes");
+			List<HishopCategories> listTypes = (List<HishopCategories>) baseBiz.findAll(" from HishopCategories as hc where hc.depth = 1");
 			for (int i = 0; i < listTypes.size(); i++) {
-				HishopProductTypes info = listTypes.get(i);
-				List<HishopProducts> hishopProducts = (List<HishopProducts>) baseBiz.findPage(1, 3, " from HishopProducts as p where p.typeId = " + info.getTypeId() + " order by p.addedDate asc ");
+				HishopCategories info = listTypes.get(i);
+//				List<?> list =  baseBiz.findPage(1, 3, " from HishopProducts as p,HishopSkus as hs where hs.productId = p.productId and p.typeId = " + info.getCategoryId() + " order by p.addedDate asc ");
+//				List<HishopProducts> listPro = new ArrayList<HishopProducts>();
+//				for (Object object : list) {
+//					HishopProducts infoPro = ((HishopProducts)((Object[])object)[0]);
+//					infoPro.setHishopSkus((HishopSkus)((Object[])object)[1]);
+//					listPro.add(infoPro);
+//					HishopProducts hishopProducts2 = 
+//					listInfo.add((Supplier)((Object[])object)[0]);
+//				}
+				List<?> list = baseBiz.findPage(1, 3, " from HishopProducts as hp,HishopCategories as hc where hp.typeId = hc.associatedProductType and hc.categoryId =" + info.getCategoryId() + " order by hp.addedDate asc ");
+				List<HishopProducts> hishopProducts = new ArrayList<HishopProducts>();
+				for (Object object : list) {
+					hishopProducts.add((HishopProducts)((Object[])object)[0]);
+				}
+//				List<HishopProducts> hishopProducts = (List<HishopProducts>) baseBiz.findPage(1, 3, " from HishopProducts as p where p.categoryId =" + info.getCategoryId() + " order by p.addedDate asc ");
 				for (int j = 0; j < hishopProducts.size(); j++) {
 					HishopProducts hishopProducts2 = hishopProducts.get(j);
 					HishopSkus hishopSkus = (HishopSkus) baseBiz.bean(" from HishopSkus as hs where hs.productId =" + hishopProducts2.getProductId() + " order by hs.salePrice asc");
 					hishopProducts2.setHishopSkus(hishopSkus);
-					System.out.println(hishopProducts2.getProductName());
-					System.out.println(hishopProducts2.getHishopSkus().getSalePrice());
 					hishopProducts.set(j, hishopProducts2);
 				}
 				info.setHishopProducts(hishopProducts);

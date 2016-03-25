@@ -1,5 +1,7 @@
 package com.zgld.api.beans;
 
+import java.util.Date;
+
 /**
  * AbstractHishopOrderItems entity provides the base persistence definition of
  * the HishopOrderItems entity. @author MyEclipse Persistence Tools
@@ -26,11 +28,19 @@ public abstract class AbstractHishopOrderItems implements java.io.Serializable {
 	private Integer wholesaleDiscountId;
 	private String wholesaleDiscountName;
 	private String skucontent;
-
+	private Date addTime;
 	// Constructors
 
 	/** default constructor */
 	public AbstractHishopOrderItems() {
+	}
+
+	public Date getAddTime() {
+		return addTime;
+	}
+
+	public void setAddTime(Date addTime) {
+		this.addTime = addTime;
 	}
 
 	public String getOrderId() {

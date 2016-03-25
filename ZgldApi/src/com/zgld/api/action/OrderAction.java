@@ -38,9 +38,13 @@ public class OrderAction extends BaseAction {
 				form.setJsonMsg("skuId不能为空", false, json, 1001);
 			} else if (form.getSkuNumber() == null) {
 				form.setJsonMsg("skuNumber不能为空", false, json, 1001);
-			} else {
+			} else if(form.getShippingId()==null){
+				form.setJsonMsg("shippingId不能为空", false, json, 1001);
+			}else{
 				String skuId[] = form.getSkuId().split(",");
 				String skuNumber[] = form.getSkuNumber().split(",");
+//				String skuId[] = new String[]{"8_9_36","9_0"};
+//				String skuNumber[] = new String[]{"1","6"};
 				String message = "";
 				String skuIdStr = "";
 				for (int i = 0; i < skuId.length; i++) {
@@ -60,10 +64,9 @@ public class OrderAction extends BaseAction {
 					form.setJsonMsg("购买的产品不存在", false, json, 1001);
 				} else {
 					int userId = aspnetUsers.getUserId();
-					String orderId = DateUtils.order_no();// 订单号
 					AspnetUsers users = (AspnetUsers) baseBiz.bean(" from AspnetUsers as au where au.userId = " + userId);
 					// 地址信息
-					HishopUserShippingAddresses address = (HishopUserShippingAddresses) baseBiz.bean(" from HishopUserShippingAddresses as usa where usa.userId = " + userId);
+					HishopUserShippingAddresses address = (HishopUserShippingAddresses) baseBiz.bean(" from HishopUserShippingAddresses as usa where usa.shippingId = "+form.getShippingId()+" and usa.userId = " + userId);
 					if (address == null) {
 						form.setJsonMsg("请填写收货地址", false, json, 1001);
 					} else {
@@ -71,34 +74,7 @@ public class OrderAction extends BaseAction {
 						if (hishopShoppingCarts == null) {
 							form.setJsonMsg("购物车是空的，请添加产品", false, json, 1001);
 						} else {
-							for (HishopShoppingCarts hishopShoppingCarts2 : hishopShoppingCarts) {
-								HishopSkus hishopSkus = (HishopSkus) baseBiz.bean(" from HishopSkus as hs where hs.skuId = '" + hishopShoppingCarts2.getSkuId() + "' and hs.productId = " + hishopShoppingCarts2.getProductId());
-								HishopProducts products = (HishopProducts) baseBiz.bean(" from HishopProducts as hp where hp.productId = " + hishopShoppingCarts2.getProductId());
-								List<HishopSkuitems> skuitems = (List<HishopSkuitems>) baseBiz.bean(" from HishopSkuitems as hs where hs.skuId = '" + hishopShoppingCarts2.getSkuId() + "'");
-								// List<HishopSkuitems> skuitems =
-								// (List<HishopSkuitems>)baseBiz.findAll(" from HishopSkuitems as hs where hs.skuId = '40_93_75'");
-								String skuStr = "";
-								for (HishopSkuitems hishopSkuitems : skuitems) {
-									HishopAttributes hishopAttributes = (HishopAttributes) baseBiz.bean(" from HishopAttributes as ha where ha.attributeId = " + hishopSkuitems.getAttributeId());
-									HishopAttributeValues hishopAttributeValues = (HishopAttributeValues) baseBiz.bean(" from HishopAttributeValues as hav where hav.valueId = " + hishopSkuitems.getValueId() + " and hav.attributeId = '" + hishopSkuitems.getAttributeId() + "'");
-									skuStr += hishopAttributes.getAttributeName() + "：" + hishopAttributeValues.getValueStr() + ";";
-								}
-								HishopOrderItems items = new HishopOrderItems();
-								items.setOrderId(orderId);
-								items.setSkuId(hishopShoppingCarts2.getSkuId());
-								items.setProductId(hishopShoppingCarts2.getProductId());
-								items.setSku(hishopSkus.getSku());
-								items.setQuantity(hishopShoppingCarts2.getQuantity());
-								items.setShipmentQuantity(1);
-								items.setCostPrice(hishopSkus.getCostPrice());
-								items.setItemListPrice(hishopSkus.getSalePrice());
-								items.setItemAdjustedPrice(hishopSkus.getSalePrice());
-								items.setItemDescription(products.getProductName());
-								items.setThumbnailsUrl(products.getThumbnailUrl40());
-								items.setWeight(Long.parseLong(hishopSkus.getWeight() + ""));
-								items.setSkucontent(skuStr);
-							}
-
+							String orderId = DateUtils.order_no();// 订单号
 							HishopOrders orders = new HishopOrders();
 							orders.setOrderId(orderId);
 							orders.setOrderStatus(1);
@@ -114,9 +90,36 @@ public class OrderAction extends BaseAction {
 							orders.setCellPhone(address.getAddress());
 							orders.setRegionId(address.getRegionId());
 							orders.setSourceOrder(1);
-
 							baseBiz.save(orders);
-							form.setJsonMsg("添加成功", true, json, 200);
+							for (int i = 0; i < skuId.length; i++) {
+								HishopSkus hishopSkus = (HishopSkus) baseBiz.bean(" from HishopSkus as hs where hs.skuId = '" + skuId[i] + "'");
+								HishopProducts products = (HishopProducts) baseBiz.bean(" from HishopProducts as hp where hp.productId = " + hishopSkus.getProductId());
+								List<HishopSkuitems> skuitems = (List<HishopSkuitems>) baseBiz.findAll(" from HishopSkuitems as hs where hs.skuId = '" + hishopSkus.getSkuId() + "'");
+								String skuStr = "";
+								for (HishopSkuitems hishopSkuitems : skuitems) {
+									HishopAttributes hishopAttributes = (HishopAttributes) baseBiz.bean(" from HishopAttributes as ha where ha.attributeId = " + hishopSkuitems.getAttributeId());
+									HishopAttributeValues hishopAttributeValues = (HishopAttributeValues) baseBiz.bean(" from HishopAttributeValues as hav where hav.valueId = " + hishopSkuitems.getValueId() + " and hav.attributeId = '" + hishopSkuitems.getAttributeId() + "'");
+									skuStr += hishopAttributes.getAttributeName() + "：" + hishopAttributeValues.getValueStr() + "; ";
+								}
+								HishopOrderItems items = new HishopOrderItems();
+								items.setOrderId(orderId);
+								items.setSkuId(hishopSkus.getSkuId());
+								items.setProductId(hishopSkus.getProductId());
+								items.setSku(hishopSkus.getSku());
+								items.setQuantity(Integer.parseInt(skuNumber[0]));
+								items.setShipmentQuantity(1);
+								items.setCostPrice(hishopSkus.getCostPrice());
+								items.setItemListPrice(hishopSkus.getSalePrice());
+								items.setItemAdjustedPrice(hishopSkus.getSalePrice());
+								items.setItemDescription(products.getProductName());
+								items.setThumbnailsUrl(products.getThumbnailUrl40());
+								items.setWeight(Long.parseLong(hishopSkus.getWeight() + ""));
+								items.setSkucontent(skuStr);
+								baseBiz.updateListObject(" delete from HishopShoppingCarts as hsc where hsc.skuId = '"+hishopSkus.getSkuId()+"' and hsc.userId = "+userId);
+								items.setAddTime(new Date());
+								baseBiz.save(items);
+							}
+							form.setJsonMsg("提交订单成功", true, json, 200);
 						}
 					}
 				}

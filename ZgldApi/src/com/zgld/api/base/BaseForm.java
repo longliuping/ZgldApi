@@ -70,6 +70,7 @@ public class BaseForm {
 	private Integer number;
 	private String skuId;
 	private String skuNumber;
+	private Integer shippingId;
 	private Double money;
 	private String content;
 	private Integer display;
@@ -392,4 +393,13 @@ public class BaseForm {
 	public void setSelectedUser(Map<Integer, Integer> selectedUser) {
 		this.selectedUser = selectedUser;
 	}
+
+	public Integer getShippingId() {
+		return shippingId;
+	}
+
+	public void setShippingId(Integer shippingId) {
+		this.shippingId = shippingId;
+	}
+	
 }
