@@ -114,9 +114,9 @@ public class OrderAction extends BaseAction {
 								orders.setAdjustedFreight(hishopShippingTemplates.getPrice());
 								orders.setOptionPrice(0.0);
 								orders.setActivityId(0);
-								orders.setEightFree(true);
-								orders.setProcedureFeeFree(true);
-								orders.setOrderOptionFree(true);
+								orders.setEightFree(false);
+								orders.setProcedureFeeFree(false);
+								orders.setOrderOptionFree(false);
 								orders.setDiscountId(0);
 								orders.setDiscountValue(0.0);
 								orders.setDiscountValueType(0);
@@ -167,7 +167,9 @@ public class OrderAction extends BaseAction {
 									//更新总运费和总金额总总量
 									ho.setAmount(salePrice);
 									ho.setOrderCostPrice(costPrice);
-									ho.setOrderTotal(salePrice);
+									ho.setOrderTotal(salePrice+hishopShippingTemplates.getPrice());
+									ho.setOrderPoint(Integer.parseInt(salePrice+hishopShippingTemplates.getPrice()+""));
+									ho.setOrderProfit(salePrice);
 									baseBiz.update(ho);
 								}
 								form.setJsonMsg("提交订单成功", true, json, 200);
@@ -197,7 +199,9 @@ public class OrderAction extends BaseAction {
 				form.setJsonMsg(NO_USER, false, json, 201);
 			} else {
 				StringBuffer sb = new StringBuffer(" from HishopOrders as ho where ho.userId = "+aspnetUsers.getUserId());
-				sb.append(" and ho.orderStatus = "+form.getId());
+				if(form.getId()!=null && form.getId()>0){
+					sb.append(" and ho.orderStatus = "+form.getId());
+				}
 				sb.append(" order by ho.orderDate desc ");
 				List<HishopOrders> hishopOrders = (List<HishopOrders>) baseBiz.findPage(form.getPageNum(), form.getPageSize(), sb.toString());
 				for (int i = 0; i < hishopOrders.size(); i++) {
