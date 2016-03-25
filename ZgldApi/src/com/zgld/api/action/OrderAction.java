@@ -197,9 +197,7 @@ public class OrderAction extends BaseAction {
 				form.setJsonMsg(NO_USER, false, json, 201);
 			} else {
 				StringBuffer sb = new StringBuffer(" from HishopOrders as ho where ho.userId = "+aspnetUsers.getUserId());
-				if(form.getId()!=null && form.getId()>0){
-					sb.append(" and ho.orderStatus = "+form.getId());
-				}
+				sb.append(" and ho.orderStatus = "+form.getId());
 				sb.append(" order by ho.orderDate desc ");
 				List<HishopOrders> hishopOrders = (List<HishopOrders>) baseBiz.findPage(form.getPageNum(), form.getPageSize(), sb.toString());
 				for (int i = 0; i < hishopOrders.size(); i++) {
