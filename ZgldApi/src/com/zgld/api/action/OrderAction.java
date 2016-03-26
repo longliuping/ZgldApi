@@ -68,7 +68,7 @@ public class OrderAction extends BaseAction {
 				}
 				if (message.length() > 5) {
 					form.setJsonMsg("产品库存不足，请删减后重试!" + message, false, json, 1001);
-				} else if (skuIdStr.length() < 5) {
+				} else if (skuIdStr.length() < 1) {
 					form.setJsonMsg("购买的产品不存在", false, json, 1001);
 				} else {
 					int userId = aspnetUsers.getUserId();
