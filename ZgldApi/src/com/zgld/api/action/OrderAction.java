@@ -263,7 +263,7 @@ public class OrderAction extends BaseAction {
 			if (aspnetUsers == null) {
 				form.setJsonMsg(NO_USER, false, json, 201);
 			} else {
-				StringBuffer sb = new StringBuffer(" from HishopOrders as where ho.orderId = " + form.getOrderid() + " and ho. and ho.userId = " + aspnetUsers.getUserId());
+				StringBuffer sb = new StringBuffer(" from HishopOrders as where ho.orderId = '" + form.getOrderid() + "' and ho.userId = " + aspnetUsers.getUserId());
 				HishopOrders order = (HishopOrders) baseBiz.bean(sb.toString());
 				if (order == null) {
 					form.setJsonMsg("订单不存在", false, json, 1001);
@@ -272,6 +272,9 @@ public class OrderAction extends BaseAction {
 				} else {
 					order.setOrderStatus(4);
 					baseBiz.update(order);
+					List<HishopOrderItems> items = (List<HishopOrderItems>) baseBiz.findPage(form.getPageNum(), form.getPageSize(), " from HishopOrderItems as oi where oi.orderId = '" + order.getOrderId()+"'");
+					order.setListHishopOrderItems(items);
+					json.put(INFO, order);
 					form.setJsonMsg("取消成功", true, json, 200);
 				}
 			}
