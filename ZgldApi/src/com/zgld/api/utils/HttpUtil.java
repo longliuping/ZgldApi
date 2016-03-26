@@ -39,15 +39,13 @@ public class HttpUtil {
 				responseMessage.append((char) charCount);
 			}
 		} catch (Exception ex) {
-			System.out
-					.println("url=" + url + "?" + paramContent + "\n e=" + ex);
+			System.out.println("url=" + url + "?" + paramContent + "\n e=" + ex);
 		} finally {
 			try {
 				in.close();
 				reqOut.close();
 			} catch (Exception e) {
-				System.out
-						.println("paramContent=" + paramContent + "|err=" + e);
+				System.out.println("paramContent=" + paramContent + "|err=" + e);
 			}
 
 		}
@@ -71,8 +69,7 @@ public class HttpUtil {
 			connection.setDoInput(true);
 			connection.setDoOutput(false);
 			// 取得输入流，并使用Reader读取
-			reader = new BufferedReader(new InputStreamReader(connection
-					.getInputStream()));
+			reader = new BufferedReader(new InputStreamReader(connection.getInputStream()));
 			String lines;
 			StringBuffer linebuff = new StringBuffer("");
 			while ((lines = reader.readLine()) != null) {

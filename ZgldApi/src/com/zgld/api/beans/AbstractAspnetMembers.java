@@ -35,7 +35,6 @@ public abstract class AbstractAspnetMembers implements java.io.Serializable {
 	private String wangwang;
 	private String msn;
 
-
 	// Constructors
 
 	/** default constructor */

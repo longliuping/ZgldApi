@@ -10,12 +10,15 @@ public class SupperArea extends AbstractSupperArea implements java.io.Serializab
 	/** default constructor */
 	public SupperArea() {
 	}
+
 	Supplier supplier;
+
 	public Supplier getSupplier() {
 		return supplier;
 	}
+
 	public void setSupplier(Supplier supplier) {
 		this.supplier = supplier;
 	}
-	
+
 }

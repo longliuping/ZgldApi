@@ -6,8 +6,7 @@ package com.zgld.api.beans;
  * Persistence Tools
  */
 
-public abstract class AbstractHishopSkumemberPriceId implements
-		java.io.Serializable {
+public abstract class AbstractHishopSkumemberPriceId implements java.io.Serializable {
 
 	// Fields
 
@@ -21,8 +20,7 @@ public abstract class AbstractHishopSkumemberPriceId implements
 	}
 
 	/** full constructor */
-	public AbstractHishopSkumemberPriceId(HishopSkus hishopSkus,
-			AspnetMemberGrades aspnetMemberGrades) {
+	public AbstractHishopSkumemberPriceId(HishopSkus hishopSkus, AspnetMemberGrades aspnetMemberGrades) {
 		this.hishopSkus = hishopSkus;
 		this.aspnetMemberGrades = aspnetMemberGrades;
 	}
@@ -54,29 +52,14 @@ public abstract class AbstractHishopSkumemberPriceId implements
 			return false;
 		AbstractHishopSkumemberPriceId castOther = (AbstractHishopSkumemberPriceId) other;
 
-		return ((this.getHishopSkus() == castOther.getHishopSkus()) || (this
-				.getHishopSkus() != null
-				&& castOther.getHishopSkus() != null && this.getHishopSkus()
-				.equals(castOther.getHishopSkus())))
-				&& ((this.getAspnetMemberGrades() == castOther
-						.getAspnetMemberGrades()) || (this
-						.getAspnetMemberGrades() != null
-						&& castOther.getAspnetMemberGrades() != null && this
-						.getAspnetMemberGrades().equals(
-								castOther.getAspnetMemberGrades())));
+		return ((this.getHishopSkus() == castOther.getHishopSkus()) || (this.getHishopSkus() != null && castOther.getHishopSkus() != null && this.getHishopSkus().equals(castOther.getHishopSkus()))) && ((this.getAspnetMemberGrades() == castOther.getAspnetMemberGrades()) || (this.getAspnetMemberGrades() != null && castOther.getAspnetMemberGrades() != null && this.getAspnetMemberGrades().equals(castOther.getAspnetMemberGrades())));
 	}
 
 	public int hashCode() {
 		int result = 17;
 
-		result = 37
-				* result
-				+ (getHishopSkus() == null ? 0 : this.getHishopSkus()
-						.hashCode());
-		result = 37
-				* result
-				+ (getAspnetMemberGrades() == null ? 0 : this
-						.getAspnetMemberGrades().hashCode());
+		result = 37 * result + (getHishopSkus() == null ? 0 : this.getHishopSkus().hashCode());
+		result = 37 * result + (getAspnetMemberGrades() == null ? 0 : this.getAspnetMemberGrades().hashCode());
 		return result;
 	}
 

@@ -1,4 +1,5 @@
 package com.zgld.api.base;
+
 import org.hibernate.HibernateException;
 import org.hibernate.Session;
 import org.hibernate.cfg.Configuration;

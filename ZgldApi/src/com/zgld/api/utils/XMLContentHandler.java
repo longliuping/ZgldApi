@@ -12,7 +12,7 @@ import com.zgld.api.beans.County;
 import com.zgld.api.beans.Province;
 import com.zgld.api.beans.Region;
 
-public class XMLContentHandler extends DefaultHandler{
+public class XMLContentHandler extends DefaultHandler {
 	List<Region> regions = null;
 	Region currentRegion;
 
@@ -55,8 +55,7 @@ public class XMLContentHandler extends DefaultHandler{
 	// 接收元素开始的通知。当读到一个开始标签的时候，会触发这个方法。其中namespaceURI表示元素的命名空间；
 	// localName表示元素的本地名称（不带前缀）；qName表示元素的限定名（带前缀）；atts 表示元素的属性集合
 	@Override
-	public void startElement(String namespaceURI, String localName,
-			String qName, Attributes atts) throws SAXException {
+	public void startElement(String namespaceURI, String localName, String qName, Attributes atts) throws SAXException {
 
 		if (qName.equals("region")) {
 			currentRegion = new Region();
@@ -84,8 +83,7 @@ public class XMLContentHandler extends DefaultHandler{
 	// 接收字符数据的通知。该方法用来处理在XML文件中读到的内容，第一个参数用于存放文件的内容，
 	// 后面两个参数是读到的字符串在这个数组中的起始位置和长度，使用new String(ch,start,length)就可以获取内容。
 	@Override
-	public void characters(char[] ch, int start, int length)
-			throws SAXException {
+	public void characters(char[] ch, int start, int length) throws SAXException {
 
 		if (tagName != null) {
 			String data = new String(ch, start, length);
@@ -100,8 +98,7 @@ public class XMLContentHandler extends DefaultHandler{
 	// 接收文档的结尾的通知。在遇到结束标签的时候，调用这个方法。其中，uri表示元素的命名空间；
 	// localName表示元素的本地名称（不带前缀）；name表示元素的限定名（带前缀）
 	@Override
-	public void endElement(String uri, String localName, String name)
-			throws SAXException {
+	public void endElement(String uri, String localName, String name) throws SAXException {
 
 		if (name.equals("region")) {
 			currentRegion.setProvinces(getProvinces());

@@ -5,8 +5,7 @@ package com.zgld.api.beans;
  * the HishopApiShorpCart entity. @author MyEclipse Persistence Tools
  */
 
-public abstract class AbstractHishopApiShorpCart implements
-		java.io.Serializable {
+public abstract class AbstractHishopApiShorpCart implements java.io.Serializable {
 
 	// Fields
 

@@ -21,8 +21,7 @@ public abstract class AbstractHishopVoteItems implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public AbstractHishopVoteItems(HishopVotes hishopVotes,
-			String voteItemName, Integer itemCount) {
+	public AbstractHishopVoteItems(HishopVotes hishopVotes, String voteItemName, Integer itemCount) {
 		this.hishopVotes = hishopVotes;
 		this.voteItemName = voteItemName;
 		this.itemCount = itemCount;

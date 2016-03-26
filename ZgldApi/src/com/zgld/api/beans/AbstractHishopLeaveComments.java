@@ -10,8 +10,7 @@ import java.util.Set;
  * of the HishopLeaveComments entity. @author MyEclipse Persistence Tools
  */
 
-public abstract class AbstractHishopLeaveComments implements
-		java.io.Serializable {
+public abstract class AbstractHishopLeaveComments implements java.io.Serializable {
 
 	// Fields
 
@@ -32,8 +31,7 @@ public abstract class AbstractHishopLeaveComments implements
 	}
 
 	/** minimal constructor */
-	public AbstractHishopLeaveComments(String title, String publishContent,
-			Date publishDate, Date lastDate, Boolean isReply) {
+	public AbstractHishopLeaveComments(String title, String publishContent, Date publishDate, Date lastDate, Boolean isReply) {
 		this.title = title;
 		this.publishContent = publishContent;
 		this.publishDate = publishDate;
@@ -42,9 +40,7 @@ public abstract class AbstractHishopLeaveComments implements
 	}
 
 	/** full constructor */
-	public AbstractHishopLeaveComments(Integer userId, String userName,
-			String title, String publishContent, Date publishDate,
-			Date lastDate, Boolean isReply, Set hishopLeaveCommentReplyses) {
+	public AbstractHishopLeaveComments(Integer userId, String userName, String title, String publishContent, Date publishDate, Date lastDate, Boolean isReply, Set hishopLeaveCommentReplyses) {
 		this.userId = userId;
 		this.userName = userName;
 		this.title = title;

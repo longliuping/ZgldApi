@@ -27,9 +27,7 @@ public abstract class AbstractHishopCountDown implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public AbstractHishopCountDown(HishopProducts hishopProducts,
-			Date startDate, Date endDate, Integer displaySequence,
-			Double countDownPrice) {
+	public AbstractHishopCountDown(HishopProducts hishopProducts, Date startDate, Date endDate, Integer displaySequence, Double countDownPrice) {
 		this.hishopProducts = hishopProducts;
 		this.startDate = startDate;
 		this.endDate = endDate;
@@ -38,9 +36,7 @@ public abstract class AbstractHishopCountDown implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public AbstractHishopCountDown(HishopProducts hishopProducts,
-			Date startDate, Date endDate, String content,
-			Integer displaySequence, Double countDownPrice) {
+	public AbstractHishopCountDown(HishopProducts hishopProducts, Date startDate, Date endDate, String content, Integer displaySequence, Double countDownPrice) {
 		this.hishopProducts = hishopProducts;
 		this.startDate = startDate;
 		this.endDate = endDate;

@@ -6,8 +6,7 @@ package com.zgld.api.beans;
  * Persistence Tools
  */
 
-public abstract class AbstractHishopTemplateRelatedShipping implements
-		java.io.Serializable {
+public abstract class AbstractHishopTemplateRelatedShipping implements java.io.Serializable {
 
 	// Fields
 
@@ -20,8 +19,7 @@ public abstract class AbstractHishopTemplateRelatedShipping implements
 	}
 
 	/** full constructor */
-	public AbstractHishopTemplateRelatedShipping(
-			HishopTemplateRelatedShippingId id) {
+	public AbstractHishopTemplateRelatedShipping(HishopTemplateRelatedShippingId id) {
 		this.id = id;
 	}
 

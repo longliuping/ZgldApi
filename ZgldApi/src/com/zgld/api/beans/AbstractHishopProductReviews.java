@@ -8,8 +8,7 @@ import java.util.Date;
  * of the HishopProductReviews entity. @author MyEclipse Persistence Tools
  */
 
-public abstract class AbstractHishopProductReviews implements
-		java.io.Serializable {
+public abstract class AbstractHishopProductReviews implements java.io.Serializable {
 
 	// Fields
 
@@ -28,9 +27,7 @@ public abstract class AbstractHishopProductReviews implements
 	}
 
 	/** full constructor */
-	public AbstractHishopProductReviews(HishopProducts hishopProducts,
-			Integer userId, String reviewText, String userName,
-			String userEmail, Date reviewDate) {
+	public AbstractHishopProductReviews(HishopProducts hishopProducts, Integer userId, String reviewText, String userName, String userEmail, Date reviewDate) {
 		this.hishopProducts = hishopProducts;
 		this.userId = userId;
 		this.reviewText = reviewText;

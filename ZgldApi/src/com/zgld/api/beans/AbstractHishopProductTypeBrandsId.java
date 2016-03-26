@@ -6,8 +6,7 @@ package com.zgld.api.beans;
  * Persistence Tools
  */
 
-public abstract class AbstractHishopProductTypeBrandsId implements
-		java.io.Serializable {
+public abstract class AbstractHishopProductTypeBrandsId implements java.io.Serializable {
 
 	// Fields
 
@@ -21,9 +20,7 @@ public abstract class AbstractHishopProductTypeBrandsId implements
 	}
 
 	/** full constructor */
-	public AbstractHishopProductTypeBrandsId(
-			HishopProductTypes hishopProductTypes,
-			HishopBrandCategories hishopBrandCategories) {
+	public AbstractHishopProductTypeBrandsId(HishopProductTypes hishopProductTypes, HishopBrandCategories hishopBrandCategories) {
 		this.hishopProductTypes = hishopProductTypes;
 		this.hishopBrandCategories = hishopBrandCategories;
 	}
@@ -42,8 +39,7 @@ public abstract class AbstractHishopProductTypeBrandsId implements
 		return this.hishopBrandCategories;
 	}
 
-	public void setHishopBrandCategories(
-			HishopBrandCategories hishopBrandCategories) {
+	public void setHishopBrandCategories(HishopBrandCategories hishopBrandCategories) {
 		this.hishopBrandCategories = hishopBrandCategories;
 	}
 
@@ -56,30 +52,14 @@ public abstract class AbstractHishopProductTypeBrandsId implements
 			return false;
 		AbstractHishopProductTypeBrandsId castOther = (AbstractHishopProductTypeBrandsId) other;
 
-		return ((this.getHishopProductTypes() == castOther
-				.getHishopProductTypes()) || (this.getHishopProductTypes() != null
-				&& castOther.getHishopProductTypes() != null && this
-				.getHishopProductTypes().equals(
-						castOther.getHishopProductTypes())))
-				&& ((this.getHishopBrandCategories() == castOther
-						.getHishopBrandCategories()) || (this
-						.getHishopBrandCategories() != null
-						&& castOther.getHishopBrandCategories() != null && this
-						.getHishopBrandCategories().equals(
-								castOther.getHishopBrandCategories())));
+		return ((this.getHishopProductTypes() == castOther.getHishopProductTypes()) || (this.getHishopProductTypes() != null && castOther.getHishopProductTypes() != null && this.getHishopProductTypes().equals(castOther.getHishopProductTypes()))) && ((this.getHishopBrandCategories() == castOther.getHishopBrandCategories()) || (this.getHishopBrandCategories() != null && castOther.getHishopBrandCategories() != null && this.getHishopBrandCategories().equals(castOther.getHishopBrandCategories())));
 	}
 
 	public int hashCode() {
 		int result = 17;
 
-		result = 37
-				* result
-				+ (getHishopProductTypes() == null ? 0 : this
-						.getHishopProductTypes().hashCode());
-		result = 37
-				* result
-				+ (getHishopBrandCategories() == null ? 0 : this
-						.getHishopBrandCategories().hashCode());
+		result = 37 * result + (getHishopProductTypes() == null ? 0 : this.getHishopProductTypes().hashCode());
+		result = 37 * result + (getHishopBrandCategories() == null ? 0 : this.getHishopBrandCategories().hashCode());
 		return result;
 	}
 

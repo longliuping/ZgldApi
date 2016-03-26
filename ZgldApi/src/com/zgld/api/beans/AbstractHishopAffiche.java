@@ -30,8 +30,7 @@ public abstract class AbstractHishopAffiche implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public AbstractHishopAffiche(String title, String content,
-			Date addedDate) {
+	public AbstractHishopAffiche(String title, String content, Date addedDate) {
 		this.title = title;
 		this.content = content;
 		this.addedDate = addedDate;

@@ -67,17 +67,19 @@ public class SupplierAction extends BaseAction {
 		}
 		return JSON_PAGE;
 	}
+
 	/**
 	 * 根据地址和热门标签查询商家
+	 * 
 	 * @return
 	 */
 	public String hot_area_supplier() {
 		Map<String, Object> json = new HashMap<String, Object>();
 		try {
 			List<Supplier> listInfo = new ArrayList<Supplier>();
-			List<?> obj = baseBiz.findPage(form.getPageNum(), form.getPageSize(), " from Supplier as s,SupperArea as sa,SupperHot as sh where s.userId = sa.userid and  sa.userid = sh.userid and sa.areaid = " + form.getAreaid()+" and sh.hotid = "+form.getHotid());
+			List<?> obj = baseBiz.findPage(form.getPageNum(), form.getPageSize(), " from Supplier as s,SupperArea as sa,SupperHot as sh where s.userId = sa.userid and  sa.userid = sh.userid and sa.areaid = " + form.getAreaid() + " and sh.hotid = " + form.getHotid());
 			for (Object object : obj) {
-				listInfo.add((Supplier)((Object[])object)[0]);
+				listInfo.add((Supplier) ((Object[]) object)[0]);
 			}
 			json.put(LISTINFO, listInfo);
 			form.setJsonMsg(SUCCESS, true, json, 200);

@@ -315,8 +315,8 @@ public class BaseAction extends ActionSupport implements ModelDriven<Object> {
 	 * @return
 	 */
 	public AspnetUsers getUserInfo() {
-//		form.setToken("f43d04f6-8110-45c8-b68f-9e3cca84c9c1");
-//		form.setUserId(1145);
+		// form.setToken("f43d04f6-8110-45c8-b68f-9e3cca84c9c1");
+		// form.setUserId(1145);
 		String token = form.getToken();
 		int userId = form.getUserId();
 		if (token == null) {

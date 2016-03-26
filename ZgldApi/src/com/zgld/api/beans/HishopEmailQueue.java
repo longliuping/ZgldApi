@@ -5,8 +5,7 @@ import java.sql.Timestamp;
 /**
  * HishopEmailQueue entity. @author MyEclipse Persistence Tools
  */
-public class HishopEmailQueue extends AbstractHishopEmailQueue implements
-		java.io.Serializable {
+public class HishopEmailQueue extends AbstractHishopEmailQueue implements java.io.Serializable {
 
 	// Constructors
 
@@ -15,20 +14,13 @@ public class HishopEmailQueue extends AbstractHishopEmailQueue implements
 	}
 
 	/** minimal constructor */
-	public HishopEmailQueue(Integer emailPriority, Boolean isBodyHtml,
-			String emailTo, String emailSubject, String emailBody,
-			Timestamp nextTryTime, Integer numberOfTries) {
-		super(emailPriority, isBodyHtml, emailTo, emailSubject, emailBody,
-				nextTryTime, numberOfTries);
+	public HishopEmailQueue(Integer emailPriority, Boolean isBodyHtml, String emailTo, String emailSubject, String emailBody, Timestamp nextTryTime, Integer numberOfTries) {
+		super(emailPriority, isBodyHtml, emailTo, emailSubject, emailBody, nextTryTime, numberOfTries);
 	}
 
 	/** full constructor */
-	public HishopEmailQueue(Integer emailPriority, Boolean isBodyHtml,
-			String emailTo, String emailCc, String emailBcc,
-			String emailSubject, String emailBody, Timestamp nextTryTime,
-			Integer numberOfTries) {
-		super(emailPriority, isBodyHtml, emailTo, emailCc, emailBcc,
-				emailSubject, emailBody, nextTryTime, numberOfTries);
+	public HishopEmailQueue(Integer emailPriority, Boolean isBodyHtml, String emailTo, String emailCc, String emailBcc, String emailSubject, String emailBody, Timestamp nextTryTime, Integer numberOfTries) {
+		super(emailPriority, isBodyHtml, emailTo, emailCc, emailBcc, emailSubject, emailBody, nextTryTime, numberOfTries);
 	}
 
 }

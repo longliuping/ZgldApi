@@ -5,8 +5,7 @@ package com.zgld.api.beans;
  * the HishopOrderOptions entity. @author MyEclipse Persistence Tools
  */
 
-public abstract class AbstractHishopOrderOptions implements
-		java.io.Serializable {
+public abstract class AbstractHishopOrderOptions implements java.io.Serializable {
 
 	// Fields
 
@@ -24,8 +23,7 @@ public abstract class AbstractHishopOrderOptions implements
 	}
 
 	/** minimal constructor */
-	public AbstractHishopOrderOptions(HishopOrderOptionsId id,
-			String listDescription, String itemDescription, Double adjustedPrice) {
+	public AbstractHishopOrderOptions(HishopOrderOptionsId id, String listDescription, String itemDescription, Double adjustedPrice) {
 		this.id = id;
 		this.listDescription = listDescription;
 		this.itemDescription = itemDescription;
@@ -33,10 +31,7 @@ public abstract class AbstractHishopOrderOptions implements
 	}
 
 	/** full constructor */
-	public AbstractHishopOrderOptions(HishopOrderOptionsId id,
-			String listDescription, String itemDescription,
-			Double adjustedPrice, String customerTitle,
-			String customerDescription) {
+	public AbstractHishopOrderOptions(HishopOrderOptionsId id, String listDescription, String itemDescription, Double adjustedPrice, String customerTitle, String customerDescription) {
 		this.id = id;
 		this.listDescription = listDescription;
 		this.itemDescription = itemDescription;

@@ -29,6 +29,7 @@ public abstract class AbstractHishopOrderItems implements java.io.Serializable {
 	private String wholesaleDiscountName;
 	private String skucontent;
 	private Date addTime;
+
 	// Constructors
 
 	/** default constructor */
@@ -178,5 +179,5 @@ public abstract class AbstractHishopOrderItems implements java.io.Serializable {
 	public void setSkucontent(String skucontent) {
 		this.skucontent = skucontent;
 	}
-	
+
 }

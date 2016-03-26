@@ -51,7 +51,8 @@ public class AddressXmlUtils {
 
 		return null;
 	}
-	public static String readXML(int regionId){
+
+	public static String readXML(int regionId) {
 		String address = "";
 		try {
 			InputStream inputStream = AddressXmlUtils.class.getClassLoader().getResourceAsStream("address.xml");
@@ -69,8 +70,9 @@ public class AddressXmlUtils {
 		}
 		return address;
 	}
+
 	public static void main(String[] args) {
-//		readXML();
+		// readXML();
 		System.out.println(readXML(1947));
 	}
 }

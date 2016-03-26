@@ -26,9 +26,7 @@ public abstract class AbstractHishopHotkeywords implements java.io.Serializable 
 	}
 
 	/** full constructor */
-	public AbstractHishopHotkeywords(HishopCategories hishopCategories,
-			String keywords, Date searchTime, Date lasttime,
-			Integer frequency) {
+	public AbstractHishopHotkeywords(HishopCategories hishopCategories, String keywords, Date searchTime, Date lasttime, Integer frequency) {
 		this.hishopCategories = hishopCategories;
 		this.keywords = keywords;
 		this.searchTime = searchTime;

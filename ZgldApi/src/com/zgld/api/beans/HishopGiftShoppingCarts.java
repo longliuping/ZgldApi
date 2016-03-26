@@ -5,8 +5,7 @@ import java.sql.Timestamp;
 /**
  * HishopGiftShoppingCarts entity. @author MyEclipse Persistence Tools
  */
-public class HishopGiftShoppingCarts extends AbstractHishopGiftShoppingCarts
-		implements java.io.Serializable {
+public class HishopGiftShoppingCarts extends AbstractHishopGiftShoppingCarts implements java.io.Serializable {
 
 	// Constructors
 
@@ -15,8 +14,7 @@ public class HishopGiftShoppingCarts extends AbstractHishopGiftShoppingCarts
 	}
 
 	/** full constructor */
-	public HishopGiftShoppingCarts(HishopGiftShoppingCartsId id,
-			Integer quantity, Timestamp addTime) {
+	public HishopGiftShoppingCarts(HishopGiftShoppingCartsId id, Integer quantity, Timestamp addTime) {
 		super(id, quantity, addTime);
 	}
 

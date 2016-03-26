@@ -20,8 +20,10 @@ import com.zgld.api.beans.HishopSkus;
 import com.zgld.api.beans.HishopUserShippingAddresses;
 import com.zgld.api.utils.AddressXmlUtils;
 import com.zgld.api.utils.DateUtils;
+
 /**
  * 订单
+ * 
  * @author Administrator
  *
  */
@@ -80,12 +82,12 @@ public class OrderAction extends BaseAction {
 						if (hishopShoppingCarts == null) {
 							form.setJsonMsg("购物车是空的，请添加产品", false, json, 1001);
 						} else {
-							HishopPaymentTypes pay = (HishopPaymentTypes)baseBiz.bean(" from HishopPaymentTypes as hpt where hpt.modeId = 1 ");
-							HishopShippingTypes shippingTypes = (HishopShippingTypes)baseBiz.bean(" from HishopShippingTypes as hst where hst.modeId = "+form.getModeId()+" and hst.templateId = "+form.getTemplateId());
-							HishopShippingTemplates hishopShippingTemplates = (HishopShippingTemplates)baseBiz.bean(" from HishopShippingTemplates as hst where hst.templateId = "+form.getTemplateId());
-							if(pay==null || shippingTypes==null || hishopShippingTemplates == null){
+							HishopPaymentTypes pay = (HishopPaymentTypes) baseBiz.bean(" from HishopPaymentTypes as hpt where hpt.modeId = 1 ");
+							HishopShippingTypes shippingTypes = (HishopShippingTypes) baseBiz.bean(" from HishopShippingTypes as hst where hst.modeId = " + form.getModeId() + " and hst.templateId = " + form.getTemplateId());
+							HishopShippingTemplates hishopShippingTemplates = (HishopShippingTemplates) baseBiz.bean(" from HishopShippingTemplates as hst where hst.templateId = " + form.getTemplateId());
+							if (pay == null || shippingTypes == null || hishopShippingTemplates == null) {
 								form.setJsonMsg("暂时不能提交订单,快递模板没有选择!", false, json, 1001);
-							}else{
+							} else {
 								String orderId = DateUtils.order_no();// 订单号
 								HishopOrders orders = new HishopOrders();
 								orders.setOrderId(orderId);
@@ -102,13 +104,13 @@ public class OrderAction extends BaseAction {
 								orders.setCellPhone(address.getCellPhone());
 								orders.setRegionId(address.getRegionId());
 								orders.setSourceOrder(1);
-								orders.setPaymentTypeId(pay.getModeId());//支付类型
-								orders.setPaymentType(pay.getName());//支付名字
-								orders.setPayCharge(pay.getCharge());//支付费用
+								orders.setPaymentTypeId(pay.getModeId());// 支付类型
+								orders.setPaymentType(pay.getName());// 支付名字
+								orders.setPayCharge(pay.getCharge());// 支付费用
 								orders.setGateway(pay.getGateway());
-								orders.setAdjustedPayCharge(0.0);//调整后的支付费用
-								orders.setRefundStatus(0);//退款状态
-								orders.setAdjustedDiscount(0.0);//调整折扣
+								orders.setAdjustedPayCharge(0.0);// 调整后的支付费用
+								orders.setRefundStatus(0);// 退款状态
+								orders.setAdjustedDiscount(0.0);// 调整折扣
 								orders.setShippingModeId(shippingTypes.getTemplateId());
 								orders.setModeName(shippingTypes.getName());
 								orders.setFreight(hishopShippingTemplates.getPrice());
@@ -124,8 +126,8 @@ public class OrderAction extends BaseAction {
 								orders.setDiscountAmount(0.0);
 								orders.setCouponAmount(0.0);
 								orders.setCouponValue(0.0);
-								orders.setWeight(hishopShippingTemplates.getWeight());//总量量
-								orders.setOrderTotal(0.00);//总费用  ----
+								orders.setWeight(hishopShippingTemplates.getWeight());// 总量量
+								orders.setOrderTotal(0.00);// 总费用 ----
 								orders.setEmailAddress(aspnetUsers.getEmail());
 								baseBiz.save(orders);
 								double weight = 0;
@@ -141,9 +143,9 @@ public class OrderAction extends BaseAction {
 										HishopAttributeValues hishopAttributeValues = (HishopAttributeValues) baseBiz.bean(" from HishopAttributeValues as hav where hav.valueId = " + hishopSkuitems.getValueId() + " and hav.attributeId = '" + hishopSkuitems.getAttributeId() + "'");
 										skuStr += hishopAttributes.getAttributeName() + "：" + hishopAttributeValues.getValueStr() + "; ";
 									}
-									weight +=(hishopSkus.getWeight()*Double.parseDouble(skuNumber[i]));
-									salePrice +=(hishopSkus.getSalePrice()*Double.parseDouble(skuNumber[i]));
-									costPrice +=(hishopSkus.getCostPrice()*Double.parseDouble(skuNumber[i]));
+									weight += (hishopSkus.getWeight() * Double.parseDouble(skuNumber[i]));
+									salePrice += (hishopSkus.getSalePrice() * Double.parseDouble(skuNumber[i]));
+									costPrice += (hishopSkus.getCostPrice() * Double.parseDouble(skuNumber[i]));
 									HishopOrderItems items = new HishopOrderItems();
 									items.setOrderId(orderId);
 									items.setSkuId(hishopSkus.getSkuId());
@@ -157,26 +159,26 @@ public class OrderAction extends BaseAction {
 									items.setItemDescription(products.getProductName());
 									items.setThumbnailsUrl(products.getThumbnailUrl40());
 									items.setWeight(Long.parseLong(hishopSkus.getWeight() + ""));
-									items.setSkucontent(skuStr+"");
+									items.setSkucontent(skuStr + "");
 									items.setPurchaseGiftId(0);
-									items.setWeight(Long.parseLong(hishopSkus.getWeight()+""));
+									items.setWeight(Long.parseLong(hishopSkus.getWeight() + ""));
 									baseBiz.updateListObject(" delete from HishopShoppingCarts as hsc where hsc.skuId = '" + hishopSkus.getSkuId() + "' and hsc.userId = " + userId);
 									items.setAddTime(new Date());
 									baseBiz.save(items);
 								}
-								HishopOrders ho = (HishopOrders)baseBiz.bean(" from HishopOrders as ho where ho.orderId = "+orderId);
-								if(ho!=null){
-									//更新总运费和总金额总总量
+								HishopOrders ho = (HishopOrders) baseBiz.bean(" from HishopOrders as ho where ho.orderId = " + orderId);
+								if (ho != null) {
+									// 更新总运费和总金额总总量
 									ho.setAmount(salePrice);
 									ho.setOrderCostPrice(costPrice);
-									ho.setOrderTotal(salePrice+hishopShippingTemplates.getPrice());
-									ho.setOrderPoint((int)(salePrice+hishopShippingTemplates.getPrice()));
+									ho.setOrderTotal(salePrice + hishopShippingTemplates.getPrice());
+									ho.setOrderPoint((int) (salePrice + hishopShippingTemplates.getPrice()));
 									ho.setOrderProfit(salePrice);
 									baseBiz.update(ho);
 								}
 								form.setJsonMsg("提交订单成功", true, json, 200);
 							}
-							}
+						}
 					}
 				}
 			}
@@ -200,14 +202,14 @@ public class OrderAction extends BaseAction {
 			if (aspnetUsers == null) {
 				form.setJsonMsg(NO_USER, false, json, 201);
 			} else {
-				StringBuffer sb = new StringBuffer(" from HishopOrders as ho where ho.userId = "+aspnetUsers.getUserId());
-				if(form.getId()!=null && form.getId()>0){
-					sb.append(" and ho.orderStatus = "+form.getId());
+				StringBuffer sb = new StringBuffer(" from HishopOrders as ho where ho.userId = " + aspnetUsers.getUserId());
+				if (form.getId() != null && form.getId() > 0) {
+					sb.append(" and ho.orderStatus = " + form.getId());
 				}
 				sb.append(" order by ho.orderDate desc ");
 				List<HishopOrders> hishopOrders = (List<HishopOrders>) baseBiz.findPage(form.getPageNum(), form.getPageSize(), sb.toString());
 				for (int i = 0; i < hishopOrders.size(); i++) {
-					List<HishopOrderItems> items = (List<HishopOrderItems>) baseBiz.findAll(" from HishopOrderItems as oi where oi.orderId = '" + hishopOrders.get(i).getOrderId()+"'");
+					List<HishopOrderItems> items = (List<HishopOrderItems>) baseBiz.findAll(" from HishopOrderItems as oi where oi.orderId = '" + hishopOrders.get(i).getOrderId() + "'");
 					hishopOrders.get(i).setListHishopOrderItems(items);
 				}
 				json.put("listInfo", hishopOrders);
@@ -250,23 +252,24 @@ public class OrderAction extends BaseAction {
 		}
 		return JSON_PAGE;
 	}
+
 	/**
 	 * 取消订单
 	 */
-	public String cancel_order(){
+	public String cancel_order() {
 		Map<String, Object> json = new HashMap<String, Object>();
 		try {
 			AspnetUsers aspnetUsers = getUserInfo();
 			if (aspnetUsers == null) {
 				form.setJsonMsg(NO_USER, false, json, 201);
 			} else {
-				StringBuffer sb = new StringBuffer(" from HishopOrders as where ho.orderId = "+form.getOrderid()+" and ho. and ho.userId = "+aspnetUsers.getUserId());
-				HishopOrders order = (HishopOrders)baseBiz.bean(sb.toString());
-				if(order==null){
+				StringBuffer sb = new StringBuffer(" from HishopOrders as where ho.orderId = " + form.getOrderid() + " and ho. and ho.userId = " + aspnetUsers.getUserId());
+				HishopOrders order = (HishopOrders) baseBiz.bean(sb.toString());
+				if (order == null) {
 					form.setJsonMsg("订单不存在", false, json, 1001);
-				}else if(order.getOrderStatus()>1){
+				} else if (order.getOrderStatus() > 1) {
 					form.setJsonMsg("订单不能取消(已经发货或者已经付款)", false, json, 1001);
-				}else{
+				} else {
 					order.setOrderStatus(4);
 					baseBiz.update(order);
 					form.setJsonMsg("取消成功", true, json, 200);

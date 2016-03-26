@@ -8,8 +8,7 @@ import java.util.Date;
  * the HishopPointDetails entity. @author MyEclipse Persistence Tools
  */
 
-public abstract class AbstractHishopPointDetails implements
-		java.io.Serializable {
+public abstract class AbstractHishopPointDetails implements java.io.Serializable {
 
 	// Fields
 
@@ -30,17 +29,14 @@ public abstract class AbstractHishopPointDetails implements
 	}
 
 	/** minimal constructor */
-	public AbstractHishopPointDetails(AspnetMembers aspnetMembers,
-			Date tradeDate, Integer tradeType) {
+	public AbstractHishopPointDetails(AspnetMembers aspnetMembers, Date tradeDate, Integer tradeType) {
 		this.aspnetMembers = aspnetMembers;
 		this.tradeDate = tradeDate;
 		this.tradeType = tradeType;
 	}
 
 	/** full constructor */
-	public AbstractHishopPointDetails(AspnetMembers aspnetMembers,
-			String orderId, Date tradeDate, Integer tradeType,
-			Integer increased, Integer reduced, Integer points, String remark) {
+	public AbstractHishopPointDetails(AspnetMembers aspnetMembers, String orderId, Date tradeDate, Integer tradeType, Integer increased, Integer reduced, Integer points, String remark) {
 		this.aspnetMembers = aspnetMembers;
 		this.orderId = orderId;
 		this.tradeDate = tradeDate;

@@ -3,8 +3,7 @@ package com.zgld.api.beans;
 /**
  * HishopPhotoCategories entity. @author MyEclipse Persistence Tools
  */
-public class HishopPhotoCategories extends AbstractHishopPhotoCategories
-		implements java.io.Serializable {
+public class HishopPhotoCategories extends AbstractHishopPhotoCategories implements java.io.Serializable {
 
 	// Constructors
 

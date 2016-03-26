@@ -5,8 +5,7 @@ import java.sql.Timestamp;
 /**
  * HishopCouponItems entity. @author MyEclipse Persistence Tools
  */
-public class HishopCouponItems extends AbstractHishopCouponItems implements
-		java.io.Serializable {
+public class HishopCouponItems extends AbstractHishopCouponItems implements java.io.Serializable {
 
 	// Constructors
 
@@ -15,14 +14,12 @@ public class HishopCouponItems extends AbstractHishopCouponItems implements
 	}
 
 	/** minimal constructor */
-	public HishopCouponItems(HishopCoupons hishopCoupons, String lotNumber,
-			Timestamp generateTime) {
+	public HishopCouponItems(HishopCoupons hishopCoupons, String lotNumber, Timestamp generateTime) {
 		super(hishopCoupons, lotNumber, generateTime);
 	}
 
 	/** full constructor */
-	public HishopCouponItems(HishopCoupons hishopCoupons, String lotNumber,
-			Integer userId, String emailAddress, Timestamp generateTime) {
+	public HishopCouponItems(HishopCoupons hishopCoupons, String lotNumber, Integer userId, String emailAddress, Timestamp generateTime) {
 		super(hishopCoupons, lotNumber, userId, emailAddress, generateTime);
 	}
 

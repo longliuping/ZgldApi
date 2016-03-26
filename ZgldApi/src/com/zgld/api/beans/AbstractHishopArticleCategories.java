@@ -9,8 +9,7 @@ import java.util.Set;
  * Persistence Tools
  */
 
-public abstract class AbstractHishopArticleCategories implements
-		java.io.Serializable {
+public abstract class AbstractHishopArticleCategories implements java.io.Serializable {
 
 	// Fields
 
@@ -34,9 +33,7 @@ public abstract class AbstractHishopArticleCategories implements
 	}
 
 	/** full constructor */
-	public AbstractHishopArticleCategories(String name,
-			Integer displaySequence, String iconUrl, String description,
-			Set hishopArticleses) {
+	public AbstractHishopArticleCategories(String name, Integer displaySequence, String iconUrl, String description, Set hishopArticleses) {
 		this.name = name;
 		this.displaySequence = displaySequence;
 		this.iconUrl = iconUrl;

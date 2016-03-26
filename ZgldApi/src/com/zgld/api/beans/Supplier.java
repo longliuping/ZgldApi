@@ -17,9 +17,10 @@ public class Supplier extends AbstractSupplier implements java.io.Serializable {
 	public Supplier(String supplierName) {
 		super(supplierName);
 	}
+
 	List<HishopProducts> listHishopProducts;
 	HishopProducts hishopProducts;
-	
+
 	public HishopProducts getHishopProducts() {
 		return hishopProducts;
 	}
@@ -35,5 +36,5 @@ public class Supplier extends AbstractSupplier implements java.io.Serializable {
 	public void setListHishopProducts(List<HishopProducts> listHishopProducts) {
 		this.listHishopProducts = listHishopProducts;
 	}
-	
+
 }

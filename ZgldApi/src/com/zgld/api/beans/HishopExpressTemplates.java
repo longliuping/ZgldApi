@@ -3,8 +3,7 @@ package com.zgld.api.beans;
 /**
  * HishopExpressTemplates entity. @author MyEclipse Persistence Tools
  */
-public class HishopExpressTemplates extends AbstractHishopExpressTemplates
-		implements java.io.Serializable {
+public class HishopExpressTemplates extends AbstractHishopExpressTemplates implements java.io.Serializable {
 
 	// Constructors
 
@@ -13,8 +12,7 @@ public class HishopExpressTemplates extends AbstractHishopExpressTemplates
 	}
 
 	/** full constructor */
-	public HishopExpressTemplates(String expressName, String xmlFile,
-			Boolean isUse) {
+	public HishopExpressTemplates(String expressName, String xmlFile, Boolean isUse) {
 		super(expressName, xmlFile, isUse);
 	}
 

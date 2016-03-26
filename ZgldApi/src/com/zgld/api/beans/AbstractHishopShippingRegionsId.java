@@ -6,8 +6,7 @@ package com.zgld.api.beans;
  * Persistence Tools
  */
 
-public abstract class AbstractHishopShippingRegionsId implements
-		java.io.Serializable {
+public abstract class AbstractHishopShippingRegionsId implements java.io.Serializable {
 
 	// Fields
 
@@ -21,8 +20,7 @@ public abstract class AbstractHishopShippingRegionsId implements
 	}
 
 	/** full constructor */
-	public AbstractHishopShippingRegionsId(
-			HishopShippingTemplates hishopShippingTemplates, Integer regionId) {
+	public AbstractHishopShippingRegionsId(HishopShippingTemplates hishopShippingTemplates, Integer regionId) {
 		this.hishopShippingTemplates = hishopShippingTemplates;
 		this.regionId = regionId;
 	}
@@ -33,8 +31,7 @@ public abstract class AbstractHishopShippingRegionsId implements
 		return this.hishopShippingTemplates;
 	}
 
-	public void setHishopShippingTemplates(
-			HishopShippingTemplates hishopShippingTemplates) {
+	public void setHishopShippingTemplates(HishopShippingTemplates hishopShippingTemplates) {
 		this.hishopShippingTemplates = hishopShippingTemplates;
 	}
 
@@ -55,27 +52,14 @@ public abstract class AbstractHishopShippingRegionsId implements
 			return false;
 		AbstractHishopShippingRegionsId castOther = (AbstractHishopShippingRegionsId) other;
 
-		return ((this.getHishopShippingTemplates() == castOther
-				.getHishopShippingTemplates()) || (this
-				.getHishopShippingTemplates() != null
-				&& castOther.getHishopShippingTemplates() != null && this
-				.getHishopShippingTemplates().equals(
-						castOther.getHishopShippingTemplates())))
-				&& ((this.getRegionId() == castOther.getRegionId()) || (this
-						.getRegionId() != null
-						&& castOther.getRegionId() != null && this
-						.getRegionId().equals(castOther.getRegionId())));
+		return ((this.getHishopShippingTemplates() == castOther.getHishopShippingTemplates()) || (this.getHishopShippingTemplates() != null && castOther.getHishopShippingTemplates() != null && this.getHishopShippingTemplates().equals(castOther.getHishopShippingTemplates()))) && ((this.getRegionId() == castOther.getRegionId()) || (this.getRegionId() != null && castOther.getRegionId() != null && this.getRegionId().equals(castOther.getRegionId())));
 	}
 
 	public int hashCode() {
 		int result = 17;
 
-		result = 37
-				* result
-				+ (getHishopShippingTemplates() == null ? 0 : this
-						.getHishopShippingTemplates().hashCode());
-		result = 37 * result
-				+ (getRegionId() == null ? 0 : this.getRegionId().hashCode());
+		result = 37 * result + (getHishopShippingTemplates() == null ? 0 : this.getHishopShippingTemplates().hashCode());
+		result = 37 * result + (getRegionId() == null ? 0 : this.getRegionId().hashCode());
 		return result;
 	}
 

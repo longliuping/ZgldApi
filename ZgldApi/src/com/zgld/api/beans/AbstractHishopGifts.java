@@ -43,14 +43,7 @@ public abstract class AbstractHishopGifts implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public AbstractHishopGifts(String name, String shortDescription,
-			String unit, String longDescription, String title,
-			String metaDescription, String metaKeywords, Double costPrice,
-			String imageUrl, String thumbnailUrl40, String thumbnailUrl60,
-			String thumbnailUrl100, String thumbnailUrl160,
-			String thumbnailUrl180, String thumbnailUrl220,
-			String thumbnailUrl310, String thumbnailUrl410, Double marketPrice,
-			Integer needPoint) {
+	public AbstractHishopGifts(String name, String shortDescription, String unit, String longDescription, String title, String metaDescription, String metaKeywords, Double costPrice, String imageUrl, String thumbnailUrl40, String thumbnailUrl60, String thumbnailUrl100, String thumbnailUrl160, String thumbnailUrl180, String thumbnailUrl220, String thumbnailUrl310, String thumbnailUrl410, Double marketPrice, Integer needPoint) {
 		this.name = name;
 		this.shortDescription = shortDescription;
 		this.unit = unit;

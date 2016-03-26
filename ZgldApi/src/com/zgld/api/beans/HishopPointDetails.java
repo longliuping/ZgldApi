@@ -5,8 +5,7 @@ import java.sql.Timestamp;
 /**
  * HishopPointDetails entity. @author MyEclipse Persistence Tools
  */
-public class HishopPointDetails extends AbstractHishopPointDetails implements
-		java.io.Serializable {
+public class HishopPointDetails extends AbstractHishopPointDetails implements java.io.Serializable {
 
 	// Constructors
 
@@ -15,17 +14,13 @@ public class HishopPointDetails extends AbstractHishopPointDetails implements
 	}
 
 	/** minimal constructor */
-	public HishopPointDetails(AspnetMembers aspnetMembers, Timestamp tradeDate,
-			Integer tradeType) {
+	public HishopPointDetails(AspnetMembers aspnetMembers, Timestamp tradeDate, Integer tradeType) {
 		super(aspnetMembers, tradeDate, tradeType);
 	}
 
 	/** full constructor */
-	public HishopPointDetails(AspnetMembers aspnetMembers, String orderId,
-			Timestamp tradeDate, Integer tradeType, Integer increased,
-			Integer reduced, Integer points, String remark) {
-		super(aspnetMembers, orderId, tradeDate, tradeType, increased, reduced,
-				points, remark);
+	public HishopPointDetails(AspnetMembers aspnetMembers, String orderId, Timestamp tradeDate, Integer tradeType, Integer increased, Integer reduced, Integer points, String remark) {
+		super(aspnetMembers, orderId, tradeDate, tradeType, increased, reduced, points, remark);
 	}
 
 }

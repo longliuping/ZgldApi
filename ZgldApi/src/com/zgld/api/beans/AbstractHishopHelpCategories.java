@@ -8,8 +8,7 @@ import java.util.Set;
  * of the HishopHelpCategories entity. @author MyEclipse Persistence Tools
  */
 
-public abstract class AbstractHishopHelpCategories implements
-		java.io.Serializable {
+public abstract class AbstractHishopHelpCategories implements java.io.Serializable {
 
 	// Fields
 
@@ -29,17 +28,14 @@ public abstract class AbstractHishopHelpCategories implements
 	}
 
 	/** minimal constructor */
-	public AbstractHishopHelpCategories(String name, Integer displaySequence,
-			Boolean isShowFooter) {
+	public AbstractHishopHelpCategories(String name, Integer displaySequence, Boolean isShowFooter) {
 		this.name = name;
 		this.displaySequence = displaySequence;
 		this.isShowFooter = isShowFooter;
 	}
 
 	/** full constructor */
-	public AbstractHishopHelpCategories(String name, Integer displaySequence,
-			String iconUrl, String indexChar, String description,
-			Boolean isShowFooter, Set hishopHelpses) {
+	public AbstractHishopHelpCategories(String name, Integer displaySequence, String iconUrl, String indexChar, String description, Boolean isShowFooter, Set hishopHelpses) {
 		this.name = name;
 		this.displaySequence = displaySequence;
 		this.iconUrl = iconUrl;

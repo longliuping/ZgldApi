@@ -6,8 +6,7 @@ package com.zgld.api.beans;
  * Persistence Tools
  */
 
-public abstract class AbstractHishopPromotionMemberGradesId implements
-		java.io.Serializable {
+public abstract class AbstractHishopPromotionMemberGradesId implements java.io.Serializable {
 
 	// Fields
 
@@ -21,9 +20,7 @@ public abstract class AbstractHishopPromotionMemberGradesId implements
 	}
 
 	/** full constructor */
-	public AbstractHishopPromotionMemberGradesId(
-			HishopPromotions hishopPromotions,
-			AspnetMemberGrades aspnetMemberGrades) {
+	public AbstractHishopPromotionMemberGradesId(HishopPromotions hishopPromotions, AspnetMemberGrades aspnetMemberGrades) {
 		this.hishopPromotions = hishopPromotions;
 		this.aspnetMemberGrades = aspnetMemberGrades;
 	}
@@ -55,29 +52,14 @@ public abstract class AbstractHishopPromotionMemberGradesId implements
 			return false;
 		AbstractHishopPromotionMemberGradesId castOther = (AbstractHishopPromotionMemberGradesId) other;
 
-		return ((this.getHishopPromotions() == castOther.getHishopPromotions()) || (this
-				.getHishopPromotions() != null
-				&& castOther.getHishopPromotions() != null && this
-				.getHishopPromotions().equals(castOther.getHishopPromotions())))
-				&& ((this.getAspnetMemberGrades() == castOther
-						.getAspnetMemberGrades()) || (this
-						.getAspnetMemberGrades() != null
-						&& castOther.getAspnetMemberGrades() != null && this
-						.getAspnetMemberGrades().equals(
-								castOther.getAspnetMemberGrades())));
+		return ((this.getHishopPromotions() == castOther.getHishopPromotions()) || (this.getHishopPromotions() != null && castOther.getHishopPromotions() != null && this.getHishopPromotions().equals(castOther.getHishopPromotions()))) && ((this.getAspnetMemberGrades() == castOther.getAspnetMemberGrades()) || (this.getAspnetMemberGrades() != null && castOther.getAspnetMemberGrades() != null && this.getAspnetMemberGrades().equals(castOther.getAspnetMemberGrades())));
 	}
 
 	public int hashCode() {
 		int result = 17;
 
-		result = 37
-				* result
-				+ (getHishopPromotions() == null ? 0 : this
-						.getHishopPromotions().hashCode());
-		result = 37
-				* result
-				+ (getAspnetMemberGrades() == null ? 0 : this
-						.getAspnetMemberGrades().hashCode());
+		result = 37 * result + (getHishopPromotions() == null ? 0 : this.getHishopPromotions().hashCode());
+		result = 37 * result + (getAspnetMemberGrades() == null ? 0 : this.getAspnetMemberGrades().hashCode());
 		return result;
 	}
 

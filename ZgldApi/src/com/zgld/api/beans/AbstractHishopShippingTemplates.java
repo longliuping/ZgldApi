@@ -9,8 +9,7 @@ import java.util.Set;
  * Persistence Tools
  */
 
-public abstract class AbstractHishopShippingTemplates implements
-		java.io.Serializable {
+public abstract class AbstractHishopShippingTemplates implements java.io.Serializable {
 
 	// Fields
 
@@ -31,18 +30,14 @@ public abstract class AbstractHishopShippingTemplates implements
 	}
 
 	/** minimal constructor */
-	public AbstractHishopShippingTemplates(String templateName, Integer weight,
-			Double price) {
+	public AbstractHishopShippingTemplates(String templateName, Integer weight, Double price) {
 		this.templateName = templateName;
 		this.weight = weight;
 		this.price = price;
 	}
 
 	/** full constructor */
-	public AbstractHishopShippingTemplates(String templateName, Integer weight,
-			Integer addWeight, Double price, Double addPrice,
-			Set hishopShippingTypeses, Set hishopShippingTypeGroupses,
-			Set hishopShippingRegionses) {
+	public AbstractHishopShippingTemplates(String templateName, Integer weight, Integer addWeight, Double price, Double addPrice, Set hishopShippingTypeses, Set hishopShippingTypeGroupses, Set hishopShippingRegionses) {
 		this.templateName = templateName;
 		this.weight = weight;
 		this.addWeight = addWeight;

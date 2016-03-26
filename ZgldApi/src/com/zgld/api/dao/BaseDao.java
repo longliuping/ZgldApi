@@ -24,12 +24,15 @@ public interface BaseDao {
 	 * @return
 	 */
 	public void update(Object object);
+
 	/**
 	 * 保存数据 添加数据 插入数据
+	 * 
 	 * @param object
 	 * @return
 	 */
 	public Serializable save(Object object);
+
 	/**
 	 * 删除一个对象 删除数据
 	 * 
@@ -76,5 +79,6 @@ public interface BaseDao {
 	 * @return
 	 */
 	public Object totalObject(String hql);
+
 	public Object getObjectInfo(String hql);
 }

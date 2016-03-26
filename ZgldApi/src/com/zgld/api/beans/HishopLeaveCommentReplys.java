@@ -5,8 +5,7 @@ import java.sql.Timestamp;
 /**
  * HishopLeaveCommentReplys entity. @author MyEclipse Persistence Tools
  */
-public class HishopLeaveCommentReplys extends AbstractHishopLeaveCommentReplys
-		implements java.io.Serializable {
+public class HishopLeaveCommentReplys extends AbstractHishopLeaveCommentReplys implements java.io.Serializable {
 
 	// Constructors
 
@@ -15,8 +14,7 @@ public class HishopLeaveCommentReplys extends AbstractHishopLeaveCommentReplys
 	}
 
 	/** full constructor */
-	public HishopLeaveCommentReplys(HishopLeaveComments hishopLeaveComments,
-			Integer userId, String replyContent, Timestamp replyDate) {
+	public HishopLeaveCommentReplys(HishopLeaveComments hishopLeaveComments, Integer userId, String replyContent, Timestamp replyDate) {
 		super(hishopLeaveComments, userId, replyContent, replyDate);
 	}
 

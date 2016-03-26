@@ -5,8 +5,7 @@ import java.util.Set;
 /**
  * HishopPromotions entity. @author MyEclipse Persistence Tools
  */
-public class HishopPromotions extends AbstractHishopPromotions implements
-		java.io.Serializable {
+public class HishopPromotions extends AbstractHishopPromotions implements java.io.Serializable {
 
 	// Constructors
 
@@ -20,15 +19,8 @@ public class HishopPromotions extends AbstractHishopPromotions implements
 	}
 
 	/** full constructor */
-	public HishopPromotions(String name, Integer promoteType,
-			String description, Set hishopFullFrees,
-			Set hishopWholesaleDiscountses, Set hishopPromotionProductses,
-			Set hishopPurchaseGiftses, Set hishopFullDiscountses,
-			Set hishopPromotionMemberGradeses) {
-		super(name, promoteType, description, hishopFullFrees,
-				hishopWholesaleDiscountses, hishopPromotionProductses,
-				hishopPurchaseGiftses, hishopFullDiscountses,
-				hishopPromotionMemberGradeses);
+	public HishopPromotions(String name, Integer promoteType, String description, Set hishopFullFrees, Set hishopWholesaleDiscountses, Set hishopPromotionProductses, Set hishopPurchaseGiftses, Set hishopFullDiscountses, Set hishopPromotionMemberGradeses) {
+		super(name, promoteType, description, hishopFullFrees, hishopWholesaleDiscountses, hishopPromotionProductses, hishopPurchaseGiftses, hishopFullDiscountses, hishopPromotionMemberGradeses);
 	}
 
 }

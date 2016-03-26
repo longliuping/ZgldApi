@@ -89,17 +89,19 @@ public class UserAction extends BaseAction {
 		}
 		return JSON_PAGE;
 	}
+
 	/**
 	 * 获取用户信息
+	 * 
 	 * @return
 	 */
-	public String userinfo(){
+	public String userinfo() {
 		Map<String, Object> json = new HashMap<String, Object>();
 		try {
 			AspnetUsers aspnetUsers = getUserInfo();
 			if (aspnetUsers == null) {
 				form.setJsonMsg(NO_USER, false, json, 201);
-			}else{
+			} else {
 				json.put(INFO, aspnetUsers);
 				form.setJsonMsg(SUCCESS, true, json, 200);
 			}
@@ -110,6 +112,7 @@ public class UserAction extends BaseAction {
 		}
 		return JSON_PAGE;
 	}
+
 	/**
 	 * 修改用户密码
 	 * 
@@ -125,14 +128,14 @@ public class UserAction extends BaseAction {
 				form.setJsonMsg("密码oldPassword不能为空", false, json, 1001);
 			} else if (form.getPassword() == null) {
 				form.setJsonMsg("密码password不能为空", false, json, 1001);
-			} else if(form.getPassword().length()<6){
+			} else if (form.getPassword().length() < 6) {
 				form.setJsonMsg("新密码长度不能小于6位数", false, json, 1001);
-			}else{
+			} else {
 				String pwd = pwd(form.getOldPassword(), aspnetUsers.getPasswordSalt());
 				if (!pwd.equals(aspnetUsers.getPassword())) {
 					form.setJsonMsg("旧密码错误", false, json, 1001);
 				} else {
-					aspnetUsers.setPassword(pwd(form.getPassword(),aspnetUsers.getPasswordSalt()));
+					aspnetUsers.setPassword(pwd(form.getPassword(), aspnetUsers.getPasswordSalt()));
 					aspnetUsers.setUserToken(setUserToken(aspnetUsers.getUserId()));
 					baseBiz.update(aspnetUsers);
 					json.put(INFO, aspnetUsers);
@@ -160,9 +163,9 @@ public class UserAction extends BaseAction {
 				form.setJsonMsg(NO_USER, false, json, 201);
 			} else if (form.getUserinfo().getGender() == null) {
 				form.setJsonMsg("userinfo.gender不能为空", false, json, 1001);
-			} else if(form.getUserinfo().getGender()>1 || form.getUserinfo().getGender()<0){
+			} else if (form.getUserinfo().getGender() > 1 || form.getUserinfo().getGender() < 0) {
 				form.setJsonMsg("userinfo.gender数据传输错误(0|1)", false, json, 1001);
-			}else{
+			} else {
 				aspnetUsers.setGender(form.getUserinfo().getGender());
 				baseBiz.update(aspnetUsers);
 				json.put(INFO, aspnetUsers);
@@ -236,7 +239,8 @@ public class UserAction extends BaseAction {
 		}
 		return JSON_PAGE;
 	}
-	public String update_telphone(){
+
+	public String update_telphone() {
 		Map<String, Object> json = new HashMap<String, Object>();
 		try {
 			AspnetUsers aspnetUsers = getUserInfo();
@@ -249,7 +253,7 @@ public class UserAction extends BaseAction {
 				baseBiz.update(aspnetUsers.getAspnetMembers());
 				json.put(INFO, aspnetUsers);
 				form.setJsonMsg("修改成功", true, json, 200);
-			
+
 			}
 		} catch (Exception e) {
 			// TODO: handle exception
@@ -258,7 +262,8 @@ public class UserAction extends BaseAction {
 		}
 		return JSON_PAGE;
 	}
-	public String update_cellphone(){
+
+	public String update_cellphone() {
 		Map<String, Object> json = new HashMap<String, Object>();
 		try {
 			AspnetUsers aspnetUsers = getUserInfo();

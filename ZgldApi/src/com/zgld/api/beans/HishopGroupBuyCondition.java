@@ -3,8 +3,7 @@ package com.zgld.api.beans;
 /**
  * HishopGroupBuyCondition entity. @author MyEclipse Persistence Tools
  */
-public class HishopGroupBuyCondition extends AbstractHishopGroupBuyCondition
-		implements java.io.Serializable {
+public class HishopGroupBuyCondition extends AbstractHishopGroupBuyCondition implements java.io.Serializable {
 
 	// Constructors
 

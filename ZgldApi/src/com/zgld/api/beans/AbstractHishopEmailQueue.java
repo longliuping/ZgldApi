@@ -30,9 +30,7 @@ public abstract class AbstractHishopEmailQueue implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public AbstractHishopEmailQueue(Integer emailPriority, Boolean isBodyHtml,
-			String emailTo, String emailSubject, String emailBody,
-			Date nextTryTime, Integer numberOfTries) {
+	public AbstractHishopEmailQueue(Integer emailPriority, Boolean isBodyHtml, String emailTo, String emailSubject, String emailBody, Date nextTryTime, Integer numberOfTries) {
 		this.emailPriority = emailPriority;
 		this.isBodyHtml = isBodyHtml;
 		this.emailTo = emailTo;
@@ -43,10 +41,7 @@ public abstract class AbstractHishopEmailQueue implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public AbstractHishopEmailQueue(Integer emailPriority, Boolean isBodyHtml,
-			String emailTo, String emailCc, String emailBcc,
-			String emailSubject, String emailBody, Date nextTryTime,
-			Integer numberOfTries) {
+	public AbstractHishopEmailQueue(Integer emailPriority, Boolean isBodyHtml, String emailTo, String emailCc, String emailBcc, String emailSubject, String emailBody, Date nextTryTime, Integer numberOfTries) {
 		this.emailPriority = emailPriority;
 		this.isBodyHtml = isBodyHtml;
 		this.emailTo = emailTo;

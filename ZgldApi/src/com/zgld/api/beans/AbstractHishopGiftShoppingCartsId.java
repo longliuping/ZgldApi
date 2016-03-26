@@ -6,8 +6,7 @@ package com.zgld.api.beans;
  * Persistence Tools
  */
 
-public abstract class AbstractHishopGiftShoppingCartsId implements
-		java.io.Serializable {
+public abstract class AbstractHishopGiftShoppingCartsId implements java.io.Serializable {
 
 	// Fields
 
@@ -21,8 +20,7 @@ public abstract class AbstractHishopGiftShoppingCartsId implements
 	}
 
 	/** full constructor */
-	public AbstractHishopGiftShoppingCartsId(AspnetMembers aspnetMembers,
-			Integer giftId) {
+	public AbstractHishopGiftShoppingCartsId(AspnetMembers aspnetMembers, Integer giftId) {
 		this.aspnetMembers = aspnetMembers;
 		this.giftId = giftId;
 	}
@@ -54,25 +52,14 @@ public abstract class AbstractHishopGiftShoppingCartsId implements
 			return false;
 		AbstractHishopGiftShoppingCartsId castOther = (AbstractHishopGiftShoppingCartsId) other;
 
-		return ((this.getAspnetMembers() == castOther.getAspnetMembers()) || (this
-				.getAspnetMembers() != null
-				&& castOther.getAspnetMembers() != null && this
-				.getAspnetMembers().equals(castOther.getAspnetMembers())))
-				&& ((this.getGiftId() == castOther.getGiftId()) || (this
-						.getGiftId() != null
-						&& castOther.getGiftId() != null && this.getGiftId()
-						.equals(castOther.getGiftId())));
+		return ((this.getAspnetMembers() == castOther.getAspnetMembers()) || (this.getAspnetMembers() != null && castOther.getAspnetMembers() != null && this.getAspnetMembers().equals(castOther.getAspnetMembers()))) && ((this.getGiftId() == castOther.getGiftId()) || (this.getGiftId() != null && castOther.getGiftId() != null && this.getGiftId().equals(castOther.getGiftId())));
 	}
 
 	public int hashCode() {
 		int result = 17;
 
-		result = 37
-				* result
-				+ (getAspnetMembers() == null ? 0 : this.getAspnetMembers()
-						.hashCode());
-		result = 37 * result
-				+ (getGiftId() == null ? 0 : this.getGiftId().hashCode());
+		result = 37 * result + (getAspnetMembers() == null ? 0 : this.getAspnetMembers().hashCode());
+		result = 37 * result + (getGiftId() == null ? 0 : this.getGiftId().hashCode());
 		return result;
 	}
 

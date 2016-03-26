@@ -3,8 +3,7 @@ package com.zgld.api.beans;
 /**
  * HishopFriendlyLinks entity. @author MyEclipse Persistence Tools
  */
-public class HishopFriendlyLinks extends AbstractHishopFriendlyLinks implements
-		java.io.Serializable {
+public class HishopFriendlyLinks extends AbstractHishopFriendlyLinks implements java.io.Serializable {
 
 	// Constructors
 
@@ -18,8 +17,7 @@ public class HishopFriendlyLinks extends AbstractHishopFriendlyLinks implements
 	}
 
 	/** full constructor */
-	public HishopFriendlyLinks(String imageUrl, String linkUrl, String title,
-			Boolean visible, Integer displaySequence) {
+	public HishopFriendlyLinks(String imageUrl, String linkUrl, String title, Boolean visible, Integer displaySequence) {
 		super(imageUrl, linkUrl, title, visible, displaySequence);
 	}
 

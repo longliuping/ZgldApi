@@ -9,8 +9,7 @@ import java.util.Date;
  * Persistence Tools
  */
 
-public abstract class AbstractHishopProductConsultations implements
-		java.io.Serializable {
+public abstract class AbstractHishopProductConsultations implements java.io.Serializable {
 
 	// Fields
 
@@ -32,9 +31,7 @@ public abstract class AbstractHishopProductConsultations implements
 	}
 
 	/** minimal constructor */
-	public AbstractHishopProductConsultations(HishopProducts hishopProducts,
-			Integer userId, String userName, String userEmail,
-			String consultationText, Date consultationDate) {
+	public AbstractHishopProductConsultations(HishopProducts hishopProducts, Integer userId, String userName, String userEmail, String consultationText, Date consultationDate) {
 		this.hishopProducts = hishopProducts;
 		this.userId = userId;
 		this.userName = userName;
@@ -44,10 +41,7 @@ public abstract class AbstractHishopProductConsultations implements
 	}
 
 	/** full constructor */
-	public AbstractHishopProductConsultations(HishopProducts hishopProducts,
-			Integer userId, String userName, String userEmail,
-			String consultationText, Date consultationDate,
-			String replyText, Date replyDate, Integer replyUserId) {
+	public AbstractHishopProductConsultations(HishopProducts hishopProducts, Integer userId, String userName, String userEmail, String consultationText, Date consultationDate, String replyText, Date replyDate, Integer replyUserId) {
 		this.hishopProducts = hishopProducts;
 		this.userId = userId;
 		this.userName = userName;

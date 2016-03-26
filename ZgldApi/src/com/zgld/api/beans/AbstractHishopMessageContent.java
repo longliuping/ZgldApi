@@ -8,8 +8,7 @@ import java.util.Date;
  * of the HishopMessageContent entity. @author MyEclipse Persistence Tools
  */
 
-public abstract class AbstractHishopMessageContent implements
-		java.io.Serializable {
+public abstract class AbstractHishopMessageContent implements java.io.Serializable {
 
 	// Fields
 
@@ -25,8 +24,7 @@ public abstract class AbstractHishopMessageContent implements
 	}
 
 	/** full constructor */
-	public AbstractHishopMessageContent(String title, String content,
-			Date date) {
+	public AbstractHishopMessageContent(String title, String content, Date date) {
 		this.title = title;
 		this.content = content;
 		this.date = date;

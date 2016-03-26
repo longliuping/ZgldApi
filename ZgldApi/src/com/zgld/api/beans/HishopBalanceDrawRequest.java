@@ -5,8 +5,7 @@ import java.sql.Timestamp;
 /**
  * HishopBalanceDrawRequest entity. @author MyEclipse Persistence Tools
  */
-public class HishopBalanceDrawRequest extends AbstractHishopBalanceDrawRequest
-		implements java.io.Serializable {
+public class HishopBalanceDrawRequest extends AbstractHishopBalanceDrawRequest implements java.io.Serializable {
 
 	// Constructors
 
@@ -15,20 +14,13 @@ public class HishopBalanceDrawRequest extends AbstractHishopBalanceDrawRequest
 	}
 
 	/** minimal constructor */
-	public HishopBalanceDrawRequest(AspnetMembers aspnetMembers,
-			String userName, Timestamp requestTime, Double amount,
-			String accountName, String bankName, String merchantCode) {
-		super(aspnetMembers, userName, requestTime, amount, accountName,
-				bankName, merchantCode);
+	public HishopBalanceDrawRequest(AspnetMembers aspnetMembers, String userName, Timestamp requestTime, Double amount, String accountName, String bankName, String merchantCode) {
+		super(aspnetMembers, userName, requestTime, amount, accountName, bankName, merchantCode);
 	}
 
 	/** full constructor */
-	public HishopBalanceDrawRequest(AspnetMembers aspnetMembers,
-			String userName, Timestamp requestTime, Double amount,
-			String accountName, String bankName, String merchantCode,
-			String remark) {
-		super(aspnetMembers, userName, requestTime, amount, accountName,
-				bankName, merchantCode, remark);
+	public HishopBalanceDrawRequest(AspnetMembers aspnetMembers, String userName, Timestamp requestTime, Double amount, String accountName, String bankName, String merchantCode, String remark) {
+		super(aspnetMembers, userName, requestTime, amount, accountName, bankName, merchantCode, remark);
 	}
 
 }

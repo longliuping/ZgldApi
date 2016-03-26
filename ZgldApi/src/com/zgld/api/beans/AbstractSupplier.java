@@ -54,17 +54,7 @@ public abstract class AbstractSupplier implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public AbstractSupplier(Integer userId, String supplierName,
-			String comName, String supplierLogoUrl, String supplierDescribe,
-			String supplierUrl1, String supplierUrl2, String supplierUrl3,
-			String supplierUrl4, String businessLicenseNo,
-			String businessLicenseImgUrl, Integer isExamine, String extraStr1,
-			String extraStr2, String extraStr3, Integer supplierOrder,
-			Integer clickNum, Integer commentNum, String idCard,
-			String idCardImgUrl, String linkMan, String linkPhone,
-			Integer supplierRegionId, String qq, String shopMain,
-			String shopAddress, String returnAddress, String bankOfDeposit,
-			String bankOfDepositNo, Integer examineStuart, String remark) {
+	public AbstractSupplier(Integer userId, String supplierName, String comName, String supplierLogoUrl, String supplierDescribe, String supplierUrl1, String supplierUrl2, String supplierUrl3, String supplierUrl4, String businessLicenseNo, String businessLicenseImgUrl, Integer isExamine, String extraStr1, String extraStr2, String extraStr3, Integer supplierOrder, Integer clickNum, Integer commentNum, String idCard, String idCardImgUrl, String linkMan, String linkPhone, Integer supplierRegionId, String qq, String shopMain, String shopAddress, String returnAddress, String bankOfDeposit, String bankOfDepositNo, Integer examineStuart, String remark) {
 		this.userId = userId;
 		this.supplierName = supplierName;
 		this.comName = comName;

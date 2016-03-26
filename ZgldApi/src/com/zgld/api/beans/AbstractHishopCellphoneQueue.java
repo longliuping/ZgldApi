@@ -8,8 +8,7 @@ import java.util.Date;
  * of the HishopCellphoneQueue entity. @author MyEclipse Persistence Tools
  */
 
-public abstract class AbstractHishopCellphoneQueue implements
-		java.io.Serializable {
+public abstract class AbstractHishopCellphoneQueue implements java.io.Serializable {
 
 	// Fields
 
@@ -26,8 +25,7 @@ public abstract class AbstractHishopCellphoneQueue implements
 	}
 
 	/** full constructor */
-	public AbstractHishopCellphoneQueue(String cellphoneNumber, String subject,
-			Date nextTryTime, Integer numberOfTries) {
+	public AbstractHishopCellphoneQueue(String cellphoneNumber, String subject, Date nextTryTime, Integer numberOfTries) {
 		this.cellphoneNumber = cellphoneNumber;
 		this.subject = subject;
 		this.nextTryTime = nextTryTime;

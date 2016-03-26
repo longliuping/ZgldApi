@@ -5,8 +5,7 @@ import java.util.Set;
 /**
  * AspnetRoles entity. @author MyEclipse Persistence Tools
  */
-public class AspnetRoles extends AbstractAspnetRoles implements
-		java.io.Serializable {
+public class AspnetRoles extends AbstractAspnetRoles implements java.io.Serializable {
 
 	// Constructors
 
@@ -20,8 +19,7 @@ public class AspnetRoles extends AbstractAspnetRoles implements
 	}
 
 	/** full constructor */
-	public AspnetRoles(String roleName, String loweredRoleName,
-			String description, Set aspnetUsersInRoleses) {
+	public AspnetRoles(String roleName, String loweredRoleName, String description, Set aspnetUsersInRoleses) {
 		super(roleName, loweredRoleName, description, aspnetUsersInRoleses);
 	}
 

@@ -9,8 +9,7 @@ import java.util.Set;
  * Persistence Tools
  */
 
-public abstract class AbstractHishopOrderLookupLists implements
-		java.io.Serializable {
+public abstract class AbstractHishopOrderLookupLists implements java.io.Serializable {
 
 	// Fields
 
@@ -33,8 +32,7 @@ public abstract class AbstractHishopOrderLookupLists implements
 	}
 
 	/** full constructor */
-	public AbstractHishopOrderLookupLists(String name, Integer selectMode,
-			String description, Set hishopOrderLookupItemses) {
+	public AbstractHishopOrderLookupLists(String name, Integer selectMode, String description, Set hishopOrderLookupItemses) {
 		this.name = name;
 		this.selectMode = selectMode;
 		this.description = description;

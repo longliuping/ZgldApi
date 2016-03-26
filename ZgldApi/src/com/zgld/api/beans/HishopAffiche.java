@@ -5,8 +5,7 @@ import java.sql.Timestamp;
 /**
  * HishopAffiche entity. @author MyEclipse Persistence Tools
  */
-public class HishopAffiche extends AbstractHishopAffiche implements
-		java.io.Serializable {
+public class HishopAffiche extends AbstractHishopAffiche implements java.io.Serializable {
 
 	// Constructors
 

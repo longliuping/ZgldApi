@@ -5,8 +5,7 @@ package com.zgld.api.beans;
  * of the HishopShippingRegions entity. @author MyEclipse Persistence Tools
  */
 
-public abstract class AbstractHishopShippingRegions implements
-		java.io.Serializable {
+public abstract class AbstractHishopShippingRegions implements java.io.Serializable {
 
 	// Fields
 
@@ -20,8 +19,7 @@ public abstract class AbstractHishopShippingRegions implements
 	}
 
 	/** full constructor */
-	public AbstractHishopShippingRegions(HishopShippingRegionsId id,
-			Integer groupId) {
+	public AbstractHishopShippingRegions(HishopShippingRegionsId id, Integer groupId) {
 		this.id = id;
 		this.groupId = groupId;
 	}

@@ -6,8 +6,7 @@ package com.zgld.api.beans;
  * Persistence Tools
  */
 
-public abstract class AbstractHishopOrderLookupItems implements
-		java.io.Serializable {
+public abstract class AbstractHishopOrderLookupItems implements java.io.Serializable {
 
 	// Fields
 
@@ -27,19 +26,14 @@ public abstract class AbstractHishopOrderLookupItems implements
 	}
 
 	/** minimal constructor */
-	public AbstractHishopOrderLookupItems(
-			HishopOrderLookupLists hishopOrderLookupLists, String name,
-			Boolean isUserInputRequired) {
+	public AbstractHishopOrderLookupItems(HishopOrderLookupLists hishopOrderLookupLists, String name, Boolean isUserInputRequired) {
 		this.hishopOrderLookupLists = hishopOrderLookupLists;
 		this.name = name;
 		this.isUserInputRequired = isUserInputRequired;
 	}
 
 	/** full constructor */
-	public AbstractHishopOrderLookupItems(
-			HishopOrderLookupLists hishopOrderLookupLists, String name,
-			Boolean isUserInputRequired, String userInputTitle,
-			Double appendMoney, Integer calculateMode, String remark) {
+	public AbstractHishopOrderLookupItems(HishopOrderLookupLists hishopOrderLookupLists, String name, Boolean isUserInputRequired, String userInputTitle, Double appendMoney, Integer calculateMode, String remark) {
 		this.hishopOrderLookupLists = hishopOrderLookupLists;
 		this.name = name;
 		this.isUserInputRequired = isUserInputRequired;
@@ -63,8 +57,7 @@ public abstract class AbstractHishopOrderLookupItems implements
 		return this.hishopOrderLookupLists;
 	}
 
-	public void setHishopOrderLookupLists(
-			HishopOrderLookupLists hishopOrderLookupLists) {
+	public void setHishopOrderLookupLists(HishopOrderLookupLists hishopOrderLookupLists) {
 		this.hishopOrderLookupLists = hishopOrderLookupLists;
 	}
 

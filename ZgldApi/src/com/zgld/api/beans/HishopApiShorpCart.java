@@ -3,8 +3,7 @@ package com.zgld.api.beans;
 /**
  * HishopApiShorpCart entity. @author MyEclipse Persistence Tools
  */
-public class HishopApiShorpCart extends AbstractHishopApiShorpCart implements
-		java.io.Serializable {
+public class HishopApiShorpCart extends AbstractHishopApiShorpCart implements java.io.Serializable {
 
 	// Constructors
 

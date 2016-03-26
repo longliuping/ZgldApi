@@ -45,6 +45,7 @@ public abstract class AbstractAspnetUsers implements java.io.Serializable {
 	private String openIdType;
 	private String sessionId;
 	private String head;
+
 	// Constructors
 
 	/** default constructor */
@@ -217,8 +218,7 @@ public abstract class AbstractAspnetUsers implements java.io.Serializable {
 		return this.failedPasswordAttemptWindowStart;
 	}
 
-	public void setFailedPasswordAttemptWindowStart(
-			Date failedPasswordAttemptWindowStart) {
+	public void setFailedPasswordAttemptWindowStart(Date failedPasswordAttemptWindowStart) {
 		this.failedPasswordAttemptWindowStart = failedPasswordAttemptWindowStart;
 	}
 
@@ -226,8 +226,7 @@ public abstract class AbstractAspnetUsers implements java.io.Serializable {
 		return this.failedPasswordAnswerAttemptCount;
 	}
 
-	public void setFailedPasswordAnswerAttemptCount(
-			Integer failedPasswordAnswerAttemptCount) {
+	public void setFailedPasswordAnswerAttemptCount(Integer failedPasswordAnswerAttemptCount) {
 		this.failedPasswordAnswerAttemptCount = failedPasswordAnswerAttemptCount;
 	}
 
@@ -235,8 +234,7 @@ public abstract class AbstractAspnetUsers implements java.io.Serializable {
 		return this.failedPasswordAnswerAttemptWindowStart;
 	}
 
-	public void setFailedPasswordAnswerAttemptWindowStart(
-			Date failedPasswordAnswerAttemptWindowStart) {
+	public void setFailedPasswordAnswerAttemptWindowStart(Date failedPasswordAnswerAttemptWindowStart) {
 		this.failedPasswordAnswerAttemptWindowStart = failedPasswordAnswerAttemptWindowStart;
 	}
 
@@ -303,7 +301,5 @@ public abstract class AbstractAspnetUsers implements java.io.Serializable {
 	public void setHead(String head) {
 		this.head = head;
 	}
-
-
 
 }

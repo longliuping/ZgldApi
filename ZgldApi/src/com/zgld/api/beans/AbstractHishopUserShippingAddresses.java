@@ -6,8 +6,7 @@ package com.zgld.api.beans;
  * Persistence Tools
  */
 
-public abstract class AbstractHishopUserShippingAddresses implements
-		java.io.Serializable {
+public abstract class AbstractHishopUserShippingAddresses implements java.io.Serializable {
 
 	// Fields
 
@@ -25,6 +24,7 @@ public abstract class AbstractHishopUserShippingAddresses implements
 	/** default constructor */
 	public AbstractHishopUserShippingAddresses() {
 	}
+
 	// Property accessors
 
 	public Integer getShippingId() {

@@ -5,8 +5,7 @@ import java.sql.Timestamp;
 /**
  * HishopInpourRequest entity. @author MyEclipse Persistence Tools
  */
-public class HishopInpourRequest extends AbstractHishopInpourRequest implements
-		java.io.Serializable {
+public class HishopInpourRequest extends AbstractHishopInpourRequest implements java.io.Serializable {
 
 	// Constructors
 
@@ -15,8 +14,7 @@ public class HishopInpourRequest extends AbstractHishopInpourRequest implements
 	}
 
 	/** full constructor */
-	public HishopInpourRequest(AspnetMembers aspnetMembers,
-			Timestamp tradeDate, Double inpourBlance, Integer paymentId) {
+	public HishopInpourRequest(AspnetMembers aspnetMembers, Timestamp tradeDate, Double inpourBlance, Integer paymentId) {
 		super(aspnetMembers, tradeDate, inpourBlance, paymentId);
 	}
 

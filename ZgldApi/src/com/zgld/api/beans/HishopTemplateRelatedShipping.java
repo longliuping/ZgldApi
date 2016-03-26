@@ -3,8 +3,7 @@ package com.zgld.api.beans;
 /**
  * HishopTemplateRelatedShipping entity. @author MyEclipse Persistence Tools
  */
-public class HishopTemplateRelatedShipping extends
-		AbstractHishopTemplateRelatedShipping implements java.io.Serializable {
+public class HishopTemplateRelatedShipping extends AbstractHishopTemplateRelatedShipping implements java.io.Serializable {
 
 	// Constructors
 

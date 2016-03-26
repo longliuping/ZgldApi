@@ -5,8 +5,7 @@ package com.zgld.api.beans;
  * the AspnetUsersInRoles entity. @author MyEclipse Persistence Tools
  */
 
-public abstract class AbstractAspnetUsersInRoles implements
-		java.io.Serializable {
+public abstract class AbstractAspnetUsersInRoles implements java.io.Serializable {
 
 	// Fields
 

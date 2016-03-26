@@ -5,8 +5,7 @@ package com.zgld.api.beans;
  * the HishopOrderGiftsId entity. @author MyEclipse Persistence Tools
  */
 
-public abstract class AbstractHishopOrderGiftsId implements
-		java.io.Serializable {
+public abstract class AbstractHishopOrderGiftsId implements java.io.Serializable {
 
 	// Fields
 
@@ -52,25 +51,14 @@ public abstract class AbstractHishopOrderGiftsId implements
 			return false;
 		AbstractHishopOrderGiftsId castOther = (AbstractHishopOrderGiftsId) other;
 
-		return ((this.getHishopOrders() == castOther.getHishopOrders()) || (this
-				.getHishopOrders() != null
-				&& castOther.getHishopOrders() != null && this
-				.getHishopOrders().equals(castOther.getHishopOrders())))
-				&& ((this.getGiftId() == castOther.getGiftId()) || (this
-						.getGiftId() != null
-						&& castOther.getGiftId() != null && this.getGiftId()
-						.equals(castOther.getGiftId())));
+		return ((this.getHishopOrders() == castOther.getHishopOrders()) || (this.getHishopOrders() != null && castOther.getHishopOrders() != null && this.getHishopOrders().equals(castOther.getHishopOrders()))) && ((this.getGiftId() == castOther.getGiftId()) || (this.getGiftId() != null && castOther.getGiftId() != null && this.getGiftId().equals(castOther.getGiftId())));
 	}
 
 	public int hashCode() {
 		int result = 17;
 
-		result = 37
-				* result
-				+ (getHishopOrders() == null ? 0 : this.getHishopOrders()
-						.hashCode());
-		result = 37 * result
-				+ (getGiftId() == null ? 0 : this.getGiftId().hashCode());
+		result = 37 * result + (getHishopOrders() == null ? 0 : this.getHishopOrders().hashCode());
+		result = 37 * result + (getGiftId() == null ? 0 : this.getGiftId().hashCode());
 		return result;
 	}
 

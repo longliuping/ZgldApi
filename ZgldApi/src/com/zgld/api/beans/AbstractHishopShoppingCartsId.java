@@ -5,8 +5,7 @@ package com.zgld.api.beans;
  * of the HishopShoppingCartsId entity. @author MyEclipse Persistence Tools
  */
 
-public abstract class AbstractHishopShoppingCartsId implements
-		java.io.Serializable {
+public abstract class AbstractHishopShoppingCartsId implements java.io.Serializable {
 
 	// Fields
 
@@ -20,8 +19,7 @@ public abstract class AbstractHishopShoppingCartsId implements
 	}
 
 	/** full constructor */
-	public AbstractHishopShoppingCartsId(AspnetMembers aspnetMembers,
-			String skuId) {
+	public AbstractHishopShoppingCartsId(AspnetMembers aspnetMembers, String skuId) {
 		this.aspnetMembers = aspnetMembers;
 		this.skuId = skuId;
 	}
@@ -53,25 +51,14 @@ public abstract class AbstractHishopShoppingCartsId implements
 			return false;
 		AbstractHishopShoppingCartsId castOther = (AbstractHishopShoppingCartsId) other;
 
-		return ((this.getAspnetMembers() == castOther.getAspnetMembers()) || (this
-				.getAspnetMembers() != null
-				&& castOther.getAspnetMembers() != null && this
-				.getAspnetMembers().equals(castOther.getAspnetMembers())))
-				&& ((this.getSkuId() == castOther.getSkuId()) || (this
-						.getSkuId() != null
-						&& castOther.getSkuId() != null && this.getSkuId()
-						.equals(castOther.getSkuId())));
+		return ((this.getAspnetMembers() == castOther.getAspnetMembers()) || (this.getAspnetMembers() != null && castOther.getAspnetMembers() != null && this.getAspnetMembers().equals(castOther.getAspnetMembers()))) && ((this.getSkuId() == castOther.getSkuId()) || (this.getSkuId() != null && castOther.getSkuId() != null && this.getSkuId().equals(castOther.getSkuId())));
 	}
 
 	public int hashCode() {
 		int result = 17;
 
-		result = 37
-				* result
-				+ (getAspnetMembers() == null ? 0 : this.getAspnetMembers()
-						.hashCode());
-		result = 37 * result
-				+ (getSkuId() == null ? 0 : this.getSkuId().hashCode());
+		result = 37 * result + (getAspnetMembers() == null ? 0 : this.getAspnetMembers().hashCode());
+		result = 37 * result + (getSkuId() == null ? 0 : this.getSkuId().hashCode());
 		return result;
 	}
 

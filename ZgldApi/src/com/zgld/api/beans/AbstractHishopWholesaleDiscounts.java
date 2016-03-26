@@ -6,8 +6,7 @@ package com.zgld.api.beans;
  * Persistence Tools
  */
 
-public abstract class AbstractHishopWholesaleDiscounts implements
-		java.io.Serializable {
+public abstract class AbstractHishopWholesaleDiscounts implements java.io.Serializable {
 
 	// Fields
 
@@ -23,8 +22,7 @@ public abstract class AbstractHishopWholesaleDiscounts implements
 	}
 
 	/** full constructor */
-	public AbstractHishopWholesaleDiscounts(HishopPromotions hishopPromotions,
-			Integer quantity, Integer discountValue) {
+	public AbstractHishopWholesaleDiscounts(HishopPromotions hishopPromotions, Integer quantity, Integer discountValue) {
 		this.hishopPromotions = hishopPromotions;
 		this.quantity = quantity;
 		this.discountValue = discountValue;

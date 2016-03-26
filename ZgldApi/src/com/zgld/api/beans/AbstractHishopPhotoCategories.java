@@ -5,8 +5,7 @@ package com.zgld.api.beans;
  * of the HishopPhotoCategories entity. @author MyEclipse Persistence Tools
  */
 
-public abstract class AbstractHishopPhotoCategories implements
-		java.io.Serializable {
+public abstract class AbstractHishopPhotoCategories implements java.io.Serializable {
 
 	// Fields
 
@@ -21,8 +20,7 @@ public abstract class AbstractHishopPhotoCategories implements
 	}
 
 	/** full constructor */
-	public AbstractHishopPhotoCategories(String categoryName,
-			Integer displaySequence) {
+	public AbstractHishopPhotoCategories(String categoryName, Integer displaySequence) {
 		this.categoryName = categoryName;
 		this.displaySequence = displaySequence;
 	}

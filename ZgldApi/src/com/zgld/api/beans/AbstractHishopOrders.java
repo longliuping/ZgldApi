@@ -92,6 +92,7 @@ public abstract class AbstractHishopOrders implements java.io.Serializable {
 	/** default constructor */
 	public AbstractHishopOrders() {
 	}
+
 	// Property accessors
 
 	public String getOrderId() {

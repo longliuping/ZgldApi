@@ -8,8 +8,7 @@ import java.util.Set;
  * the HishopProductTypes entity. @author MyEclipse Persistence Tools
  */
 
-public abstract class AbstractHishopProductTypes implements
-		java.io.Serializable {
+public abstract class AbstractHishopProductTypes implements java.io.Serializable {
 
 	// Fields
 

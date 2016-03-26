@@ -6,8 +6,7 @@ package com.zgld.api.beans;
  * Persistence Tools
  */
 
-public abstract class AbstractHishopRelatedArticsProductsId implements
-		java.io.Serializable {
+public abstract class AbstractHishopRelatedArticsProductsId implements java.io.Serializable {
 
 	// Fields
 
@@ -21,8 +20,7 @@ public abstract class AbstractHishopRelatedArticsProductsId implements
 	}
 
 	/** full constructor */
-	public AbstractHishopRelatedArticsProductsId(Integer articleId,
-			Integer relatedProductId) {
+	public AbstractHishopRelatedArticsProductsId(Integer articleId, Integer relatedProductId) {
 		this.articleId = articleId;
 		this.relatedProductId = relatedProductId;
 	}
@@ -54,26 +52,14 @@ public abstract class AbstractHishopRelatedArticsProductsId implements
 			return false;
 		AbstractHishopRelatedArticsProductsId castOther = (AbstractHishopRelatedArticsProductsId) other;
 
-		return ((this.getArticleId() == castOther.getArticleId()) || (this
-				.getArticleId() != null
-				&& castOther.getArticleId() != null && this.getArticleId()
-				.equals(castOther.getArticleId())))
-				&& ((this.getRelatedProductId() == castOther
-						.getRelatedProductId()) || (this.getRelatedProductId() != null
-						&& castOther.getRelatedProductId() != null && this
-						.getRelatedProductId().equals(
-								castOther.getRelatedProductId())));
+		return ((this.getArticleId() == castOther.getArticleId()) || (this.getArticleId() != null && castOther.getArticleId() != null && this.getArticleId().equals(castOther.getArticleId()))) && ((this.getRelatedProductId() == castOther.getRelatedProductId()) || (this.getRelatedProductId() != null && castOther.getRelatedProductId() != null && this.getRelatedProductId().equals(castOther.getRelatedProductId())));
 	}
 
 	public int hashCode() {
 		int result = 17;
 
-		result = 37 * result
-				+ (getArticleId() == null ? 0 : this.getArticleId().hashCode());
-		result = 37
-				* result
-				+ (getRelatedProductId() == null ? 0 : this
-						.getRelatedProductId().hashCode());
+		result = 37 * result + (getArticleId() == null ? 0 : this.getArticleId().hashCode());
+		result = 37 * result + (getRelatedProductId() == null ? 0 : this.getRelatedProductId().hashCode());
 		return result;
 	}
 

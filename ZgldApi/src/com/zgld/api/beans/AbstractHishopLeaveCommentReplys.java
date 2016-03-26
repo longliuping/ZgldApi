@@ -9,8 +9,7 @@ import java.util.Date;
  * Persistence Tools
  */
 
-public abstract class AbstractHishopLeaveCommentReplys implements
-		java.io.Serializable {
+public abstract class AbstractHishopLeaveCommentReplys implements java.io.Serializable {
 
 	// Fields
 
@@ -27,9 +26,7 @@ public abstract class AbstractHishopLeaveCommentReplys implements
 	}
 
 	/** full constructor */
-	public AbstractHishopLeaveCommentReplys(
-			HishopLeaveComments hishopLeaveComments, Integer userId,
-			String replyContent, Date replyDate) {
+	public AbstractHishopLeaveCommentReplys(HishopLeaveComments hishopLeaveComments, Integer userId, String replyContent, Date replyDate) {
 		this.hishopLeaveComments = hishopLeaveComments;
 		this.userId = userId;
 		this.replyContent = replyContent;

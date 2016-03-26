@@ -31,8 +31,7 @@ public abstract class AbstractAspnetRoles implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public AbstractAspnetRoles(String roleName, String loweredRoleName,
-			String description, Set aspnetUsersInRoleses) {
+	public AbstractAspnetRoles(String roleName, String loweredRoleName, String description, Set aspnetUsersInRoleses) {
 		this.roleName = roleName;
 		this.loweredRoleName = loweredRoleName;
 		this.description = description;

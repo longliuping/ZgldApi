@@ -36,11 +36,7 @@ public abstract class AbstractHishopPromotions implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public AbstractHishopPromotions(String name, Integer promoteType,
-			String description, Set hishopFullFrees,
-			Set hishopWholesaleDiscountses, Set hishopPromotionProductses,
-			Set hishopPurchaseGiftses, Set hishopFullDiscountses,
-			Set hishopPromotionMemberGradeses) {
+	public AbstractHishopPromotions(String name, Integer promoteType, String description, Set hishopFullFrees, Set hishopWholesaleDiscountses, Set hishopPromotionProductses, Set hishopPurchaseGiftses, Set hishopFullDiscountses, Set hishopPromotionMemberGradeses) {
 		this.name = name;
 		this.promoteType = promoteType;
 		this.description = description;
@@ -130,8 +126,7 @@ public abstract class AbstractHishopPromotions implements java.io.Serializable {
 		return this.hishopPromotionMemberGradeses;
 	}
 
-	public void setHishopPromotionMemberGradeses(
-			Set hishopPromotionMemberGradeses) {
+	public void setHishopPromotionMemberGradeses(Set hishopPromotionMemberGradeses) {
 		this.hishopPromotionMemberGradeses = hishopPromotionMemberGradeses;
 	}
 

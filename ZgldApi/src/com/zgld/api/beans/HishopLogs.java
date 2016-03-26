@@ -5,8 +5,7 @@ import java.sql.Timestamp;
 /**
  * HishopLogs entity. @author MyEclipse Persistence Tools
  */
-public class HishopLogs extends AbstractHishopLogs implements
-		java.io.Serializable {
+public class HishopLogs extends AbstractHishopLogs implements java.io.Serializable {
 
 	// Constructors
 
@@ -15,14 +14,12 @@ public class HishopLogs extends AbstractHishopLogs implements
 	}
 
 	/** minimal constructor */
-	public HishopLogs(String pageUrl, Timestamp addedTime, String userName,
-			String ipaddress, Integer privilege) {
+	public HishopLogs(String pageUrl, Timestamp addedTime, String userName, String ipaddress, Integer privilege) {
 		super(pageUrl, addedTime, userName, ipaddress, privilege);
 	}
 
 	/** full constructor */
-	public HishopLogs(String pageUrl, Timestamp addedTime, String userName,
-			String ipaddress, Integer privilege, String description) {
+	public HishopLogs(String pageUrl, Timestamp addedTime, String userName, String ipaddress, Integer privilege, String description) {
 		super(pageUrl, addedTime, userName, ipaddress, privilege, description);
 	}
 

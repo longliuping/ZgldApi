@@ -20,6 +20,7 @@ public class Test {
 			return "";
 		}
 	}
+
 	public static void main(String[] args) {
 		pwd("123456", "n2FiT+glPSuqrahoRrP7Og==");
 	}

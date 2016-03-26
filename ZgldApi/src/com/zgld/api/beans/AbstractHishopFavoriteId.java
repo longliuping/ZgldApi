@@ -19,8 +19,7 @@ public abstract class AbstractHishopFavoriteId implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public AbstractHishopFavoriteId(Integer productId,
-			AspnetMembers aspnetMembers) {
+	public AbstractHishopFavoriteId(Integer productId, AspnetMembers aspnetMembers) {
 		this.productId = productId;
 		this.aspnetMembers = aspnetMembers;
 	}
@@ -52,26 +51,14 @@ public abstract class AbstractHishopFavoriteId implements java.io.Serializable {
 			return false;
 		AbstractHishopFavoriteId castOther = (AbstractHishopFavoriteId) other;
 
-		return ((this.getProductId() == castOther.getProductId()) || (this
-				.getProductId() != null
-				&& castOther.getProductId() != null && this.getProductId()
-				.equals(castOther.getProductId())))
-				&& ((this.getAspnetMembers() == castOther.getAspnetMembers()) || (this
-						.getAspnetMembers() != null
-						&& castOther.getAspnetMembers() != null && this
-						.getAspnetMembers()
-						.equals(castOther.getAspnetMembers())));
+		return ((this.getProductId() == castOther.getProductId()) || (this.getProductId() != null && castOther.getProductId() != null && this.getProductId().equals(castOther.getProductId()))) && ((this.getAspnetMembers() == castOther.getAspnetMembers()) || (this.getAspnetMembers() != null && castOther.getAspnetMembers() != null && this.getAspnetMembers().equals(castOther.getAspnetMembers())));
 	}
 
 	public int hashCode() {
 		int result = 17;
 
-		result = 37 * result
-				+ (getProductId() == null ? 0 : this.getProductId().hashCode());
-		result = 37
-				* result
-				+ (getAspnetMembers() == null ? 0 : this.getAspnetMembers()
-						.hashCode());
+		result = 37 * result + (getProductId() == null ? 0 : this.getProductId().hashCode());
+		result = 37 * result + (getAspnetMembers() == null ? 0 : this.getAspnetMembers().hashCode());
 		return result;
 	}
 

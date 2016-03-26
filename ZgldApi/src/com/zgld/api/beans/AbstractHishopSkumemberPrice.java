@@ -5,8 +5,7 @@ package com.zgld.api.beans;
  * of the HishopSkumemberPrice entity. @author MyEclipse Persistence Tools
  */
 
-public abstract class AbstractHishopSkumemberPrice implements
-		java.io.Serializable {
+public abstract class AbstractHishopSkumemberPrice implements java.io.Serializable {
 
 	// Fields
 
@@ -20,8 +19,7 @@ public abstract class AbstractHishopSkumemberPrice implements
 	}
 
 	/** full constructor */
-	public AbstractHishopSkumemberPrice(HishopSkumemberPriceId id,
-			Double memberSalePrice) {
+	public AbstractHishopSkumemberPrice(HishopSkumemberPriceId id, Double memberSalePrice) {
 		this.id = id;
 		this.memberSalePrice = memberSalePrice;
 	}

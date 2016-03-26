@@ -5,8 +5,7 @@ package com.zgld.api.beans;
  * the HishopProductTagId entity. @author MyEclipse Persistence Tools
  */
 
-public abstract class AbstractHishopProductTagId implements
-		java.io.Serializable {
+public abstract class AbstractHishopProductTagId implements java.io.Serializable {
 
 	// Fields
 
@@ -20,8 +19,7 @@ public abstract class AbstractHishopProductTagId implements
 	}
 
 	/** full constructor */
-	public AbstractHishopProductTagId(Integer tagId,
-			HishopProducts hishopProducts) {
+	public AbstractHishopProductTagId(Integer tagId, HishopProducts hishopProducts) {
 		this.tagId = tagId;
 		this.hishopProducts = hishopProducts;
 	}
@@ -53,25 +51,14 @@ public abstract class AbstractHishopProductTagId implements
 			return false;
 		AbstractHishopProductTagId castOther = (AbstractHishopProductTagId) other;
 
-		return ((this.getTagId() == castOther.getTagId()) || (this.getTagId() != null
-				&& castOther.getTagId() != null && this.getTagId().equals(
-				castOther.getTagId())))
-				&& ((this.getHishopProducts() == castOther.getHishopProducts()) || (this
-						.getHishopProducts() != null
-						&& castOther.getHishopProducts() != null && this
-						.getHishopProducts().equals(
-								castOther.getHishopProducts())));
+		return ((this.getTagId() == castOther.getTagId()) || (this.getTagId() != null && castOther.getTagId() != null && this.getTagId().equals(castOther.getTagId()))) && ((this.getHishopProducts() == castOther.getHishopProducts()) || (this.getHishopProducts() != null && castOther.getHishopProducts() != null && this.getHishopProducts().equals(castOther.getHishopProducts())));
 	}
 
 	public int hashCode() {
 		int result = 17;
 
-		result = 37 * result
-				+ (getTagId() == null ? 0 : this.getTagId().hashCode());
-		result = 37
-				* result
-				+ (getHishopProducts() == null ? 0 : this.getHishopProducts()
-						.hashCode());
+		result = 37 * result + (getTagId() == null ? 0 : this.getTagId().hashCode());
+		result = 37 * result + (getHishopProducts() == null ? 0 : this.getHishopProducts().hashCode());
 		return result;
 	}
 

@@ -5,8 +5,7 @@ import java.util.Set;
 /**
  * HishopHelpCategories entity. @author MyEclipse Persistence Tools
  */
-public class HishopHelpCategories extends AbstractHishopHelpCategories
-		implements java.io.Serializable {
+public class HishopHelpCategories extends AbstractHishopHelpCategories implements java.io.Serializable {
 
 	// Constructors
 
@@ -15,17 +14,13 @@ public class HishopHelpCategories extends AbstractHishopHelpCategories
 	}
 
 	/** minimal constructor */
-	public HishopHelpCategories(String name, Integer displaySequence,
-			Boolean isShowFooter) {
+	public HishopHelpCategories(String name, Integer displaySequence, Boolean isShowFooter) {
 		super(name, displaySequence, isShowFooter);
 	}
 
 	/** full constructor */
-	public HishopHelpCategories(String name, Integer displaySequence,
-			String iconUrl, String indexChar, String description,
-			Boolean isShowFooter, Set hishopHelpses) {
-		super(name, displaySequence, iconUrl, indexChar, description,
-				isShowFooter, hishopHelpses);
+	public HishopHelpCategories(String name, Integer displaySequence, String iconUrl, String indexChar, String description, Boolean isShowFooter, Set hishopHelpses) {
+		super(name, displaySequence, iconUrl, indexChar, description, isShowFooter, hishopHelpses);
 	}
 
 }

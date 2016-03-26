@@ -5,8 +5,7 @@ package com.zgld.api.beans;
  * of the AspnetOpenIdSettings entity. @author MyEclipse Persistence Tools
  */
 
-public abstract class AbstractAspnetOpenIdSettings implements
-		java.io.Serializable {
+public abstract class AbstractAspnetOpenIdSettings implements java.io.Serializable {
 
 	// Fields
 
@@ -28,8 +27,7 @@ public abstract class AbstractAspnetOpenIdSettings implements
 	}
 
 	/** full constructor */
-	public AbstractAspnetOpenIdSettings(String name, String description,
-			String settings) {
+	public AbstractAspnetOpenIdSettings(String name, String description, String settings) {
 		this.name = name;
 		this.description = description;
 		this.settings = settings;

@@ -6,8 +6,7 @@ package com.zgld.api.beans;
  * Persistence Tools
  */
 
-public abstract class AbstractHishopGroupBuyConditionId implements
-		java.io.Serializable {
+public abstract class AbstractHishopGroupBuyConditionId implements java.io.Serializable {
 
 	// Fields
 
@@ -21,8 +20,7 @@ public abstract class AbstractHishopGroupBuyConditionId implements
 	}
 
 	/** full constructor */
-	public AbstractHishopGroupBuyConditionId(HishopGroupBuy hishopGroupBuy,
-			Integer count) {
+	public AbstractHishopGroupBuyConditionId(HishopGroupBuy hishopGroupBuy, Integer count) {
 		this.hishopGroupBuy = hishopGroupBuy;
 		this.count = count;
 	}
@@ -54,25 +52,14 @@ public abstract class AbstractHishopGroupBuyConditionId implements
 			return false;
 		AbstractHishopGroupBuyConditionId castOther = (AbstractHishopGroupBuyConditionId) other;
 
-		return ((this.getHishopGroupBuy() == castOther.getHishopGroupBuy()) || (this
-				.getHishopGroupBuy() != null
-				&& castOther.getHishopGroupBuy() != null && this
-				.getHishopGroupBuy().equals(castOther.getHishopGroupBuy())))
-				&& ((this.getCount() == castOther.getCount()) || (this
-						.getCount() != null
-						&& castOther.getCount() != null && this.getCount()
-						.equals(castOther.getCount())));
+		return ((this.getHishopGroupBuy() == castOther.getHishopGroupBuy()) || (this.getHishopGroupBuy() != null && castOther.getHishopGroupBuy() != null && this.getHishopGroupBuy().equals(castOther.getHishopGroupBuy()))) && ((this.getCount() == castOther.getCount()) || (this.getCount() != null && castOther.getCount() != null && this.getCount().equals(castOther.getCount())));
 	}
 
 	public int hashCode() {
 		int result = 17;
 
-		result = 37
-				* result
-				+ (getHishopGroupBuy() == null ? 0 : this.getHishopGroupBuy()
-						.hashCode());
-		result = 37 * result
-				+ (getCount() == null ? 0 : this.getCount().hashCode());
+		result = 37 * result + (getHishopGroupBuy() == null ? 0 : this.getHishopGroupBuy().hashCode());
+		result = 37 * result + (getCount() == null ? 0 : this.getCount().hashCode());
 		return result;
 	}
 

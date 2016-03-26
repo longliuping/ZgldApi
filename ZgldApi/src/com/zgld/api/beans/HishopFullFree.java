@@ -3,8 +3,7 @@ package com.zgld.api.beans;
 /**
  * HishopFullFree entity. @author MyEclipse Persistence Tools
  */
-public class HishopFullFree extends AbstractHishopFullFree implements
-		java.io.Serializable {
+public class HishopFullFree extends AbstractHishopFullFree implements java.io.Serializable {
 
 	// Constructors
 
@@ -13,11 +12,8 @@ public class HishopFullFree extends AbstractHishopFullFree implements
 	}
 
 	/** full constructor */
-	public HishopFullFree(HishopPromotions hishopPromotions, Double amount,
-			Boolean shipChargeFree, Boolean serviceChargeFree,
-			Boolean optionFeeFree) {
-		super(hishopPromotions, amount, shipChargeFree, serviceChargeFree,
-				optionFeeFree);
+	public HishopFullFree(HishopPromotions hishopPromotions, Double amount, Boolean shipChargeFree, Boolean serviceChargeFree, Boolean optionFeeFree) {
+		super(hishopPromotions, amount, shipChargeFree, serviceChargeFree, optionFeeFree);
 	}
 
 }

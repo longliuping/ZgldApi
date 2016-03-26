@@ -6,8 +6,7 @@ package com.zgld.api.beans;
  * Persistence Tools
  */
 
-public abstract class AbstractHishopMemberMessageBox implements
-		java.io.Serializable {
+public abstract class AbstractHishopMemberMessageBox implements java.io.Serializable {
 
 	// Fields
 
@@ -24,8 +23,7 @@ public abstract class AbstractHishopMemberMessageBox implements
 	}
 
 	/** full constructor */
-	public AbstractHishopMemberMessageBox(Long contentId, String sernder,
-			String accepter, Boolean isRead) {
+	public AbstractHishopMemberMessageBox(Long contentId, String sernder, String accepter, Boolean isRead) {
 		this.contentId = contentId;
 		this.sernder = sernder;
 		this.accepter = accepter;

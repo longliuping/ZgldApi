@@ -6,8 +6,7 @@ package com.zgld.api.beans;
  * Persistence Tools
  */
 
-public abstract class AbstractHishopPromotionProductsId implements
-		java.io.Serializable {
+public abstract class AbstractHishopPromotionProductsId implements java.io.Serializable {
 
 	// Fields
 
@@ -21,8 +20,7 @@ public abstract class AbstractHishopPromotionProductsId implements
 	}
 
 	/** full constructor */
-	public AbstractHishopPromotionProductsId(HishopPromotions hishopPromotions,
-			HishopProducts hishopProducts) {
+	public AbstractHishopPromotionProductsId(HishopPromotions hishopPromotions, HishopProducts hishopProducts) {
 		this.hishopPromotions = hishopPromotions;
 		this.hishopProducts = hishopProducts;
 	}
@@ -54,28 +52,14 @@ public abstract class AbstractHishopPromotionProductsId implements
 			return false;
 		AbstractHishopPromotionProductsId castOther = (AbstractHishopPromotionProductsId) other;
 
-		return ((this.getHishopPromotions() == castOther.getHishopPromotions()) || (this
-				.getHishopPromotions() != null
-				&& castOther.getHishopPromotions() != null && this
-				.getHishopPromotions().equals(castOther.getHishopPromotions())))
-				&& ((this.getHishopProducts() == castOther.getHishopProducts()) || (this
-						.getHishopProducts() != null
-						&& castOther.getHishopProducts() != null && this
-						.getHishopProducts().equals(
-								castOther.getHishopProducts())));
+		return ((this.getHishopPromotions() == castOther.getHishopPromotions()) || (this.getHishopPromotions() != null && castOther.getHishopPromotions() != null && this.getHishopPromotions().equals(castOther.getHishopPromotions()))) && ((this.getHishopProducts() == castOther.getHishopProducts()) || (this.getHishopProducts() != null && castOther.getHishopProducts() != null && this.getHishopProducts().equals(castOther.getHishopProducts())));
 	}
 
 	public int hashCode() {
 		int result = 17;
 
-		result = 37
-				* result
-				+ (getHishopPromotions() == null ? 0 : this
-						.getHishopPromotions().hashCode());
-		result = 37
-				* result
-				+ (getHishopProducts() == null ? 0 : this.getHishopProducts()
-						.hashCode());
+		result = 37 * result + (getHishopPromotions() == null ? 0 : this.getHishopPromotions().hashCode());
+		result = 37 * result + (getHishopProducts() == null ? 0 : this.getHishopProducts().hashCode());
 		return result;
 	}
 

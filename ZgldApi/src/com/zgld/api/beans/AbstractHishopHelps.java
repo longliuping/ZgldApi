@@ -29,9 +29,7 @@ public abstract class AbstractHishopHelps implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public AbstractHishopHelps(HishopHelpCategories hishopHelpCategories,
-			String title, String content, Date addedDate,
-			Boolean isShowFooter) {
+	public AbstractHishopHelps(HishopHelpCategories hishopHelpCategories, String title, String content, Date addedDate, Boolean isShowFooter) {
 		this.hishopHelpCategories = hishopHelpCategories;
 		this.title = title;
 		this.content = content;
@@ -40,10 +38,7 @@ public abstract class AbstractHishopHelps implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public AbstractHishopHelps(HishopHelpCategories hishopHelpCategories,
-			String title, String metaDescription, String metaKeywords,
-			String description, String content, Date addedDate,
-			Boolean isShowFooter) {
+	public AbstractHishopHelps(HishopHelpCategories hishopHelpCategories, String title, String metaDescription, String metaKeywords, String description, String content, Date addedDate, Boolean isShowFooter) {
 		this.hishopHelpCategories = hishopHelpCategories;
 		this.title = title;
 		this.metaDescription = metaDescription;
@@ -68,8 +63,7 @@ public abstract class AbstractHishopHelps implements java.io.Serializable {
 		return this.hishopHelpCategories;
 	}
 
-	public void setHishopHelpCategories(
-			HishopHelpCategories hishopHelpCategories) {
+	public void setHishopHelpCategories(HishopHelpCategories hishopHelpCategories) {
 		this.hishopHelpCategories = hishopHelpCategories;
 	}
 

@@ -5,8 +5,7 @@ import java.util.Set;
 /**
  * HishopOrderLookupLists entity. @author MyEclipse Persistence Tools
  */
-public class HishopOrderLookupLists extends AbstractHishopOrderLookupLists
-		implements java.io.Serializable {
+public class HishopOrderLookupLists extends AbstractHishopOrderLookupLists implements java.io.Serializable {
 
 	// Constructors
 
@@ -20,8 +19,7 @@ public class HishopOrderLookupLists extends AbstractHishopOrderLookupLists
 	}
 
 	/** full constructor */
-	public HishopOrderLookupLists(String name, Integer selectMode,
-			String description, Set hishopOrderLookupItemses) {
+	public HishopOrderLookupLists(String name, Integer selectMode, String description, Set hishopOrderLookupItemses) {
 		super(name, selectMode, description, hishopOrderLookupItemses);
 	}
 

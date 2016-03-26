@@ -3,8 +3,7 @@ package com.zgld.api.beans;
 /**
  * AspnetOpenIdSettings entity. @author MyEclipse Persistence Tools
  */
-public class AspnetOpenIdSettings extends AbstractAspnetOpenIdSettings
-		implements java.io.Serializable {
+public class AspnetOpenIdSettings extends AbstractAspnetOpenIdSettings implements java.io.Serializable {
 
 	// Constructors
 

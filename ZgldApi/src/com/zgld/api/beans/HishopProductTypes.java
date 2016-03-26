@@ -6,8 +6,7 @@ import java.util.Set;
 /**
  * HishopProductTypes entity. @author MyEclipse Persistence Tools
  */
-public class HishopProductTypes extends AbstractHishopProductTypes implements
-		java.io.Serializable {
+public class HishopProductTypes extends AbstractHishopProductTypes implements java.io.Serializable {
 
 	// Constructors
 
@@ -19,7 +18,9 @@ public class HishopProductTypes extends AbstractHishopProductTypes implements
 	public HishopProductTypes(String typeName) {
 		super(typeName);
 	}
+
 	public List<HishopProducts> hishopProducts;
+
 	public List<HishopProducts> getHishopProducts() {
 		return hishopProducts;
 	}
@@ -27,5 +28,5 @@ public class HishopProductTypes extends AbstractHishopProductTypes implements
 	public void setHishopProducts(List<HishopProducts> hishopProducts) {
 		this.hishopProducts = hishopProducts;
 	}
-	
+
 }

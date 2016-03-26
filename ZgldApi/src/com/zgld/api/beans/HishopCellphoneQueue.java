@@ -5,8 +5,7 @@ import java.sql.Timestamp;
 /**
  * HishopCellphoneQueue entity. @author MyEclipse Persistence Tools
  */
-public class HishopCellphoneQueue extends AbstractHishopCellphoneQueue
-		implements java.io.Serializable {
+public class HishopCellphoneQueue extends AbstractHishopCellphoneQueue implements java.io.Serializable {
 
 	// Constructors
 
@@ -15,8 +14,7 @@ public class HishopCellphoneQueue extends AbstractHishopCellphoneQueue
 	}
 
 	/** full constructor */
-	public HishopCellphoneQueue(String cellphoneNumber, String subject,
-			Timestamp nextTryTime, Integer numberOfTries) {
+	public HishopCellphoneQueue(String cellphoneNumber, String subject, Timestamp nextTryTime, Integer numberOfTries) {
 		super(cellphoneNumber, subject, nextTryTime, numberOfTries);
 	}
 

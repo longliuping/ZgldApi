@@ -3,8 +3,7 @@ package com.zgld.api.beans;
 /**
  * HishopPrivilegeInRoles entity. @author MyEclipse Persistence Tools
  */
-public class HishopPrivilegeInRoles extends AbstractHishopPrivilegeInRoles
-		implements java.io.Serializable {
+public class HishopPrivilegeInRoles extends AbstractHishopPrivilegeInRoles implements java.io.Serializable {
 
 	// Constructors
 

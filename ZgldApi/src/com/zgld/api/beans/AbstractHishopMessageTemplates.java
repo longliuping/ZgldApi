@@ -6,8 +6,7 @@ package com.zgld.api.beans;
  * Persistence Tools
  */
 
-public abstract class AbstractHishopMessageTemplates implements
-		java.io.Serializable {
+public abstract class AbstractHishopMessageTemplates implements java.io.Serializable {
 
 	// Fields
 
@@ -30,10 +29,7 @@ public abstract class AbstractHishopMessageTemplates implements
 	}
 
 	/** full constructor */
-	public AbstractHishopMessageTemplates(String name, Boolean sendEmail,
-			Boolean sendSms, Boolean sendInnerMessage, String tagDescription,
-			String emailSubject, String emailBody, String innerMessageSubject,
-			String innerMessageBody, String smsbody) {
+	public AbstractHishopMessageTemplates(String name, Boolean sendEmail, Boolean sendSms, Boolean sendInnerMessage, String tagDescription, String emailSubject, String emailBody, String innerMessageSubject, String innerMessageBody, String smsbody) {
 		this.name = name;
 		this.sendEmail = sendEmail;
 		this.sendSms = sendSms;

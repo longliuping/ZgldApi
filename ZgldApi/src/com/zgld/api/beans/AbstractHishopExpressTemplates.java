@@ -6,8 +6,7 @@ package com.zgld.api.beans;
  * Persistence Tools
  */
 
-public abstract class AbstractHishopExpressTemplates implements
-		java.io.Serializable {
+public abstract class AbstractHishopExpressTemplates implements java.io.Serializable {
 
 	// Fields
 
@@ -23,8 +22,7 @@ public abstract class AbstractHishopExpressTemplates implements
 	}
 
 	/** full constructor */
-	public AbstractHishopExpressTemplates(String expressName, String xmlFile,
-			Boolean isUse) {
+	public AbstractHishopExpressTemplates(String expressName, String xmlFile, Boolean isUse) {
 		this.expressName = expressName;
 		this.xmlFile = xmlFile;
 		this.isUse = isUse;

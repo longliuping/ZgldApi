@@ -5,8 +5,7 @@ import java.util.Set;
 /**
  * HishopVotes entity. @author MyEclipse Persistence Tools
  */
-public class HishopVotes extends AbstractHishopVotes implements
-		java.io.Serializable {
+public class HishopVotes extends AbstractHishopVotes implements java.io.Serializable {
 
 	// Constructors
 
@@ -20,8 +19,7 @@ public class HishopVotes extends AbstractHishopVotes implements
 	}
 
 	/** full constructor */
-	public HishopVotes(String voteName, Boolean isBackup, Integer maxCheck,
-			Set hishopVoteItemses) {
+	public HishopVotes(String voteName, Boolean isBackup, Integer maxCheck, Set hishopVoteItemses) {
 		super(voteName, isBackup, maxCheck, hishopVoteItemses);
 	}
 

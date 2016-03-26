@@ -6,8 +6,7 @@ package com.zgld.api.beans;
  * Persistence Tools
  */
 
-public abstract class AbstractHishopPrivilegeInRolesId implements
-		java.io.Serializable {
+public abstract class AbstractHishopPrivilegeInRolesId implements java.io.Serializable {
 
 	// Fields
 
@@ -53,23 +52,14 @@ public abstract class AbstractHishopPrivilegeInRolesId implements
 			return false;
 		AbstractHishopPrivilegeInRolesId castOther = (AbstractHishopPrivilegeInRolesId) other;
 
-		return ((this.getRoleId() == castOther.getRoleId()) || (this
-				.getRoleId() != null
-				&& castOther.getRoleId() != null && this.getRoleId().equals(
-				castOther.getRoleId())))
-				&& ((this.getPrivilege() == castOther.getPrivilege()) || (this
-						.getPrivilege() != null
-						&& castOther.getPrivilege() != null && this
-						.getPrivilege().equals(castOther.getPrivilege())));
+		return ((this.getRoleId() == castOther.getRoleId()) || (this.getRoleId() != null && castOther.getRoleId() != null && this.getRoleId().equals(castOther.getRoleId()))) && ((this.getPrivilege() == castOther.getPrivilege()) || (this.getPrivilege() != null && castOther.getPrivilege() != null && this.getPrivilege().equals(castOther.getPrivilege())));
 	}
 
 	public int hashCode() {
 		int result = 17;
 
-		result = 37 * result
-				+ (getRoleId() == null ? 0 : this.getRoleId().hashCode());
-		result = 37 * result
-				+ (getPrivilege() == null ? 0 : this.getPrivilege().hashCode());
+		result = 37 * result + (getRoleId() == null ? 0 : this.getRoleId().hashCode());
+		result = 37 * result + (getPrivilege() == null ? 0 : this.getPrivilege().hashCode());
 		return result;
 	}
 

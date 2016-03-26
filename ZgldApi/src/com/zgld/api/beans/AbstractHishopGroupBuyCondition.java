@@ -6,8 +6,7 @@ package com.zgld.api.beans;
  * Persistence Tools
  */
 
-public abstract class AbstractHishopGroupBuyCondition implements
-		java.io.Serializable {
+public abstract class AbstractHishopGroupBuyCondition implements java.io.Serializable {
 
 	// Fields
 
@@ -21,8 +20,7 @@ public abstract class AbstractHishopGroupBuyCondition implements
 	}
 
 	/** full constructor */
-	public AbstractHishopGroupBuyCondition(HishopGroupBuyConditionId id,
-			Double price) {
+	public AbstractHishopGroupBuyCondition(HishopGroupBuyConditionId id, Double price) {
 		this.id = id;
 		this.price = price;
 	}

@@ -65,7 +65,6 @@ public class BaseBizImpl implements BaseBiz {
 		baseDao.updateListObject(hql);
 	}
 
-
 	public AspnetUsers findUserinfoByUserid(int userid) {
 		// TODO Auto-generated method stub
 		return (AspnetUsers) baseDao.bean(" from AspnetUsers as u where u.userId = " + userid + "");
@@ -94,7 +93,7 @@ public class BaseBizImpl implements BaseBiz {
 		user.setComment("");
 		user.setCreateDate(timestamp);
 		user.setEmail("");
-//		user.setExamineStuart(0);
+		// user.setExamineStuart(0);
 		user.setFailedPasswordAnswerAttemptCount(0);
 		user.setFailedPasswordAnswerAttemptWindowStart(timestamp);
 		user.setFailedPasswordAttemptCount(0);

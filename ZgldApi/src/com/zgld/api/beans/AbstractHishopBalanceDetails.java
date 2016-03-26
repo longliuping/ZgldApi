@@ -8,8 +8,7 @@ import java.util.Date;
  * of the HishopBalanceDetails entity. @author MyEclipse Persistence Tools
  */
 
-public abstract class AbstractHishopBalanceDetails implements
-		java.io.Serializable {
+public abstract class AbstractHishopBalanceDetails implements java.io.Serializable {
 
 	// Fields
 
@@ -30,9 +29,7 @@ public abstract class AbstractHishopBalanceDetails implements
 	}
 
 	/** minimal constructor */
-	public AbstractHishopBalanceDetails(AspnetMembers aspnetMembers,
-			String userName, Date tradeDate, Integer tradeType,
-			Double balance) {
+	public AbstractHishopBalanceDetails(AspnetMembers aspnetMembers, String userName, Date tradeDate, Integer tradeType, Double balance) {
 		this.aspnetMembers = aspnetMembers;
 		this.userName = userName;
 		this.tradeDate = tradeDate;
@@ -41,9 +38,7 @@ public abstract class AbstractHishopBalanceDetails implements
 	}
 
 	/** full constructor */
-	public AbstractHishopBalanceDetails(AspnetMembers aspnetMembers,
-			String userName, Date tradeDate, Integer tradeType,
-			Double income, Double expenses, Double balance, String remark) {
+	public AbstractHishopBalanceDetails(AspnetMembers aspnetMembers, String userName, Date tradeDate, Integer tradeType, Double income, Double expenses, Double balance, String remark) {
 		this.aspnetMembers = aspnetMembers;
 		this.userName = userName;
 		this.tradeDate = tradeDate;

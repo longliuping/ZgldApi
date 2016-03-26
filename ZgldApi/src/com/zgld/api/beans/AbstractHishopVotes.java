@@ -25,16 +25,14 @@ public abstract class AbstractHishopVotes implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public AbstractHishopVotes(String voteName, Boolean isBackup,
-			Integer maxCheck) {
+	public AbstractHishopVotes(String voteName, Boolean isBackup, Integer maxCheck) {
 		this.voteName = voteName;
 		this.isBackup = isBackup;
 		this.maxCheck = maxCheck;
 	}
 
 	/** full constructor */
-	public AbstractHishopVotes(String voteName, Boolean isBackup,
-			Integer maxCheck, Set hishopVoteItemses) {
+	public AbstractHishopVotes(String voteName, Boolean isBackup, Integer maxCheck, Set hishopVoteItemses) {
 		this.voteName = voteName;
 		this.isBackup = isBackup;
 		this.maxCheck = maxCheck;

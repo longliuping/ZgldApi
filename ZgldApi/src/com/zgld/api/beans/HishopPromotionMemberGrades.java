@@ -3,8 +3,7 @@ package com.zgld.api.beans;
 /**
  * HishopPromotionMemberGrades entity. @author MyEclipse Persistence Tools
  */
-public class HishopPromotionMemberGrades extends
-		AbstractHishopPromotionMemberGrades implements java.io.Serializable {
+public class HishopPromotionMemberGrades extends AbstractHishopPromotionMemberGrades implements java.io.Serializable {
 
 	// Constructors
 

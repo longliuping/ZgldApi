@@ -464,12 +464,14 @@ public class DateUtils {
 		long day = (date.getTime() - mydate.getTime()) / (24 * 60 * 60 * 1000);
 		return day;
 	}
-	public static String order_no(){
+
+	public static String order_no() {
 		Date currentTime = new Date();
 		SimpleDateFormat formatter = new SimpleDateFormat("yyyyMMddHHmmssS");
 		String dateString = formatter.format(currentTime);
 		return dateString;
 	}
+
 	public static void main(String[] args) throws Exception {
 		try {
 			// System.out.print(Integer.valueOf(getTwoDay("2006-11-03 12:22:10",

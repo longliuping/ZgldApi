@@ -6,7 +6,7 @@ import java.util.List;
 import com.zgld.api.base.BaseHibernateDaoSupport;
 import com.zgld.api.dao.BaseDao;
 
-public class BaseDaoImpl extends BaseHibernateDaoSupport implements BaseDao,Cloneable {
+public class BaseDaoImpl extends BaseHibernateDaoSupport implements BaseDao, Cloneable {
 
 	public List<Object> findPage(int pageNum, int pageSize, String hql) {
 		// TODO Auto-generated method stub
@@ -57,6 +57,7 @@ public class BaseDaoImpl extends BaseHibernateDaoSupport implements BaseDao,Clon
 		// TODO Auto-generated method stub
 		return beanObject(hql);
 	}
+
 	@Override
 	protected Object clone() throws CloneNotSupportedException {
 		// TODO Auto-generated method stub

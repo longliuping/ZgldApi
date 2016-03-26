@@ -8,8 +8,7 @@ import java.util.Date;
  * the HishopPhotoGallery entity. @author MyEclipse Persistence Tools
  */
 
-public abstract class AbstractHishopPhotoGallery implements
-		java.io.Serializable {
+public abstract class AbstractHishopPhotoGallery implements java.io.Serializable {
 
 	// Fields
 
@@ -28,8 +27,7 @@ public abstract class AbstractHishopPhotoGallery implements
 	}
 
 	/** minimal constructor */
-	public AbstractHishopPhotoGallery(Integer categoryId, String photoPath,
-			Integer fileSize, Date uploadTime, Date lastUpdateTime) {
+	public AbstractHishopPhotoGallery(Integer categoryId, String photoPath, Integer fileSize, Date uploadTime, Date lastUpdateTime) {
 		this.categoryId = categoryId;
 		this.photoPath = photoPath;
 		this.fileSize = fileSize;
@@ -38,9 +36,7 @@ public abstract class AbstractHishopPhotoGallery implements
 	}
 
 	/** full constructor */
-	public AbstractHishopPhotoGallery(Integer categoryId, String photoName,
-			String photoPath, Integer fileSize, Date uploadTime,
-			Date lastUpdateTime) {
+	public AbstractHishopPhotoGallery(Integer categoryId, String photoName, String photoPath, Integer fileSize, Date uploadTime, Date lastUpdateTime) {
 		this.categoryId = categoryId;
 		this.photoName = photoName;
 		this.photoPath = photoPath;

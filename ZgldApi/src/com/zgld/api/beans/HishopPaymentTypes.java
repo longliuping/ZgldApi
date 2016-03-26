@@ -3,8 +3,7 @@ package com.zgld.api.beans;
 /**
  * HishopPaymentTypes entity. @author MyEclipse Persistence Tools
  */
-public class HishopPaymentTypes extends AbstractHishopPaymentTypes implements
-		java.io.Serializable {
+public class HishopPaymentTypes extends AbstractHishopPaymentTypes implements java.io.Serializable {
 
 	// Constructors
 
@@ -13,19 +12,13 @@ public class HishopPaymentTypes extends AbstractHishopPaymentTypes implements
 	}
 
 	/** minimal constructor */
-	public HishopPaymentTypes(String name, Integer displaySequence,
-			Boolean isUseInpour, Double charge, Boolean isPercent,
-			String applicationType) {
-		super(name, displaySequence, isUseInpour, charge, isPercent,
-				applicationType);
+	public HishopPaymentTypes(String name, Integer displaySequence, Boolean isUseInpour, Double charge, Boolean isPercent, String applicationType) {
+		super(name, displaySequence, isUseInpour, charge, isPercent, applicationType);
 	}
 
 	/** full constructor */
-	public HishopPaymentTypes(String name, String description, String gateway,
-			Integer displaySequence, Boolean isUseInpour, Double charge,
-			Boolean isPercent, String applicationType, String settings) {
-		super(name, description, gateway, displaySequence, isUseInpour, charge,
-				isPercent, applicationType, settings);
+	public HishopPaymentTypes(String name, String description, String gateway, Integer displaySequence, Boolean isUseInpour, Double charge, Boolean isPercent, String applicationType, String settings) {
+		super(name, description, gateway, displaySequence, isUseInpour, charge, isPercent, applicationType, settings);
 	}
 
 }

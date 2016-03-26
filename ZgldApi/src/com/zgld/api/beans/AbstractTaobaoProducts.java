@@ -44,10 +44,7 @@ public abstract class AbstractTaobaoProducts implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public AbstractTaobaoProducts(HishopProducts hishopProducts, Long cid,
-			String proTitle, Long num, String locationState,
-			String locationCity, String freightPayer, Boolean hasInvoice,
-			Boolean hasWarranty, Boolean hasDiscount, Long validThru) {
+	public AbstractTaobaoProducts(HishopProducts hishopProducts, Long cid, String proTitle, Long num, String locationState, String locationCity, String freightPayer, Boolean hasInvoice, Boolean hasWarranty, Boolean hasDiscount, Long validThru) {
 		this.hishopProducts = hishopProducts;
 		this.cid = cid;
 		this.proTitle = proTitle;
@@ -62,14 +59,7 @@ public abstract class AbstractTaobaoProducts implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public AbstractTaobaoProducts(HishopProducts hishopProducts, Long cid,
-			String stuffStatus, String proTitle, Long num,
-			String locationState, String locationCity, String freightPayer,
-			Double postFee, Double expressFee, Double emsfee,
-			Boolean hasInvoice, Boolean hasWarranty, Boolean hasDiscount,
-			Long validThru, Date listTime, String propertyAlias,
-			String inputPids, String inputStr, String skuProperties,
-			String skuQuantities, String skuPrices, String skuOuterIds) {
+	public AbstractTaobaoProducts(HishopProducts hishopProducts, Long cid, String stuffStatus, String proTitle, Long num, String locationState, String locationCity, String freightPayer, Double postFee, Double expressFee, Double emsfee, Boolean hasInvoice, Boolean hasWarranty, Boolean hasDiscount, Long validThru, Date listTime, String propertyAlias, String inputPids, String inputStr, String skuProperties, String skuQuantities, String skuPrices, String skuOuterIds) {
 		this.hishopProducts = hishopProducts;
 		this.cid = cid;
 		this.stuffStatus = stuffStatus;

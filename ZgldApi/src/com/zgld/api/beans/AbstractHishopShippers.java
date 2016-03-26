@@ -28,9 +28,7 @@ public abstract class AbstractHishopShippers implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public AbstractHishopShippers(Integer distributorUserId, Boolean isDefault,
-			String shipperTag, String shipperName, Integer regionId,
-			String address, String zipcode) {
+	public AbstractHishopShippers(Integer distributorUserId, Boolean isDefault, String shipperTag, String shipperName, Integer regionId, String address, String zipcode) {
 		this.distributorUserId = distributorUserId;
 		this.isDefault = isDefault;
 		this.shipperTag = shipperTag;
@@ -41,10 +39,7 @@ public abstract class AbstractHishopShippers implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public AbstractHishopShippers(Integer distributorUserId, Boolean isDefault,
-			String shipperTag, String shipperName, Integer regionId,
-			String address, String cellPhone, String telPhone, String zipcode,
-			String remark) {
+	public AbstractHishopShippers(Integer distributorUserId, Boolean isDefault, String shipperTag, String shipperName, Integer regionId, String address, String cellPhone, String telPhone, String zipcode, String remark) {
 		this.distributorUserId = distributorUserId;
 		this.isDefault = isDefault;
 		this.shipperTag = shipperTag;

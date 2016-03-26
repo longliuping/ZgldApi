@@ -3,8 +3,7 @@ package com.zgld.api.beans;
 /**
  * HishopGiftShoppingCartsId entity. @author MyEclipse Persistence Tools
  */
-public class HishopGiftShoppingCartsId extends
-		AbstractHishopGiftShoppingCartsId implements java.io.Serializable {
+public class HishopGiftShoppingCartsId extends AbstractHishopGiftShoppingCartsId implements java.io.Serializable {
 
 	// Constructors
 

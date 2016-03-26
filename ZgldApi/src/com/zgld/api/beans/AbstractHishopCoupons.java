@@ -32,9 +32,7 @@ public abstract class AbstractHishopCoupons implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public AbstractHishopCoupons(String name, Date closingTime,
-			Double discountValue, Integer sentCount, Integer usedCount,
-			Integer needPoint) {
+	public AbstractHishopCoupons(String name, Date closingTime, Double discountValue, Integer sentCount, Integer usedCount, Integer needPoint) {
 		this.name = name;
 		this.closingTime = closingTime;
 		this.discountValue = discountValue;
@@ -44,10 +42,7 @@ public abstract class AbstractHishopCoupons implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public AbstractHishopCoupons(String name, Date closingTime,
-			String description, Double amount, Double discountValue,
-			Integer sentCount, Integer usedCount, Integer needPoint,
-			Set hishopCouponItemses) {
+	public AbstractHishopCoupons(String name, Date closingTime, String description, Double amount, Double discountValue, Integer sentCount, Integer usedCount, Integer needPoint, Set hishopCouponItemses) {
 		this.name = name;
 		this.closingTime = closingTime;
 		this.description = description;

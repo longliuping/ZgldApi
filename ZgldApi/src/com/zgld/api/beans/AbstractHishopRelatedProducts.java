@@ -5,8 +5,7 @@ package com.zgld.api.beans;
  * of the HishopRelatedProducts entity. @author MyEclipse Persistence Tools
  */
 
-public abstract class AbstractHishopRelatedProducts implements
-		java.io.Serializable {
+public abstract class AbstractHishopRelatedProducts implements java.io.Serializable {
 
 	// Fields
 

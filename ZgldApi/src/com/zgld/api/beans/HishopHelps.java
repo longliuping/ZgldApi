@@ -5,8 +5,7 @@ import java.sql.Timestamp;
 /**
  * HishopHelps entity. @author MyEclipse Persistence Tools
  */
-public class HishopHelps extends AbstractHishopHelps implements
-		java.io.Serializable {
+public class HishopHelps extends AbstractHishopHelps implements java.io.Serializable {
 
 	// Constructors
 
@@ -15,17 +14,13 @@ public class HishopHelps extends AbstractHishopHelps implements
 	}
 
 	/** minimal constructor */
-	public HishopHelps(HishopHelpCategories hishopHelpCategories, String title,
-			String content, Timestamp addedDate, Boolean isShowFooter) {
+	public HishopHelps(HishopHelpCategories hishopHelpCategories, String title, String content, Timestamp addedDate, Boolean isShowFooter) {
 		super(hishopHelpCategories, title, content, addedDate, isShowFooter);
 	}
 
 	/** full constructor */
-	public HishopHelps(HishopHelpCategories hishopHelpCategories, String title,
-			String metaDescription, String metaKeywords, String description,
-			String content, Timestamp addedDate, Boolean isShowFooter) {
-		super(hishopHelpCategories, title, metaDescription, metaKeywords,
-				description, content, addedDate, isShowFooter);
+	public HishopHelps(HishopHelpCategories hishopHelpCategories, String title, String metaDescription, String metaKeywords, String description, String content, Timestamp addedDate, Boolean isShowFooter) {
+		super(hishopHelpCategories, title, metaDescription, metaKeywords, description, content, addedDate, isShowFooter);
 	}
 
 }

@@ -3,8 +3,7 @@ package com.zgld.api.beans;
 /**
  * HishopMemberMessageBox entity. @author MyEclipse Persistence Tools
  */
-public class HishopMemberMessageBox extends AbstractHishopMemberMessageBox
-		implements java.io.Serializable {
+public class HishopMemberMessageBox extends AbstractHishopMemberMessageBox implements java.io.Serializable {
 
 	// Constructors
 
@@ -13,8 +12,7 @@ public class HishopMemberMessageBox extends AbstractHishopMemberMessageBox
 	}
 
 	/** full constructor */
-	public HishopMemberMessageBox(Long contentId, String sernder,
-			String accepter, Boolean isRead) {
+	public HishopMemberMessageBox(Long contentId, String sernder, String accepter, Boolean isRead) {
 		super(contentId, sernder, accepter, isRead);
 	}
 

@@ -5,8 +5,7 @@ import java.sql.Timestamp;
 /**
  * HishopPhotoGallery entity. @author MyEclipse Persistence Tools
  */
-public class HishopPhotoGallery extends AbstractHishopPhotoGallery implements
-		java.io.Serializable {
+public class HishopPhotoGallery extends AbstractHishopPhotoGallery implements java.io.Serializable {
 
 	// Constructors
 
@@ -15,17 +14,13 @@ public class HishopPhotoGallery extends AbstractHishopPhotoGallery implements
 	}
 
 	/** minimal constructor */
-	public HishopPhotoGallery(Integer categoryId, String photoPath,
-			Integer fileSize, Timestamp uploadTime, Timestamp lastUpdateTime) {
+	public HishopPhotoGallery(Integer categoryId, String photoPath, Integer fileSize, Timestamp uploadTime, Timestamp lastUpdateTime) {
 		super(categoryId, photoPath, fileSize, uploadTime, lastUpdateTime);
 	}
 
 	/** full constructor */
-	public HishopPhotoGallery(Integer categoryId, String photoName,
-			String photoPath, Integer fileSize, Timestamp uploadTime,
-			Timestamp lastUpdateTime) {
-		super(categoryId, photoName, photoPath, fileSize, uploadTime,
-				lastUpdateTime);
+	public HishopPhotoGallery(Integer categoryId, String photoName, String photoPath, Integer fileSize, Timestamp uploadTime, Timestamp lastUpdateTime) {
+		super(categoryId, photoName, photoPath, fileSize, uploadTime, lastUpdateTime);
 	}
 
 }

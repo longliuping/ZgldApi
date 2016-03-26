@@ -12,6 +12,7 @@ public abstract class AbstractHotCategory implements java.io.Serializable {
 	private Integer hotid;
 	private String hotname;
 	private String hotimg;
+
 	// Constructors
 
 	/** default constructor */

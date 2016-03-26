@@ -8,8 +8,7 @@ import java.util.Date;
  * of the HishopShoppingCarts entity. @author MyEclipse Persistence Tools
  */
 
-public abstract class AbstractHishopShoppingCarts implements
-		java.io.Serializable {
+public abstract class AbstractHishopShoppingCarts implements java.io.Serializable {
 
 	// Fields
 

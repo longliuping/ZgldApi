@@ -6,8 +6,7 @@ package com.zgld.api.beans;
  * Persistence Tools
  */
 
-public abstract class AbstractHishopRelatedArticsProducts implements
-		java.io.Serializable {
+public abstract class AbstractHishopRelatedArticsProducts implements java.io.Serializable {
 
 	// Fields
 

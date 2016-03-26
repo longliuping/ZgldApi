@@ -6,8 +6,7 @@ package com.zgld.api.beans;
  * Persistence Tools
  */
 
-public abstract class AbstractHishopTemplateRelatedShippingId implements
-		java.io.Serializable {
+public abstract class AbstractHishopTemplateRelatedShippingId implements java.io.Serializable {
 
 	// Fields
 
@@ -21,8 +20,7 @@ public abstract class AbstractHishopTemplateRelatedShippingId implements
 	}
 
 	/** full constructor */
-	public AbstractHishopTemplateRelatedShippingId(Integer modeId,
-			String expressCompanyName) {
+	public AbstractHishopTemplateRelatedShippingId(Integer modeId, String expressCompanyName) {
 		this.modeId = modeId;
 		this.expressCompanyName = expressCompanyName;
 	}
@@ -54,27 +52,14 @@ public abstract class AbstractHishopTemplateRelatedShippingId implements
 			return false;
 		AbstractHishopTemplateRelatedShippingId castOther = (AbstractHishopTemplateRelatedShippingId) other;
 
-		return ((this.getModeId() == castOther.getModeId()) || (this
-				.getModeId() != null
-				&& castOther.getModeId() != null && this.getModeId().equals(
-				castOther.getModeId())))
-				&& ((this.getExpressCompanyName() == castOther
-						.getExpressCompanyName()) || (this
-						.getExpressCompanyName() != null
-						&& castOther.getExpressCompanyName() != null && this
-						.getExpressCompanyName().equals(
-								castOther.getExpressCompanyName())));
+		return ((this.getModeId() == castOther.getModeId()) || (this.getModeId() != null && castOther.getModeId() != null && this.getModeId().equals(castOther.getModeId()))) && ((this.getExpressCompanyName() == castOther.getExpressCompanyName()) || (this.getExpressCompanyName() != null && castOther.getExpressCompanyName() != null && this.getExpressCompanyName().equals(castOther.getExpressCompanyName())));
 	}
 
 	public int hashCode() {
 		int result = 17;
 
-		result = 37 * result
-				+ (getModeId() == null ? 0 : this.getModeId().hashCode());
-		result = 37
-				* result
-				+ (getExpressCompanyName() == null ? 0 : this
-						.getExpressCompanyName().hashCode());
+		result = 37 * result + (getModeId() == null ? 0 : this.getModeId().hashCode());
+		result = 37 * result + (getExpressCompanyName() == null ? 0 : this.getExpressCompanyName().hashCode());
 		return result;
 	}
 

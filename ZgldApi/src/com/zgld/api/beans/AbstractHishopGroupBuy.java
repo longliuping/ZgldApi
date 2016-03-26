@@ -32,9 +32,7 @@ public abstract class AbstractHishopGroupBuy implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public AbstractHishopGroupBuy(HishopProducts hishopProducts,
-			Double needPrice, Date startDate, Date endDate,
-			Integer maxCount, Integer status, Integer displaySequence) {
+	public AbstractHishopGroupBuy(HishopProducts hishopProducts, Double needPrice, Date startDate, Date endDate, Integer maxCount, Integer status, Integer displaySequence) {
 		this.hishopProducts = hishopProducts;
 		this.needPrice = needPrice;
 		this.startDate = startDate;
@@ -45,10 +43,7 @@ public abstract class AbstractHishopGroupBuy implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public AbstractHishopGroupBuy(HishopProducts hishopProducts,
-			Double needPrice, Date startDate, Date endDate,
-			Integer maxCount, String content, Integer status,
-			Integer displaySequence, Set hishopGroupBuyConditions) {
+	public AbstractHishopGroupBuy(HishopProducts hishopProducts, Double needPrice, Date startDate, Date endDate, Integer maxCount, String content, Integer status, Integer displaySequence, Set hishopGroupBuyConditions) {
 		this.hishopProducts = hishopProducts;
 		this.needPrice = needPrice;
 		this.startDate = startDate;

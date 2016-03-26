@@ -26,17 +26,14 @@ public abstract class AbstractHishopCouponItems implements java.io.Serializable 
 	}
 
 	/** minimal constructor */
-	public AbstractHishopCouponItems(HishopCoupons hishopCoupons,
-			String lotNumber, Date generateTime) {
+	public AbstractHishopCouponItems(HishopCoupons hishopCoupons, String lotNumber, Date generateTime) {
 		this.hishopCoupons = hishopCoupons;
 		this.lotNumber = lotNumber;
 		this.generateTime = generateTime;
 	}
 
 	/** full constructor */
-	public AbstractHishopCouponItems(HishopCoupons hishopCoupons,
-			String lotNumber, Integer userId, String emailAddress,
-			Date generateTime) {
+	public AbstractHishopCouponItems(HishopCoupons hishopCoupons, String lotNumber, Integer userId, String emailAddress, Date generateTime) {
 		this.hishopCoupons = hishopCoupons;
 		this.lotNumber = lotNumber;
 		this.userId = userId;

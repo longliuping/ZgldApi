@@ -27,8 +27,7 @@ public abstract class AbstractHishopLogs implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public AbstractHishopLogs(String pageUrl, Date addedTime,
-			String userName, String ipaddress, Integer privilege) {
+	public AbstractHishopLogs(String pageUrl, Date addedTime, String userName, String ipaddress, Integer privilege) {
 		this.pageUrl = pageUrl;
 		this.addedTime = addedTime;
 		this.userName = userName;
@@ -37,9 +36,7 @@ public abstract class AbstractHishopLogs implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public AbstractHishopLogs(String pageUrl, Date addedTime,
-			String userName, String ipaddress, Integer privilege,
-			String description) {
+	public AbstractHishopLogs(String pageUrl, Date addedTime, String userName, String ipaddress, Integer privilege, String description) {
 		this.pageUrl = pageUrl;
 		this.addedTime = addedTime;
 		this.userName = userName;

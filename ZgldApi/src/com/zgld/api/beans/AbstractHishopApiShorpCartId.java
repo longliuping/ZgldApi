@@ -8,8 +8,7 @@ import java.util.Date;
  * of the HishopApiShorpCartId entity. @author MyEclipse Persistence Tools
  */
 
-public abstract class AbstractHishopApiShorpCartId implements
-		java.io.Serializable {
+public abstract class AbstractHishopApiShorpCartId implements java.io.Serializable {
 
 	// Fields
 
@@ -27,9 +26,7 @@ public abstract class AbstractHishopApiShorpCartId implements
 	}
 
 	/** full constructor */
-	public AbstractHishopApiShorpCartId(String apiuserId, String apitype,
-			Integer apiproductId, String apiskuId, Integer apiquantity,
-			Date apitime) {
+	public AbstractHishopApiShorpCartId(String apiuserId, String apitype, Integer apiproductId, String apiskuId, Integer apiquantity, Date apitime) {
 		this.apiuserId = apiuserId;
 		this.apitype = apitype;
 		this.apiproductId = apiproductId;
@@ -97,51 +94,19 @@ public abstract class AbstractHishopApiShorpCartId implements
 			return false;
 		AbstractHishopApiShorpCartId castOther = (AbstractHishopApiShorpCartId) other;
 
-		return ((this.getApiuserId() == castOther.getApiuserId()) || (this
-				.getApiuserId() != null
-				&& castOther.getApiuserId() != null && this.getApiuserId()
-				.equals(castOther.getApiuserId())))
-				&& ((this.getApitype() == castOther.getApitype()) || (this
-						.getApitype() != null
-						&& castOther.getApitype() != null && this.getApitype()
-						.equals(castOther.getApitype())))
-				&& ((this.getApiproductId() == castOther.getApiproductId()) || (this
-						.getApiproductId() != null
-						&& castOther.getApiproductId() != null && this
-						.getApiproductId().equals(castOther.getApiproductId())))
-				&& ((this.getApiskuId() == castOther.getApiskuId()) || (this
-						.getApiskuId() != null
-						&& castOther.getApiskuId() != null && this
-						.getApiskuId().equals(castOther.getApiskuId())))
-				&& ((this.getApiquantity() == castOther.getApiquantity()) || (this
-						.getApiquantity() != null
-						&& castOther.getApiquantity() != null && this
-						.getApiquantity().equals(castOther.getApiquantity())))
-				&& ((this.getApitime() == castOther.getApitime()) || (this
-						.getApitime() != null
-						&& castOther.getApitime() != null && this.getApitime()
-						.equals(castOther.getApitime())));
+		return ((this.getApiuserId() == castOther.getApiuserId()) || (this.getApiuserId() != null && castOther.getApiuserId() != null && this.getApiuserId().equals(castOther.getApiuserId()))) && ((this.getApitype() == castOther.getApitype()) || (this.getApitype() != null && castOther.getApitype() != null && this.getApitype().equals(castOther.getApitype()))) && ((this.getApiproductId() == castOther.getApiproductId()) || (this.getApiproductId() != null && castOther.getApiproductId() != null && this.getApiproductId().equals(castOther.getApiproductId()))) && ((this.getApiskuId() == castOther.getApiskuId()) || (this.getApiskuId() != null && castOther.getApiskuId() != null && this.getApiskuId().equals(castOther.getApiskuId())))
+				&& ((this.getApiquantity() == castOther.getApiquantity()) || (this.getApiquantity() != null && castOther.getApiquantity() != null && this.getApiquantity().equals(castOther.getApiquantity()))) && ((this.getApitime() == castOther.getApitime()) || (this.getApitime() != null && castOther.getApitime() != null && this.getApitime().equals(castOther.getApitime())));
 	}
 
 	public int hashCode() {
 		int result = 17;
 
-		result = 37 * result
-				+ (getApiuserId() == null ? 0 : this.getApiuserId().hashCode());
-		result = 37 * result
-				+ (getApitype() == null ? 0 : this.getApitype().hashCode());
-		result = 37
-				* result
-				+ (getApiproductId() == null ? 0 : this.getApiproductId()
-						.hashCode());
-		result = 37 * result
-				+ (getApiskuId() == null ? 0 : this.getApiskuId().hashCode());
-		result = 37
-				* result
-				+ (getApiquantity() == null ? 0 : this.getApiquantity()
-						.hashCode());
-		result = 37 * result
-				+ (getApitime() == null ? 0 : this.getApitime().hashCode());
+		result = 37 * result + (getApiuserId() == null ? 0 : this.getApiuserId().hashCode());
+		result = 37 * result + (getApitype() == null ? 0 : this.getApitype().hashCode());
+		result = 37 * result + (getApiproductId() == null ? 0 : this.getApiproductId().hashCode());
+		result = 37 * result + (getApiskuId() == null ? 0 : this.getApiskuId().hashCode());
+		result = 37 * result + (getApiquantity() == null ? 0 : this.getApiquantity().hashCode());
+		result = 37 * result + (getApitime() == null ? 0 : this.getApitime().hashCode());
 		return result;
 	}
 

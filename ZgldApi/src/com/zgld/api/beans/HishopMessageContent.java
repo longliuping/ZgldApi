@@ -5,8 +5,7 @@ import java.sql.Timestamp;
 /**
  * HishopMessageContent entity. @author MyEclipse Persistence Tools
  */
-public class HishopMessageContent extends AbstractHishopMessageContent
-		implements java.io.Serializable {
+public class HishopMessageContent extends AbstractHishopMessageContent implements java.io.Serializable {
 
 	// Constructors
 

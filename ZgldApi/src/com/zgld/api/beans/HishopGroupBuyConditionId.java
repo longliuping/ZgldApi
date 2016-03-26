@@ -3,8 +3,7 @@ package com.zgld.api.beans;
 /**
  * HishopGroupBuyConditionId entity. @author MyEclipse Persistence Tools
  */
-public class HishopGroupBuyConditionId extends
-		AbstractHishopGroupBuyConditionId implements java.io.Serializable {
+public class HishopGroupBuyConditionId extends AbstractHishopGroupBuyConditionId implements java.io.Serializable {
 
 	// Constructors
 
@@ -13,8 +12,7 @@ public class HishopGroupBuyConditionId extends
 	}
 
 	/** full constructor */
-	public HishopGroupBuyConditionId(HishopGroupBuy hishopGroupBuy,
-			Integer count) {
+	public HishopGroupBuyConditionId(HishopGroupBuy hishopGroupBuy, Integer count) {
 		super(hishopGroupBuy, count);
 	}
 

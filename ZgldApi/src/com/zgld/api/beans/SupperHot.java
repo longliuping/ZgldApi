@@ -10,12 +10,15 @@ public class SupperHot extends AbstractSupperHot implements java.io.Serializable
 	/** default constructor */
 	public SupperHot() {
 	}
+
 	Supplier supplier;
+
 	public Supplier getSupplier() {
 		return supplier;
 	}
+
 	public void setSupplier(Supplier supplier) {
 		this.supplier = supplier;
 	}
-	
+
 }

@@ -3,8 +3,7 @@ package com.zgld.api.beans;
 /**
  * AspnetUsersInRolesId entity. @author MyEclipse Persistence Tools
  */
-public class AspnetUsersInRolesId extends AbstractAspnetUsersInRolesId
-		implements java.io.Serializable {
+public class AspnetUsersInRolesId extends AbstractAspnetUsersInRolesId implements java.io.Serializable {
 
 	// Constructors
 

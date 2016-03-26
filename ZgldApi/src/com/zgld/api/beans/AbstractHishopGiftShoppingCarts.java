@@ -9,8 +9,7 @@ import java.util.Date;
  * Persistence Tools
  */
 
-public abstract class AbstractHishopGiftShoppingCarts implements
-		java.io.Serializable {
+public abstract class AbstractHishopGiftShoppingCarts implements java.io.Serializable {
 
 	// Fields
 
@@ -25,8 +24,7 @@ public abstract class AbstractHishopGiftShoppingCarts implements
 	}
 
 	/** full constructor */
-	public AbstractHishopGiftShoppingCarts(HishopGiftShoppingCartsId id,
-			Integer quantity, Date addTime) {
+	public AbstractHishopGiftShoppingCarts(HishopGiftShoppingCartsId id, Integer quantity, Date addTime) {
 		this.id = id;
 		this.quantity = quantity;
 		this.addTime = addTime;

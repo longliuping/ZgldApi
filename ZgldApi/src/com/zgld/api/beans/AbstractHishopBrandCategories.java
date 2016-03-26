@@ -8,8 +8,7 @@ import java.util.Set;
  * of the HishopBrandCategories entity. @author MyEclipse Persistence Tools
  */
 
-public abstract class AbstractHishopBrandCategories implements
-		java.io.Serializable {
+public abstract class AbstractHishopBrandCategories implements java.io.Serializable {
 
 	// Fields
 
@@ -32,17 +31,13 @@ public abstract class AbstractHishopBrandCategories implements
 	}
 
 	/** minimal constructor */
-	public AbstractHishopBrandCategories(String brandName,
-			Integer displaySequence) {
+	public AbstractHishopBrandCategories(String brandName, Integer displaySequence) {
 		this.brandName = brandName;
 		this.displaySequence = displaySequence;
 	}
 
 	/** full constructor */
-	public AbstractHishopBrandCategories(String brandName, String logo,
-			String companyUrl, String rewriteName, String metaKeywords,
-			String metaDescription, String description,
-			Integer displaySequence, String theme, Set hishopProductTypeBrandses) {
+	public AbstractHishopBrandCategories(String brandName, String logo, String companyUrl, String rewriteName, String metaKeywords, String metaDescription, String description, Integer displaySequence, String theme, Set hishopProductTypeBrandses) {
 		this.brandName = brandName;
 		this.logo = logo;
 		this.companyUrl = companyUrl;

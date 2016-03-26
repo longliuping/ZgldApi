@@ -5,8 +5,7 @@ import java.util.Set;
 /**
  * HishopBrandCategories entity. @author MyEclipse Persistence Tools
  */
-public class HishopBrandCategories extends AbstractHishopBrandCategories
-		implements java.io.Serializable {
+public class HishopBrandCategories extends AbstractHishopBrandCategories implements java.io.Serializable {
 
 	// Constructors
 
@@ -20,13 +19,8 @@ public class HishopBrandCategories extends AbstractHishopBrandCategories
 	}
 
 	/** full constructor */
-	public HishopBrandCategories(String brandName, String logo,
-			String companyUrl, String rewriteName, String metaKeywords,
-			String metaDescription, String description,
-			Integer displaySequence, String theme, Set hishopProductTypeBrandses) {
-		super(brandName, logo, companyUrl, rewriteName, metaKeywords,
-				metaDescription, description, displaySequence, theme,
-				hishopProductTypeBrandses);
+	public HishopBrandCategories(String brandName, String logo, String companyUrl, String rewriteName, String metaKeywords, String metaDescription, String description, Integer displaySequence, String theme, Set hishopProductTypeBrandses) {
+		super(brandName, logo, companyUrl, rewriteName, metaKeywords, metaDescription, description, displaySequence, theme, hishopProductTypeBrandses);
 	}
 
 }

@@ -6,8 +6,7 @@ package com.zgld.api.beans;
  * Persistence Tools
  */
 
-public abstract class AbstractHishopProductAttributesId implements
-		java.io.Serializable {
+public abstract class AbstractHishopProductAttributesId implements java.io.Serializable {
 
 	// Fields
 
@@ -22,8 +21,7 @@ public abstract class AbstractHishopProductAttributesId implements
 	}
 
 	/** full constructor */
-	public AbstractHishopProductAttributesId(HishopProducts hishopProducts,
-			HishopAttributes hishopAttributes, Integer valueId) {
+	public AbstractHishopProductAttributesId(HishopProducts hishopProducts, HishopAttributes hishopAttributes, Integer valueId) {
 		this.hishopProducts = hishopProducts;
 		this.hishopAttributes = hishopAttributes;
 		this.valueId = valueId;
@@ -64,34 +62,15 @@ public abstract class AbstractHishopProductAttributesId implements
 			return false;
 		AbstractHishopProductAttributesId castOther = (AbstractHishopProductAttributesId) other;
 
-		return ((this.getHishopProducts() == castOther.getHishopProducts()) || (this
-				.getHishopProducts() != null
-				&& castOther.getHishopProducts() != null && this
-				.getHishopProducts().equals(castOther.getHishopProducts())))
-				&& ((this.getHishopAttributes() == castOther
-						.getHishopAttributes()) || (this.getHishopAttributes() != null
-						&& castOther.getHishopAttributes() != null && this
-						.getHishopAttributes().equals(
-								castOther.getHishopAttributes())))
-				&& ((this.getValueId() == castOther.getValueId()) || (this
-						.getValueId() != null
-						&& castOther.getValueId() != null && this.getValueId()
-						.equals(castOther.getValueId())));
+		return ((this.getHishopProducts() == castOther.getHishopProducts()) || (this.getHishopProducts() != null && castOther.getHishopProducts() != null && this.getHishopProducts().equals(castOther.getHishopProducts()))) && ((this.getHishopAttributes() == castOther.getHishopAttributes()) || (this.getHishopAttributes() != null && castOther.getHishopAttributes() != null && this.getHishopAttributes().equals(castOther.getHishopAttributes()))) && ((this.getValueId() == castOther.getValueId()) || (this.getValueId() != null && castOther.getValueId() != null && this.getValueId().equals(castOther.getValueId())));
 	}
 
 	public int hashCode() {
 		int result = 17;
 
-		result = 37
-				* result
-				+ (getHishopProducts() == null ? 0 : this.getHishopProducts()
-						.hashCode());
-		result = 37
-				* result
-				+ (getHishopAttributes() == null ? 0 : this
-						.getHishopAttributes().hashCode());
-		result = 37 * result
-				+ (getValueId() == null ? 0 : this.getValueId().hashCode());
+		result = 37 * result + (getHishopProducts() == null ? 0 : this.getHishopProducts().hashCode());
+		result = 37 * result + (getHishopAttributes() == null ? 0 : this.getHishopAttributes().hashCode());
+		result = 37 * result + (getValueId() == null ? 0 : this.getValueId().hashCode());
 		return result;
 	}
 

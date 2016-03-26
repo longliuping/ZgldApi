@@ -6,8 +6,7 @@ package com.zgld.api.beans;
  * Persistence Tools
  */
 
-public abstract class AbstractHishopIntegrationSettingsId implements
-		java.io.Serializable {
+public abstract class AbstractHishopIntegrationSettingsId implements java.io.Serializable {
 
 	// Fields
 
@@ -25,9 +24,7 @@ public abstract class AbstractHishopIntegrationSettingsId implements
 	}
 
 	/** full constructor */
-	public AbstractHishopIntegrationSettingsId(Integer integrationForumId,
-			String applicationName, String integrationForumXml, Boolean isOff,
-			Boolean isUsing, String integrationForumUrl) {
+	public AbstractHishopIntegrationSettingsId(Integer integrationForumId, String applicationName, String integrationForumXml, Boolean isOff, Boolean isUsing, String integrationForumUrl) {
 		this.integrationForumId = integrationForumId;
 		this.applicationName = applicationName;
 		this.integrationForumXml = integrationForumXml;
@@ -95,61 +92,19 @@ public abstract class AbstractHishopIntegrationSettingsId implements
 			return false;
 		AbstractHishopIntegrationSettingsId castOther = (AbstractHishopIntegrationSettingsId) other;
 
-		return ((this.getIntegrationForumId() == castOther
-				.getIntegrationForumId()) || (this.getIntegrationForumId() != null
-				&& castOther.getIntegrationForumId() != null && this
-				.getIntegrationForumId().equals(
-						castOther.getIntegrationForumId())))
-				&& ((this.getApplicationName() == castOther
-						.getApplicationName()) || (this.getApplicationName() != null
-						&& castOther.getApplicationName() != null && this
-						.getApplicationName().equals(
-								castOther.getApplicationName())))
-				&& ((this.getIntegrationForumXml() == castOther
-						.getIntegrationForumXml()) || (this
-						.getIntegrationForumXml() != null
-						&& castOther.getIntegrationForumXml() != null && this
-						.getIntegrationForumXml().equals(
-								castOther.getIntegrationForumXml())))
-				&& ((this.getIsOff() == castOther.getIsOff()) || (this
-						.getIsOff() != null
-						&& castOther.getIsOff() != null && this.getIsOff()
-						.equals(castOther.getIsOff())))
-				&& ((this.getIsUsing() == castOther.getIsUsing()) || (this
-						.getIsUsing() != null
-						&& castOther.getIsUsing() != null && this.getIsUsing()
-						.equals(castOther.getIsUsing())))
-				&& ((this.getIntegrationForumUrl() == castOther
-						.getIntegrationForumUrl()) || (this
-						.getIntegrationForumUrl() != null
-						&& castOther.getIntegrationForumUrl() != null && this
-						.getIntegrationForumUrl().equals(
-								castOther.getIntegrationForumUrl())));
+		return ((this.getIntegrationForumId() == castOther.getIntegrationForumId()) || (this.getIntegrationForumId() != null && castOther.getIntegrationForumId() != null && this.getIntegrationForumId().equals(castOther.getIntegrationForumId()))) && ((this.getApplicationName() == castOther.getApplicationName()) || (this.getApplicationName() != null && castOther.getApplicationName() != null && this.getApplicationName().equals(castOther.getApplicationName()))) && ((this.getIntegrationForumXml() == castOther.getIntegrationForumXml()) || (this.getIntegrationForumXml() != null && castOther.getIntegrationForumXml() != null && this.getIntegrationForumXml().equals(castOther.getIntegrationForumXml())))
+				&& ((this.getIsOff() == castOther.getIsOff()) || (this.getIsOff() != null && castOther.getIsOff() != null && this.getIsOff().equals(castOther.getIsOff()))) && ((this.getIsUsing() == castOther.getIsUsing()) || (this.getIsUsing() != null && castOther.getIsUsing() != null && this.getIsUsing().equals(castOther.getIsUsing()))) && ((this.getIntegrationForumUrl() == castOther.getIntegrationForumUrl()) || (this.getIntegrationForumUrl() != null && castOther.getIntegrationForumUrl() != null && this.getIntegrationForumUrl().equals(castOther.getIntegrationForumUrl())));
 	}
 
 	public int hashCode() {
 		int result = 17;
 
-		result = 37
-				* result
-				+ (getIntegrationForumId() == null ? 0 : this
-						.getIntegrationForumId().hashCode());
-		result = 37
-				* result
-				+ (getApplicationName() == null ? 0 : this.getApplicationName()
-						.hashCode());
-		result = 37
-				* result
-				+ (getIntegrationForumXml() == null ? 0 : this
-						.getIntegrationForumXml().hashCode());
-		result = 37 * result
-				+ (getIsOff() == null ? 0 : this.getIsOff().hashCode());
-		result = 37 * result
-				+ (getIsUsing() == null ? 0 : this.getIsUsing().hashCode());
-		result = 37
-				* result
-				+ (getIntegrationForumUrl() == null ? 0 : this
-						.getIntegrationForumUrl().hashCode());
+		result = 37 * result + (getIntegrationForumId() == null ? 0 : this.getIntegrationForumId().hashCode());
+		result = 37 * result + (getApplicationName() == null ? 0 : this.getApplicationName().hashCode());
+		result = 37 * result + (getIntegrationForumXml() == null ? 0 : this.getIntegrationForumXml().hashCode());
+		result = 37 * result + (getIsOff() == null ? 0 : this.getIsOff().hashCode());
+		result = 37 * result + (getIsUsing() == null ? 0 : this.getIsUsing().hashCode());
+		result = 37 * result + (getIntegrationForumUrl() == null ? 0 : this.getIntegrationForumUrl().hashCode());
 		return result;
 	}
 

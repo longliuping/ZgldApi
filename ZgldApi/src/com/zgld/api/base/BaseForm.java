@@ -61,18 +61,18 @@ public class BaseForm {
 	private Integer pageSize = 50;
 	private Integer newPageSize = 0;
 	private Integer id;
-	private Integer userId = 0;//用戶id
+	private Integer userId = 0;// 用戶id
 	private Integer code;
-	private String orderid;//订单ID
-	private Integer productId;//产品ID
-	private Integer hotid;//热门标签ID
-	private Integer areaid;//地址ID
+	private String orderid;// 订单ID
+	private Integer productId;// 产品ID
+	private Integer hotid;// 热门标签ID
+	private Integer areaid;// 地址ID
 	private Integer number;
-	private String skuId;//产品skuId
-	private String skuNumber;//产品数量
-	private Integer shippingId;//用户地址ID
-	private Integer modeId;//快递公司模板
-	private Integer templateId;//快递模板
+	private String skuId;// 产品skuId
+	private String skuNumber;// 产品数量
+	private Integer shippingId;// 用户地址ID
+	private Integer modeId;// 快递公司模板
+	private Integer templateId;// 快递模板
 	private Double money;
 	private String content;
 	private Integer display;
@@ -97,7 +97,7 @@ public class BaseForm {
 	private String telPhone;
 	private String cellPhone;
 	private HishopUserShippingAddresses address;
-	
+
 	public Integer getHotid() {
 		return hotid;
 	}
@@ -165,6 +165,7 @@ public class BaseForm {
 	public Timestamp getDatetime() {
 		return new Timestamp(new Date().getTime());
 	}
+
 	public Integer getCode() {
 		return code;
 	}
@@ -437,5 +438,5 @@ public class BaseForm {
 	public void setCellPhone(String cellPhone) {
 		this.cellPhone = cellPhone;
 	}
-	
+
 }

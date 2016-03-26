@@ -6,8 +6,7 @@ package com.zgld.api.beans;
  * Persistence Tools
  */
 
-public abstract class AbstractHishopShippingTypeGroups implements
-		java.io.Serializable {
+public abstract class AbstractHishopShippingTypeGroups implements java.io.Serializable {
 
 	// Fields
 
@@ -23,16 +22,13 @@ public abstract class AbstractHishopShippingTypeGroups implements
 	}
 
 	/** minimal constructor */
-	public AbstractHishopShippingTypeGroups(
-			HishopShippingTemplates hishopShippingTemplates, Double price) {
+	public AbstractHishopShippingTypeGroups(HishopShippingTemplates hishopShippingTemplates, Double price) {
 		this.hishopShippingTemplates = hishopShippingTemplates;
 		this.price = price;
 	}
 
 	/** full constructor */
-	public AbstractHishopShippingTypeGroups(
-			HishopShippingTemplates hishopShippingTemplates, Double price,
-			Double addPrice) {
+	public AbstractHishopShippingTypeGroups(HishopShippingTemplates hishopShippingTemplates, Double price, Double addPrice) {
 		this.hishopShippingTemplates = hishopShippingTemplates;
 		this.price = price;
 		this.addPrice = addPrice;
@@ -52,8 +48,7 @@ public abstract class AbstractHishopShippingTypeGroups implements
 		return this.hishopShippingTemplates;
 	}
 
-	public void setHishopShippingTemplates(
-			HishopShippingTemplates hishopShippingTemplates) {
+	public void setHishopShippingTemplates(HishopShippingTemplates hishopShippingTemplates) {
 		this.hishopShippingTemplates = hishopShippingTemplates;
 	}
 

@@ -3,8 +3,7 @@ package com.zgld.api.beans;
 /**
  * HishopFavorite entity. @author MyEclipse Persistence Tools
  */
-public class HishopFavorite extends AbstractHishopFavorite implements
-		java.io.Serializable {
+public class HishopFavorite extends AbstractHishopFavorite implements java.io.Serializable {
 
 	// Constructors
 
@@ -18,8 +17,7 @@ public class HishopFavorite extends AbstractHishopFavorite implements
 	}
 
 	/** full constructor */
-	public HishopFavorite(HishopFavoriteId id, Integer favoriteId, String tags,
-			String remark) {
+	public HishopFavorite(HishopFavoriteId id, Integer favoriteId, String tags, String remark) {
 		super(id, favoriteId, tags, remark);
 	}
 

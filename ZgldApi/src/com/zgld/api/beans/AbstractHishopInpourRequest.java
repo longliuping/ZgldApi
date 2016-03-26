@@ -8,8 +8,7 @@ import java.util.Date;
  * of the HishopInpourRequest entity. @author MyEclipse Persistence Tools
  */
 
-public abstract class AbstractHishopInpourRequest implements
-		java.io.Serializable {
+public abstract class AbstractHishopInpourRequest implements java.io.Serializable {
 
 	// Fields
 
@@ -26,8 +25,7 @@ public abstract class AbstractHishopInpourRequest implements
 	}
 
 	/** full constructor */
-	public AbstractHishopInpourRequest(AspnetMembers aspnetMembers,
-			Date tradeDate, Double inpourBlance, Integer paymentId) {
+	public AbstractHishopInpourRequest(AspnetMembers aspnetMembers, Date tradeDate, Double inpourBlance, Integer paymentId) {
 		this.aspnetMembers = aspnetMembers;
 		this.tradeDate = tradeDate;
 		this.inpourBlance = inpourBlance;

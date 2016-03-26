@@ -28,8 +28,7 @@ public abstract class AbstractHishopOrderGifts implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public AbstractHishopOrderGifts(HishopOrderGiftsId id, String giftName,
-			Double costPrice, String thumbnailsUrl, Integer quantity) {
+	public AbstractHishopOrderGifts(HishopOrderGiftsId id, String giftName, Double costPrice, String thumbnailsUrl, Integer quantity) {
 		this.id = id;
 		this.giftName = giftName;
 		this.costPrice = costPrice;

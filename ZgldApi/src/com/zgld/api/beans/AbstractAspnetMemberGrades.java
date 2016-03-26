@@ -8,8 +8,7 @@ import java.util.Set;
  * the AspnetMemberGrades entity. @author MyEclipse Persistence Tools
  */
 
-public abstract class AbstractAspnetMemberGrades implements
-		java.io.Serializable {
+public abstract class AbstractAspnetMemberGrades implements java.io.Serializable {
 
 	// Fields
 
@@ -19,7 +18,6 @@ public abstract class AbstractAspnetMemberGrades implements
 	private Integer points;
 	private Boolean isDefault;
 	private Integer discount;
-	
 
 	// Constructors
 

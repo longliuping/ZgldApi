@@ -6,8 +6,7 @@ import java.util.Set;
 /**
  * HishopAttributes entity. @author MyEclipse Persistence Tools
  */
-public class HishopAttributes extends AbstractHishopAttributes implements
-		java.io.Serializable {
+public class HishopAttributes extends AbstractHishopAttributes implements java.io.Serializable {
 
 	// Constructors
 

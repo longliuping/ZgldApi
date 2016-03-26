@@ -23,9 +23,7 @@ public abstract class AbstractHishopFullFree implements java.io.Serializable {
 	}
 
 	/** full constructor */
-	public AbstractHishopFullFree(HishopPromotions hishopPromotions,
-			Double amount, Boolean shipChargeFree, Boolean serviceChargeFree,
-			Boolean optionFeeFree) {
+	public AbstractHishopFullFree(HishopPromotions hishopPromotions, Double amount, Boolean shipChargeFree, Boolean serviceChargeFree, Boolean optionFeeFree) {
 		this.hishopPromotions = hishopPromotions;
 		this.amount = amount;
 		this.shipChargeFree = shipChargeFree;

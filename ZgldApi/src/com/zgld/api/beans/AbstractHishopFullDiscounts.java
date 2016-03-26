@@ -5,8 +5,7 @@ package com.zgld.api.beans;
  * of the HishopFullDiscounts entity. @author MyEclipse Persistence Tools
  */
 
-public abstract class AbstractHishopFullDiscounts implements
-		java.io.Serializable {
+public abstract class AbstractHishopFullDiscounts implements java.io.Serializable {
 
 	// Fields
 
@@ -23,8 +22,7 @@ public abstract class AbstractHishopFullDiscounts implements
 	}
 
 	/** full constructor */
-	public AbstractHishopFullDiscounts(HishopPromotions hishopPromotions,
-			Double amount, Double discountValue, Integer valueType) {
+	public AbstractHishopFullDiscounts(HishopPromotions hishopPromotions, Double amount, Double discountValue, Integer valueType) {
 		this.hishopPromotions = hishopPromotions;
 		this.amount = amount;
 		this.discountValue = discountValue;

@@ -9,8 +9,7 @@ import java.util.Date;
  * Persistence Tools
  */
 
-public abstract class AbstractHishopBalanceDrawRequest implements
-		java.io.Serializable {
+public abstract class AbstractHishopBalanceDrawRequest implements java.io.Serializable {
 
 	// Fields
 
@@ -31,9 +30,7 @@ public abstract class AbstractHishopBalanceDrawRequest implements
 	}
 
 	/** minimal constructor */
-	public AbstractHishopBalanceDrawRequest(AspnetMembers aspnetMembers,
-			String userName, Date requestTime, Double amount,
-			String accountName, String bankName, String merchantCode) {
+	public AbstractHishopBalanceDrawRequest(AspnetMembers aspnetMembers, String userName, Date requestTime, Double amount, String accountName, String bankName, String merchantCode) {
 		this.aspnetMembers = aspnetMembers;
 		this.userName = userName;
 		this.requestTime = requestTime;
@@ -44,10 +41,7 @@ public abstract class AbstractHishopBalanceDrawRequest implements
 	}
 
 	/** full constructor */
-	public AbstractHishopBalanceDrawRequest(AspnetMembers aspnetMembers,
-			String userName, Date requestTime, Double amount,
-			String accountName, String bankName, String merchantCode,
-			String remark) {
+	public AbstractHishopBalanceDrawRequest(AspnetMembers aspnetMembers, String userName, Date requestTime, Double amount, String accountName, String bankName, String merchantCode, String remark) {
 		this.aspnetMembers = aspnetMembers;
 		this.userName = userName;
 		this.requestTime = requestTime;

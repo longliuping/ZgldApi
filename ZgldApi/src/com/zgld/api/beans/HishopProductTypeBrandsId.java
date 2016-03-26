@@ -3,8 +3,7 @@ package com.zgld.api.beans;
 /**
  * HishopProductTypeBrandsId entity. @author MyEclipse Persistence Tools
  */
-public class HishopProductTypeBrandsId extends
-		AbstractHishopProductTypeBrandsId implements java.io.Serializable {
+public class HishopProductTypeBrandsId extends AbstractHishopProductTypeBrandsId implements java.io.Serializable {
 
 	// Constructors
 
@@ -13,8 +12,7 @@ public class HishopProductTypeBrandsId extends
 	}
 
 	/** full constructor */
-	public HishopProductTypeBrandsId(HishopProductTypes hishopProductTypes,
-			HishopBrandCategories hishopBrandCategories) {
+	public HishopProductTypeBrandsId(HishopProductTypes hishopProductTypes, HishopBrandCategories hishopBrandCategories) {
 		super(hishopProductTypes, hishopBrandCategories);
 	}
 

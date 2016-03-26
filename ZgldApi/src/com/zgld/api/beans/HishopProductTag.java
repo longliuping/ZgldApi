@@ -3,8 +3,7 @@ package com.zgld.api.beans;
 /**
  * HishopProductTag entity. @author MyEclipse Persistence Tools
  */
-public class HishopProductTag extends AbstractHishopProductTag implements
-		java.io.Serializable {
+public class HishopProductTag extends AbstractHishopProductTag implements java.io.Serializable {
 
 	// Constructors
 

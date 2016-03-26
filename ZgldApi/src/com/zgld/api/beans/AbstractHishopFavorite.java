@@ -21,16 +21,14 @@ public abstract class AbstractHishopFavorite implements java.io.Serializable {
 	}
 
 	/** minimal constructor */
-	public AbstractHishopFavorite(HishopFavoriteId id, Integer favoriteId,
-			String tags) {
+	public AbstractHishopFavorite(HishopFavoriteId id, Integer favoriteId, String tags) {
 		this.id = id;
 		this.favoriteId = favoriteId;
 		this.tags = tags;
 	}
 
 	/** full constructor */
-	public AbstractHishopFavorite(HishopFavoriteId id, Integer favoriteId,
-			String tags, String remark) {
+	public AbstractHishopFavorite(HishopFavoriteId id, Integer favoriteId, String tags, String remark) {
 		this.id = id;
 		this.favoriteId = favoriteId;
 		this.tags = tags;
