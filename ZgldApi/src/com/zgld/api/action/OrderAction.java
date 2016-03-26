@@ -250,7 +250,33 @@ public class OrderAction extends BaseAction {
 		}
 		return JSON_PAGE;
 	}
-	public void aa(){
-		
+	/**
+	 * 取消订单
+	 */
+	public String cancel_order(){
+		Map<String, Object> json = new HashMap<String, Object>();
+		try {
+			AspnetUsers aspnetUsers = getUserInfo();
+			if (aspnetUsers == null) {
+				form.setJsonMsg(NO_USER, false, json, 201);
+			} else {
+				StringBuffer sb = new StringBuffer(" from HishopOrders as where ho.orderId = "+form.getOrderid()+" and ho. and ho.userId = "+aspnetUsers.getUserId());
+				HishopOrders order = (HishopOrders)baseBiz.bean(sb.toString());
+				if(order==null){
+					form.setJsonMsg("订单不存在", false, json, 1001);
+				}else if(order.getOrderStatus()>1){
+					form.setJsonMsg("订单不能取消(已经发货或者已经付款)", false, json, 1001);
+				}else{
+					order.setOrderStatus(4);
+					baseBiz.update(order);
+					form.setJsonMsg("取消成功", true, json, 200);
+				}
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			form.setJsonMsg("系统出错", false, json, 1001);
+		}
+		return JSON_PAGE;
 	}
 }

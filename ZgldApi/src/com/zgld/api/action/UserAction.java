@@ -189,8 +189,8 @@ public class UserAction extends BaseAction {
 				form.setJsonMsg(NO_USER, false, json, 201);
 			} else if (form.getUserinfo().getEmail() == null) {
 				form.setJsonMsg("userinfo.email不能为空", false, json, 1001);
-			} else if (EmailUtil.emailMatches(form.getUserinfo().getEmail())) {
-				form.setJsonMsg("email格式输入错误不能为空", false, json, 1001);
+			} else if (!EmailUtil.emailMatches(form.getUserinfo().getEmail())) {
+				form.setJsonMsg("email格式输入错误", false, json, 1001);
 			} else {
 				aspnetUsers.setEmail(form.getUserinfo().getEmail());
 				baseBiz.update(aspnetUsers);
@@ -236,5 +236,47 @@ public class UserAction extends BaseAction {
 		}
 		return JSON_PAGE;
 	}
-
+	public String update_telphone(){
+		Map<String, Object> json = new HashMap<String, Object>();
+		try {
+			AspnetUsers aspnetUsers = getUserInfo();
+			if (aspnetUsers == null) {
+				form.setJsonMsg(NO_USER, false, json, 201);
+			} else if (form.getTelPhone() == null) {
+				form.setJsonMsg("telPhone不能为空", false, json, 1001);
+			} else {
+				aspnetUsers.getAspnetMembers().setTelPhone(form.getTelPhone());
+				baseBiz.update(aspnetUsers.getAspnetMembers());
+				json.put(INFO, aspnetUsers);
+				form.setJsonMsg("修改成功", true, json, 200);
+			
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			form.setJsonMsg("系统出错", false, json, 1001);
+		}
+		return JSON_PAGE;
+	}
+	public String update_cellphone(){
+		Map<String, Object> json = new HashMap<String, Object>();
+		try {
+			AspnetUsers aspnetUsers = getUserInfo();
+			if (aspnetUsers == null) {
+				form.setJsonMsg(NO_USER, false, json, 201);
+			} else if (form.getCellPhone() == null) {
+				form.setJsonMsg("cellPhone不能为空", false, json, 1001);
+			} else {
+				aspnetUsers.getAspnetMembers().setCellPhone(form.getCellPhone());
+				baseBiz.update(aspnetUsers.getAspnetMembers());
+				json.put(INFO, aspnetUsers);
+				form.setJsonMsg("修改成功", true, json, 200);
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+			form.setJsonMsg("系统出错", false, json, 1001);
+		}
+		return JSON_PAGE;
+	}
 }

@@ -61,7 +61,7 @@ public class BaseForm {
 	private Integer pageSize = 50;
 	private Integer newPageSize = 0;
 	private Integer id;
-	private Integer userId;//用戶id
+	private Integer userId = 0;//用戶id
 	private Integer code;
 	private Integer orderid;//订单ID
 	private Integer productId;//产品ID
@@ -94,6 +94,8 @@ public class BaseForm {
 	private Object totalMoney;
 	private Object totalPageMoney;
 	private AspnetUsers userinfo;
+	private String telPhone;
+	private String cellPhone;
 	private HishopUserShippingAddresses address;
 	
 	public Integer getHotid() {
@@ -418,6 +420,22 @@ public class BaseForm {
 
 	public void setTemplateId(Integer templateId) {
 		this.templateId = templateId;
+	}
+
+	public String getTelPhone() {
+		return telPhone;
+	}
+
+	public void setTelPhone(String telPhone) {
+		this.telPhone = telPhone;
+	}
+
+	public String getCellPhone() {
+		return cellPhone;
+	}
+
+	public void setCellPhone(String cellPhone) {
+		this.cellPhone = cellPhone;
 	}
 	
 }
