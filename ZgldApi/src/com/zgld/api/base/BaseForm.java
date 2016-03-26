@@ -63,7 +63,7 @@ public class BaseForm {
 	private Integer id;
 	private Integer userId = 0;//用戶id
 	private Integer code;
-	private Integer orderid;//订单ID
+	private String orderid;//订单ID
 	private Integer productId;//产品ID
 	private Integer hotid;//热门标签ID
 	private Integer areaid;//地址ID
@@ -181,11 +181,11 @@ public class BaseForm {
 		this.userId = userId;
 	}
 
-	public Integer getOrderid() {
+	public String getOrderid() {
 		return orderid;
 	}
 
-	public void setOrderid(Integer orderid) {
+	public void setOrderid(String orderid) {
 		this.orderid = orderid;
 	}
 
