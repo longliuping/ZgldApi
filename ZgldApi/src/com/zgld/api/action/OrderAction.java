@@ -166,7 +166,7 @@ public class OrderAction extends BaseAction {
 									items.setAddTime(new Date());
 									baseBiz.save(items);
 								}
-								HishopOrders ho = (HishopOrders) baseBiz.bean(" from HishopOrders as ho where ho.orderId = " + orderId);
+								HishopOrders ho = (HishopOrders) baseBiz.bean(" from HishopOrders as ho where ho.orderId = '" + orderId+"'");
 								if (ho != null) {
 									// 更新总运费和总金额总总量
 									ho.setAmount(salePrice);
