@@ -37,8 +37,6 @@ public class ProductAction extends BaseAction {
 					HishopSkus hishopSkus = (HishopSkus) baseBiz.bean(" from HishopSkus as hs where hs.productId =" + hishopProducts2.getProductId() + " order by hs.salePrice asc");
 					hishopProducts2.setHishopSkus(hishopSkus);
 					hishopProducts.set(i, hishopProducts2);
-					System.out.println(hishopProducts2.getProductName());
-					System.out.println(hishopProducts2.getHishopSkus().getSalePrice());
 				}
 				json.put(LISTINFO, hishopProducts);
 				form.setJsonMsg(SUCCESS, true, json, 200);
@@ -92,23 +90,6 @@ public class ProductAction extends BaseAction {
 					hishopProducts.setListHishopAttributeValues(hishopAttributeValues);
 				}
 				hishopProducts.setListHishopSkus(hishopSkus);
-
-				System.out.println(hishopProducts.getProductName());
-
-				for (int i = 0; i < hishopProducts.getListHishopSkus().size(); i++) {
-					HishopSkus hishopSkus2 = hishopProducts.getListHishopSkus().get(i);
-					System.out.println(hishopSkus2.getSalePrice());
-				}
-				if (hishopProducts.getListHishopAttributes() != null) {
-					for (int i = 0; i < hishopProducts.getListHishopAttributes().size(); i++) {
-						System.out.println(hishopProducts.getListHishopAttributes().get(i).getAttributeName());
-					}
-				}
-				if (hishopProducts.getListHishopAttributeValues() != null) {
-					for (int i = 0; i < hishopProducts.getListHishopAttributeValues().size(); i++) {
-						System.out.println(hishopProducts.getListHishopAttributeValues().get(i).getValueStr());
-					}
-				}
 				info.setHishopProducts(hishopProducts);
 				json.put(INFO, info);
 				form.setJsonMsg(SUCCESS, true, json, 200);
