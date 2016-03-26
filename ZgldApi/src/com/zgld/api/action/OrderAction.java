@@ -168,7 +168,7 @@ public class OrderAction extends BaseAction {
 									ho.setAmount(salePrice);
 									ho.setOrderCostPrice(costPrice);
 									ho.setOrderTotal(salePrice+hishopShippingTemplates.getPrice());
-									ho.setOrderPoint(Integer.parseInt(salePrice+hishopShippingTemplates.getPrice()+""));
+									ho.setOrderPoint((int)(salePrice+hishopShippingTemplates.getPrice()));
 									ho.setOrderProfit(salePrice);
 									baseBiz.update(ho);
 								}
