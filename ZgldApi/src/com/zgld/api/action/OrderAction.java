@@ -18,6 +18,7 @@ import com.zgld.api.beans.HishopShoppingCarts;
 import com.zgld.api.beans.HishopSkuitems;
 import com.zgld.api.beans.HishopSkus;
 import com.zgld.api.beans.HishopUserShippingAddresses;
+import com.zgld.api.utils.AddressXmlUtils;
 import com.zgld.api.utils.DateUtils;
 /**
  * 订单
@@ -93,7 +94,7 @@ public class OrderAction extends BaseAction {
 								orders.setUserId(userId);
 								orders.setUsername(users.getUserName());
 								orders.setEmailAddress(users.getEmail());
-								orders.setShippingRegion("");
+								orders.setShippingRegion(AddressXmlUtils.readXML(address.getRegionId()));
 								orders.setAddress(address.getAddress());
 								orders.setZipCode(address.getZipcode());
 								orders.setShipTo(address.getShipTo());
@@ -125,6 +126,7 @@ public class OrderAction extends BaseAction {
 								orders.setCouponValue(0.0);
 								orders.setWeight(hishopShippingTemplates.getWeight());//总量量
 								orders.setOrderTotal(0.00);//总费用  ----
+								orders.setEmailAddress(aspnetUsers.getEmail());
 								baseBiz.save(orders);
 								double weight = 0;
 								double salePrice = 0;

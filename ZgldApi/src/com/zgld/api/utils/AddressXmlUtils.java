@@ -51,7 +51,26 @@ public class AddressXmlUtils {
 
 		return null;
 	}
+	public static String readXML(int regionId){
+		String address = "";
+		try {
+			InputStream inputStream = AddressXmlUtils.class.getClassLoader().getResourceAsStream("address.xml");
+			SAXParserFactory spf = SAXParserFactory.newInstance();// 创建解析器
+			SAXParser saxParser = spf.newSAXParser();
+			// 设置解析器的相关特性，true表示开启命名空间特性
+			// saxParser.setProperty("http://xml.org/sax/features/namespaces",
+			// true);
+			CountyXMLContentHandler handler = new CountyXMLContentHandler(regionId);
+			saxParser.parse(inputStream, handler);
+			inputStream.close();
+			address = handler.getAddress();
+		} catch (Exception e) {
+			e.printStackTrace();
+		}
+		return address;
+	}
 	public static void main(String[] args) {
-		readXML();
+//		readXML();
+		System.out.println(readXML(1947));
 	}
 }
