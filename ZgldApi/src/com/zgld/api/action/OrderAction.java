@@ -263,7 +263,7 @@ public class OrderAction extends BaseAction {
 			if (aspnetUsers == null) {
 				form.setJsonMsg(NO_USER, false, json, 201);
 			} else {
-				StringBuffer sb = new StringBuffer(" from HishopOrders as where ho.orderId = '" + form.getOrderid() + "' and ho.userId = " + aspnetUsers.getUserId());
+				StringBuffer sb = new StringBuffer(" from HishopOrders as ho where ho.orderId = '" + form.getOrderid() + "' and ho.userId = " + aspnetUsers.getUserId());
 				HishopOrders order = (HishopOrders) baseBiz.bean(sb.toString());
 				if (order == null) {
 					form.setJsonMsg("订单不存在", false, json, 1001);
