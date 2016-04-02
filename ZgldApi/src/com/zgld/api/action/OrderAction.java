@@ -285,4 +285,11 @@ public class OrderAction extends BaseAction {
 		}
 		return JSON_PAGE;
 	}
+	/**
+	 * 线下支付
+	 */
+	public String offline_payment(){
+		form.setJsonMsg();
+		return JSON_PAGE;
+	}
 }
